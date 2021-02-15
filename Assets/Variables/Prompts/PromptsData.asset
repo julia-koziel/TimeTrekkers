@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4ebeefd498b43c8b1718a7a9897e4b, type: 3}
+  m_Name: PromptsData
+  m_EditorClassIdentifier: 
+  variables:
+  - {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
+  - {fileID: 11400000, guid: 07de5161927af4c768dac182fbcc69f9, type: 2}
+  - {fileID: 11400000, guid: eb4f5add78388453fbc23aa207ecb3cc, type: 2}
+  headers:
+  - participant_id
+  - prompt
+  - prompt_used
