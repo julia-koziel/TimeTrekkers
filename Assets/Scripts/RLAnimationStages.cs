@@ -7,7 +7,6 @@ public class RLAnimationStages : MonoBehaviour
 {       
     public GameObject crab1;
     public GameObject crab2;
-    public GameObject demo;
     public GameObject Theo;
     public GameObject map;
     public float time; 
@@ -17,6 +16,7 @@ public class RLAnimationStages : MonoBehaviour
     private State stateToLoad = State.None;
     private State currentState = State.None;
     private AudioSource[] aSources;
+    public GameEvent stageEnd;
 
     public enum State{
         Intro,
@@ -116,7 +116,7 @@ public class RLAnimationStages : MonoBehaviour
             case State.Demo:
 
             gameObject.SetActive(false);
-            demo.SetActive(true);
+            stageEnd.Raise();
 
             finishStateLoad();
 

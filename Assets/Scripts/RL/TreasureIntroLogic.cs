@@ -10,6 +10,7 @@ public class TreasureIntroLogic : MonoBehaviour
     public GameObject instructions2;
     public GameObject instructions3;
     public GameObject trials;
+    public GameEvent stageEnd;
 
     public GameObject MM;
     // Start is called before the first frame update
@@ -34,7 +35,8 @@ public void StartInstructions()
 public void startTrials()
 {
     introScreen.SetActive(false);
-    instructions.SetActive(true);
+    stageEnd.Raise();
+    
 }
 
 public void BacktoMM()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class RLAnimation : MonoBehaviour
 {   
     private AudioSource[] aSources;
+    public GameObject introscreen;
     public GameObject[] textboxes;
     public GameObject[] ships;
     public GameObject storm;
@@ -46,7 +47,8 @@ public class RLAnimation : MonoBehaviour
         stateToLoad = State.TheoIntro; 
         aSources = GetComponents<AudioSource>();  
         s = FindObjectOfType<ShipsBehaviourAnimation>();
-        background.SetActive(false);
+        background.SetActive(true);
+        introscreen.SetActive(false);
         
     }
 
