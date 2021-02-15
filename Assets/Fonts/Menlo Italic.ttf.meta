@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 026d9f604d0c943b78fa8cbd013078ca
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Menlo
+  fontNames:
+  - Menlo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c6f48b0bb83cd4400ad3b54a18756ab8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

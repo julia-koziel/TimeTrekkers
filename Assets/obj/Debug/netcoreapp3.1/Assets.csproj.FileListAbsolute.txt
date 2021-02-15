@@ -1,0 +1,4 @@
+/Users/juliakoziel/Desktop/KCL_work/6-11 battery/Spatial task/Assets/obj/Debug/netcoreapp3.1/Assets.csprojAssemblyReference.cache
+/Users/juliakoziel/Desktop/KCL_work/6-11 battery/Spatial task/Assets/obj/Debug/netcoreapp3.1/Assets.csproj.CoreCompileInputs.cache
+/Users/juliakoziel/Desktop/KCL_work/6-11 battery/Spatial task/Assets/obj/Debug/netcoreapp3.1/Assets.AssemblyInfoInputs.cache
+/Users/juliakoziel/Desktop/KCL_work/6-11 battery/Spatial task/Assets/obj/Debug/netcoreapp3.1/Assets.AssemblyInfo.cs

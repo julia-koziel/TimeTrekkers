@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f3e16739fd6432182d7abacf7ac237, type: 3}
+  m_Name: Error uploading data - please try again later
+  m_EditorClassIdentifier: 
+  languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
+  translatedStrings:
+  - 
+  - 'Fout bij het uploaden van de gegevens
+
+    probeer het later alstublieft nog eens'
+  - 'Error uploading data
+
+    please try again later'
+  - "Erreur de t\xE9l\xE9chargement des donn\xE9es\nveuillez r\xE9essayer plus tard"
+  - "Fel vid uppladdning av data\nf\xF6rs\xF6k igen senare"

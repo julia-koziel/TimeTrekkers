@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f3e16739fd6432182d7abacf7ac237, type: 3}
+  m_Name: "Choose repeat if your child wasn\x19t paying attention"
+  m_EditorClassIdentifier: 
+  languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
+  translatedStrings:
+  - 
+  - "Kies \u201CHerhaal\u201D\nals uw kind niet aan het opletten was"
+  - Choose "Repeat" if you want to practice more!
+  - "Choisissez \xAB R\xE9p\xE9ter \xBB \nsi votre enfant ne pr\xEAtait pas attention"
+  - "V\xE4lj \u201DUpprepa\u201D\nom ditt barn inte var uppm\xE4rksam"
