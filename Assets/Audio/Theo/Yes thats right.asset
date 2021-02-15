@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f583fb53cc7a4f68a8b6a2dd6306a75, type: 3}
+  m_Name: Yes thats right
+  m_EditorClassIdentifier: 
+  languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
+  translatedAudioClips:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a7ccd347702f14a0baa100f857b2d25f, type: 3}
+  - {fileID: 8300000, guid: 469fa0b12023b485b8bb0b8872eb27ea, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 3982f69f9d0064f41aaf5a72283a9609, type: 3}
+  isMuteable: 1
