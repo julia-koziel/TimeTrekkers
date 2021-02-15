@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4ebeefd498b43c8b1718a7a9897e4b, type: 3}
+  m_Name: TrialData
+  m_EditorClassIdentifier: 
+  variables:
+  - {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
+  - {fileID: 11400000, guid: 2104e084b97b84c4dbac5943fbcf8718, type: 2}
+  - {fileID: 11400000, guid: 02303c03094134aef92d85814be1cfba, type: 2}
+  - {fileID: 11400000, guid: f7f42a77e9b6744ba8b60a2251d6c8b5, type: 2}
+  - {fileID: 11400000, guid: fc4cbcbe60f55415cbf922f96a6011ea, type: 2}
+  - {fileID: 11400000, guid: 18cefac58d8c540c9a584dc1a5b5191b, type: 2}
+  - {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
+  headers:
+  - participant_id
+  - trial
+  - RewardedID
+  - UnrewardedID
+  - stimulus_id
+  - response_time
+  - correct

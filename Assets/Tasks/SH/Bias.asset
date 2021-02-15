@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
+  m_Name: Bias
+  m_EditorClassIdentifier: 
+  Value: 1
+  weighted: 1
+  weights: 010000000100000001000000
+  variables:
+  - {fileID: 11400000, guid: c1eb8832a16894a62a555aa23f66e251, type: 2}
+  - {fileID: 11400000, guid: c94d31ee4936d4ded8416cec4628f7dd, type: 2}
+  - {fileID: 11400000, guid: 93acb4ee0135540c589ffce1675b2532, type: 2}
+  controlSpacing: 0
+  minSpacing:
+  - 0
+  - 0
+  - 0

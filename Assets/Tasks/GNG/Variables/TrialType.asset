@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
+  m_Name: TrialType
+  m_EditorClassIdentifier: 
+  Value: 1
+  weighted: 1
+  weights: 0100000005000000
+  variables:
+  - {fileID: 11400000, guid: 971f2a23fd2d74b8fa8403d735d6413d, type: 2}
+  - {fileID: 11400000, guid: dd85fe7eb5d224b0399171fd1dc597aa, type: 2}
+  controlSpacing: 1
+  minSpacing:
+  - 1
+  - 0
