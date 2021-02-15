@@ -5,11 +5,8 @@ using UnityEngine;
 public class StartZoom : MonoBehaviour
 {
     private Animator animator;
-    private VideoBehaviour video;
-
     private MainMenuLogic gameLogic;
-    private float time;
-
+   
     public GameObject text;
     public GameObject DinoButton;
     public GameObject PirateButton;
@@ -18,9 +15,9 @@ public class StartZoom : MonoBehaviour
     private State stateToLoad = State.None;
     private State currentState = State.None;
     public GameObject Instructions;
+    private float time;
     
-
-     private enum State
+    private enum State
     {
         None,
         DinoScreen, PirateScreen, TreasureScreen, QueensScreen,
@@ -32,7 +29,6 @@ public class StartZoom : MonoBehaviour
     {
         text.SetActive(true);
         animator = GetComponent<Animator>();
-        video = FindObjectOfType<VideoBehaviour>();
         gameLogic = FindObjectOfType<MainMenuLogic>();
         DinoButton.SetActive(false);
         PirateButton.SetActive(false);

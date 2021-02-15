@@ -11,7 +11,6 @@ public class MainMenuLogicNew : MonoBehaviour
 {
     private AudioSource[] aSources;
     private MachineOnClick machineClick;
-    private VideoBehaviour video;
     private IDScript id;
 
     public GameObject titlescreen;
