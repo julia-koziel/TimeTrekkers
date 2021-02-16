@@ -9,36 +9,27 @@ public class GameLogicPractice : MonoBehaviour
     public GameObject singlebed;
     public GameObject singlebed2;
     public GameObject[] cats;
-
     public GameObject[] sleepy;
+    public GameObject end;
 
     public int sound;
     public int cummulativecorrect;
-
-    public GameObject end;
+    public int trial =1;
+    public int correct;
+    public int firstvibration;
+    public int secondvibration;
+    public int sleepycat;
+    
     public float time;
-
     public float lagtime = 9f;
-
     public float catpres = 2f;
     public float iti = 2f;
 
-    private bool l = true;
-
-    public int trial =1;
-
     private bool k = true;
-
-    public int correct;
-    public int firstvibration;
-
-    public int secondvibration;
     public bool catIsClickable = false;
 
     public GameObject trials;
     private KittyBehaviourPractice kittyBehaviour;
-    
-    public int sleepycat;
 
     private Vector3[] positions;
     

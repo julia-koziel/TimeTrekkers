@@ -51,7 +51,6 @@ public class TheoDemoGoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioBundle[] audioInfo;
         switch (stateToLoad)
         {
             case State.ClickPip1:

@@ -9,7 +9,6 @@ public class DemoDinosBehaviour : MonoBehaviour
     public GameObject BadDino;
     private GoDemoLogic gameLogic;
 
-    private int randomprob = 7;
 
     private float x;
     private float time;

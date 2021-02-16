@@ -10,35 +10,33 @@ public class KittyBehaviourPractice : MonoBehaviour
     private AudioSource purring;
     public GameObject singlebed2;
     public GameObject singlebed;
-
-    private float time; 
-    public int firstcat;
-    public int secondcat;
-    private Vector3[] positions;
-    private GameLogicPractice gameLogic;
-    private int currentvolume = 1;
-    public int trialset;
-    public int amplitudeset;
-    
-    public int vibrationpresentation;
-
-    public int[] loweramplitude =  {0,1,2,3,4,5,6,7,8,9};
-    public int[] higheramplitude
-     = {0,1,2,3,4,5,6,7,8,9};
-
-    private bool vibrationHasStarted;
-    public bool sleepyactive;
-    public int firstamplevel; 
-    public int secondamplevel;
     public GameObject sleepbubble;
     public GameObject placeholder;
     public GameObject placeholder2;
+
+    private GameLogicPractice gameLogic;
+    private float time; 
+    private Vector3[] positions;
+   
+  
     
+    public int vibrationpresentation;
+    public int trialset;
+    public int amplitudeset;
+    public int firstcat;
+    public int secondcat;
+
+    public int[] loweramplitude =  {0,1,2,3,4,5,6,7,8,9};
+    public int[] higheramplitude = {0,1,2,3,4,5,6,7,8,9};
+    public int firstamplevel; 
+    public int secondamplevel;
+   
     public bool firstcorrect;
     public bool secondcorrect;
-    private bool g = true;
     public bool firstincorrect;
     public bool secondincorrect;
+    private bool vibrationHasStarted;
+    public bool sleepyactive;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +44,7 @@ public class KittyBehaviourPractice : MonoBehaviour
         firstamplevel =0; 
         secondamplevel =0;
         gameLogic = FindObjectOfType<GameLogicPractice>();
-         purring = GetComponent<AudioSource>();
+        purring = GetComponent<AudioSource>();
         positions = new Vector3[4];
         positions[0] = singlebed.transform.position;
         positions[1] = placeholder.transform.position;

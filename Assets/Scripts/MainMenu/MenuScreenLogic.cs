@@ -16,6 +16,8 @@ public class MenuScreenLogic : MonoBehaviour
     public bool PirateClicked;
     public bool TreasureClicked;
     public bool QueensClicked; 
+    public bool SHClicked;
+    public bool AFClicked;
 
     public float time;
     // Start is called before the first frame update
@@ -66,9 +68,28 @@ public class MenuScreenLogic : MonoBehaviour
         {
         TreasureLoad();
         }
+    }
+
+    else if (SHClicked)
+    {
+
+        if (time>3)
+        {
+        SHLoad();
+        }
 
     }
+
+    else if (AFClicked)
+    {
+
+        if (time>3)
+        {
+        AFLoad();
+        }
     }  
+
+    }
     }
 
     public void ButtonClicked()
@@ -100,6 +121,20 @@ public class MenuScreenLogic : MonoBehaviour
     }
 
     public void QueensLoad()
+    {
+        SceneManager.LoadScene(6);
+        gameObject.SetActive(false);
+        
+    }
+
+    public void SHLoad()
+    {
+        SceneManager.LoadScene(4);
+        gameObject.SetActive(false);
+        
+    }
+
+    public void AFLoad()
     {
         SceneManager.LoadScene(6);
         gameObject.SetActive(false);

@@ -12,7 +12,7 @@ public class TargetShipPractice : MonoBehaviour
     private float clickTime;
     public int trial;
     private float shipX, shipY, mouseX, mouseY;
-    private int shipType = 1;
+
     private string shipName;
     private float startTime;
     private float reactionTime;

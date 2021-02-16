@@ -25,7 +25,6 @@ public class DemoRewardSocial : MonoBehaviour
     private bool subtitleOn;
     private bool buttonClicked = false;
 
-    private int magicPos = -1;
     private Vector3[] positions;
     private AudioSource[] aSources;
 
@@ -61,7 +60,7 @@ public class DemoRewardSocial : MonoBehaviour
         positions[2] = new Vector3 (-1, -4, 0);
         positions[3] = new Vector3 (-4.5f, -4, 0);
         positions[4] = new Vector3 (4.5f,-4, 0);
-        magicPos = 0;                           // can randomize if needed
+        // can randomize if needed
 
         personGood.SetActive(false);
         personGoodReact.SetActive(false);
