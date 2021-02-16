@@ -11,26 +11,19 @@ public class GameLogicAuditoryTrials : MonoBehaviour
     public GameObject text;
 
     public GameObject squirrel;
-   
-
     public GameObject end;
+    
     public float time;
-
     public float lagtime = 0.5f;
-
     public float catpres = 1;
     public float iti = 2f;
 
-    private bool l = true;
-
     public int trial =1;
     public int trialNumber;
-
     public int cummulativecorrect;
     public int correct;
     public int previoustrial;
     public int firstvibration;
-
     public int secondvibration;
     public bool birdIsClickable = false;
     public bool reversal = false;

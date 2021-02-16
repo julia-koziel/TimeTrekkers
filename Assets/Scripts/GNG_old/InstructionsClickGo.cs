@@ -23,7 +23,6 @@ public class InstructionsClickGo : MonoBehaviour
 
     AudioSource[] aSources;
     private bool spokenAudioEnabled;
-    float delay = 0.5f;
     int i = 0;
 
     private enum State

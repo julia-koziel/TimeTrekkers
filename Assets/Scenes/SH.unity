@@ -2541,53 +2541,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 718375197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d42e77dbd56fb440f89c8d35c6c94e78, type: 3}
+  m_Script: {fileID: 11500000, guid: bd8b6c701e58a454db364c581de8ab24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trialEnd: {fileID: 11400000, guid: 36b81ca759beb4ebaba0332a3584b93a, type: 2}
   inputVariablesManager: {fileID: 11400000, guid: d3ff66459f23e4ed09c891681acf492e,
     type: 2}
   trialType: {fileID: 11400000, guid: 057452344f2bf4181b9bb44f943b543a, type: 2}
-  CurrentChild: {fileID: 0}
-  trial: {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
-  Rock: {fileID: 11400000, guid: 93acb4ee0135540c589ffce1675b2532, type: 2}
-  Paper: {fileID: 11400000, guid: c1eb8832a16894a62a555aa23f66e251, type: 2}
-  Scissors: {fileID: 11400000, guid: c94d31ee4936d4ded8416cec4628f7dd, type: 2}
+  CurrentChild: {fileID: 11400000, guid: 3e69fd7e025d44fb09b60940fad1da0f, type: 2}
+  trial: {fileID: 0}
+  Rock: {fileID: 0}
+  Paper: {fileID: 0}
+  Scissors: {fileID: 0}
   children:
   - {fileID: 1658612101}
   - {fileID: 2067534542}
+  - {fileID: 1539434392}
   - {fileID: 306788966}
   - {fileID: 345004960}
-  - {fileID: 1539434392}
   cards:
-  - {fileID: 1066328231}
-  - {fileID: 1287315810}
-  - {fileID: 725308373}
+  - {fileID: 592694840}
   - {fileID: 1642481255}
   - {fileID: 1975501066}
-  - {fileID: 592694840}
   Same: {fileID: 163343859}
-  New: {fileID: 2094339787}
-  outcomes:
-  - {fileID: 173316890}
-  - {fileID: 600580204}
-  - {fileID: 1683933048}
-  correct: {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
-  participantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
+  New: {fileID: 0}
+  outcomes: []
+  correct: {fileID: 0}
+  participantsGo: {fileID: 0}
   game: 0
   outcome: 0
   blockTrial: 0
   clicked: 0
   score: 0
   oppscore: 0
-  leftPos: {fileID: 1732365538}
-  centrePos: {fileID: 1896616781}
-  topleft: {fileID: 1147468876}
-  topmid: {fileID: 1712031207}
-  topright: {fileID: 706151018}
-  bottomleft: {fileID: 1036539065}
-  bottommid: {fileID: 63989738}
-  bottomright: {fileID: 1406599750}
+  leftPos: {fileID: 0}
+  centrePos: {fileID: 0}
+  topleft: {fileID: 0}
+  topmid: {fileID: 0}
+  topright: {fileID: 0}
+  bottomleft: {fileID: 0}
+  bottommid: {fileID: 0}
+  bottomright: {fileID: 0}
 --- !u!1 &724359806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4728937619616880081, guid: e442701b145664af68a900c3320e5ab0,
@@ -7040,15 +7034,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2094339787 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3197180118673305891, guid: e442701b145664af68a900c3320e5ab0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1312055632}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254692337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a6ac477de144661a9b7ed6d9a8d43c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

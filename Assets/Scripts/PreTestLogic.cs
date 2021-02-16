@@ -41,8 +41,6 @@ public class PreTestLogic : MonoBehaviour
     public bool rerun = true; // rerun pre-task
     public bool click = false;
 
-    float delay = 2.0f;
-
     private enum State
     {
         None,

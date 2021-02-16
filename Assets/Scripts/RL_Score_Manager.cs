@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
-public class RL_ScoreManager : MonoBehaviour 
+public class RL_Score_Manager : MonoBehaviour 
 {
     public IntVariable score;
     public IntVariable nTrials;

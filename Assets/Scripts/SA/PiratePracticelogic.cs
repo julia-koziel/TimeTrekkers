@@ -36,7 +36,6 @@ public class PiratePracticelogic : MonoBehaviour
     private int count = 0;
     private int wrong = 0;
     private int correct = 0;
-    private int misses = 0;
     private int missedInARow = 0;
    
     public GameObject TrialsButton;

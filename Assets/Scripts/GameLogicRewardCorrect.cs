@@ -27,7 +27,6 @@ public class GameLogicRewardCorrect : MonoBehaviour
     public int trial = 1;
     public int n_trials = 40;
     private int comissionerror = 0;
-    private int bad = 0;
     private int good = 0;
     private float startTime = 0;
     private float reactionTime = 0;

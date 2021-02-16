@@ -129,7 +129,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             ITI.SetActive(true);
 
 
-            this.In(0.5f).Call(() => 
+            this.In(1).Call(() => 
             {
                 ITI.SetActive(false);
                 trialEnd.Raise();

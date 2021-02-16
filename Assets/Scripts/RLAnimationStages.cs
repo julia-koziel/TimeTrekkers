@@ -100,7 +100,7 @@ public class RLAnimationStages : MonoBehaviour
 
             case State.Theo2:
             audioInfo = new AudioBundle[] {
-                    new AudioBundle(index: 1, delay: -0.5f)
+                    new AudioBundle(index: 1, delay: -1)
                 };
             if (subtitleOn)
             {

@@ -25,7 +25,6 @@ public class DemoRewardNonSocial : MonoBehaviour
     private bool buttonClicked = false;
     
     public float time = 0;
-    private float delay = 0.5f;
     private int magicPos = -1;
     private Vector3[] positions;
     

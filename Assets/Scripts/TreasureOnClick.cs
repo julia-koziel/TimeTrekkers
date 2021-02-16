@@ -9,12 +9,10 @@ public class TreasureOnClick : MonoBehaviour
     public GameObject oldtext;
     public GameObject text;
     public bool TreasureClick;
-    private AudioSource audio;
     // Start is called before the first frame update
  
      void Start()
     {
-        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,7 +23,6 @@ public class TreasureOnClick : MonoBehaviour
     
     public void OnMouseDown()
     {
-        audio.Play();
         foreach (GameObject other in otherbuttons)
         {
             other.SetActive(false);

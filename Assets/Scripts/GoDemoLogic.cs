@@ -68,7 +68,6 @@ public class GoDemoLogic : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        AudioBundle[] audioInfo;
         time += Time.deltaTime;
        
         if (restart)

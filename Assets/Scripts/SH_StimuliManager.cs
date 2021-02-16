@@ -17,9 +17,10 @@ public class SH_StimuliManager : MonoBehaviour
     
     public Stimulus[] children;
     public Stimulus[] cards;
-    public Stimulus Same;
-    public Stimulus New;
+    public Stimulus Theo;
+    public Stimulus[] New;
     public GameObject[] outcomes;
+    public GameObject machine;      
 
     [Space(10)]
     public BoolVariable correct;
@@ -179,10 +180,20 @@ public class SH_StimuliManager : MonoBehaviour
     
     public void ChooseOpponent()
     {
-        Same.SetActive(true);
-        New.SetActive(true);
-        score=0;
-        oppscore=0;
+         this.In(1).Call(() => 
+            {
+                CurrentChild++;
+                machine.SetActive(true);
+                
+                this.In(2f).Call(() => 
+            {
+                Theo.SetActive(true);
+                New[CurrentChild].SetActive(true);
+                score=0;
+                oppscore=0;
+            });
+        }); 
+    
     }
 
     public void NewGame()

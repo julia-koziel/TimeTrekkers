@@ -23,7 +23,6 @@ public class TheoDemoStardustBehaviour : MonoBehaviour
     }
     private State stateToLoad = State.None;
     private State currentState = State.None;
-    private float speed;
     private float slowSpeed = 30.0f;
     private float normalSpeed = 40.0f;
     private float fastSpeed = 60.0f;
