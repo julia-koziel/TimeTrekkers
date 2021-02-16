@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TargetShipAnimation : MonoBehaviour
 {
-    private AudioSource audio;
     private Animator animator;
     private PirateAttackAnimation logic;
     private TheoAnimation theo;
@@ -17,7 +16,6 @@ public class TargetShipAnimation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         logic = FindObjectOfType<PirateAttackAnimation>();
-        audio = GetComponent<AudioSource>();
         theo = FindObjectOfType<TheoAnimation>();
     }
 
@@ -40,7 +38,6 @@ public class TargetShipAnimation : MonoBehaviour
 
     void sound()
     {
-        audio.Play();
     }
 
     void triggerShips()

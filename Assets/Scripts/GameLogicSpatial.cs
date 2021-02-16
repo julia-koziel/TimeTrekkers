@@ -7,15 +7,15 @@ public class GameLogicSpatial : MonoBehaviour
     public GameObject[]  stimuli;
     public GameObject seaweed1;
     public GameObject seaweed2;
-     public GameObject seaweed3;
+    public GameObject seaweed3;
     public GameObject seaweed4;
     public GameObject seaweed5;
     public GameObject seaweed6;
     public GameObject seaweed7;
-        public GameObject seaweed8;
-        public GameObject seaweed9;
+    public GameObject seaweed8;
+    public GameObject seaweed9;
 
-    private Vector3[] positions;
+    public Vector3[] positions;
     public int pos;
     public int trial;
     public int stimulus;

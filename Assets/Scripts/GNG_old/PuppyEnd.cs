@@ -9,8 +9,6 @@ public class PuppyEnd : MonoBehaviour
     private bool audioStarted = false;
     private AudioSource endAudio;
 
-    private bool spokenAudioEnabled;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +20,7 @@ public class PuppyEnd : MonoBehaviour
     void Update()
     {
         if (!audioStarted)
-        {
-            Debug.Log("Thank you! You caught my puppy lots of times.");
-            if (spokenAudioEnabled) { endAudio.Play(); }
-            audioStarted = true;
+        {      
             StartCoroutine(showFinishButton());
         }
     }

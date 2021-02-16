@@ -14,7 +14,6 @@ public class PreTestLogicAuditory : MonoBehaviour
     public GameObject startpractice;
     public GameObject pretestrepeat;
     private bool buttons1Clicked = false;
-    private bool buttons2Clicked = false;
     public int replayed =0;
 
     AudioSource[] aSources;
@@ -37,9 +36,7 @@ public class PreTestLogicAuditory : MonoBehaviour
 
     public bool rerun = true; // rerun pre-task
     public bool click = false;
-
-    float delay = 2.0f;
-
+    
     private enum State
     {
         None,

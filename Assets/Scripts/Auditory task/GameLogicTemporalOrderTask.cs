@@ -7,31 +7,22 @@ public class GameLogicTemporalOrderTask : MonoBehaviour
   
     public GameObject[] birds;
     public GameObject text;
-
-    public int sound;
-    public int cummulativecorrect;
-
     public GameObject end;
+    
     public float time;
-
     public float lagtime = 0.5f;
-
     public float catpres = 1;
     public float iti = 2f;
 
-    private bool l = true;
-
+    public int sound;
+    public int cummulativecorrect;
     public int trial =1;
-
-    private bool k = true;
-
     public int correct;
     public int firstvibration;
-
     public int secondvibration;
     public bool birdIsClickable = false;
-
     public GameObject trials;
+
     private BirdBehaviourTemporalOrder birdBehaviour;
     // private AuditoryReadWriteCsv csvReadWrite;
     
@@ -85,8 +76,6 @@ public class GameLogicTemporalOrderTask : MonoBehaviour
         secondvibration = birdBehaviour.secondsoundlevel;
     
     }      
-
-
 
     public float SetTime()
     {

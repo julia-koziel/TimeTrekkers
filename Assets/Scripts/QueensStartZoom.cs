@@ -10,12 +10,10 @@ public class QueensStartZoom : MonoBehaviour
     public GameObject oldtext;
     public GameObject text;
     public bool QueensClick;
-    private AudioSource audio;
     // Start is called before the first frame update
  
      void Start()
     {
-        AudioSource audio = GetComponent<AudioSource>();
 
     }
 

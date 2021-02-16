@@ -36,8 +36,7 @@ public class GameLogicRewardLearning : MonoBehaviour
     private int good = 0;
     private float startTime = 0;
     private float reactionTime = 0;
-    private int correct_flag = 0;
-    private int incorrect_flag = 0;
+    
     private int hitrate = 0;
     private float dprime = 0;
     private int prev_correct_bar = 0;
@@ -222,8 +221,6 @@ public class GameLogicRewardLearning : MonoBehaviour
     public void correcthouse()
     {
         hitrate += 1;
-        correct_flag = 1;
-        incorrect_flag = 0;
     }
 
     public void startcorrecthouse(){
@@ -233,9 +230,7 @@ public class GameLogicRewardLearning : MonoBehaviour
 
     public void wronghouse()
     {
-        comissionerror += 1;
-        incorrect_flag = 1;
-        correct_flag = 0;
+        comissionerror += 1;  
     }
 
     // public void Quit()

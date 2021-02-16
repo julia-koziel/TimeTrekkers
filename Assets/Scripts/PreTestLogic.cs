@@ -15,7 +15,6 @@ public class PreTestLogic : MonoBehaviour
     public GameObject startpractice;
     public GameObject pretestrepeat;
     private bool buttons1Clicked = false;
-    private bool buttons2Clicked = false;
     public int replayed =0;
 
    

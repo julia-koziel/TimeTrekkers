@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShipsBehaviourAnimation : MonoBehaviour
 {
-    private AudioSource audio;
     private Animator animator;
     private TheoAnimation theo;
     public float time=0;
@@ -15,7 +14,6 @@ public class ShipsBehaviourAnimation : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
         theo = FindObjectOfType<TheoAnimation>();
         rend = GetComponent<SpriteRenderer>();
         Color c = rend.material.color;

@@ -28,8 +28,6 @@ public class BirdBehaviour : MonoBehaviour
 
     public int stimulus=0;
     public int secondsound =5;
-
-    private bool vibrationHasStarted;
     public int firstsoundlevel; 
     public int secondsoundlevel;
     
@@ -79,7 +77,6 @@ public class BirdBehaviour : MonoBehaviour
 
         if (time>2.5f && (time<3.5f))
         {
-            vibrationHasStarted = false;            
             sound1();
             singing1.SetActive(true);
             singing2.SetActive(false);
@@ -102,7 +99,6 @@ public class BirdBehaviour : MonoBehaviour
             singing1.SetActive(false);
             singing2.SetActive(false);
             birdrating();
-            vibrationHasStarted = false;
             gameLogic.birdIsClickable = true;
 
             foreach (GameObject stim in stimuliset1)
@@ -133,14 +129,12 @@ public class BirdBehaviour : MonoBehaviour
 
         if ( presentationset <1)
             {
-                vibrationHasStarted = true;
                 stimuliset1[stimulus].SetActive(true);
                 firstcorrect=true;
             }
 
             if ( presentationset >0.5f)
             {
-                vibrationHasStarted = true;
                 stimuliset1[5].SetActive(true);
                 firstincorrect=true;
             }
@@ -152,7 +146,6 @@ public class BirdBehaviour : MonoBehaviour
         if (presentationset <1)
 
             {
-                vibrationHasStarted = true;
                 stimuliset1[5].SetActive(true);
                 secondincorrect=true;
             } 
@@ -161,7 +154,6 @@ public class BirdBehaviour : MonoBehaviour
         if (presentationset >0.5f)
         
         {
-            vibrationHasStarted = true;
             stimuliset1[stimulus].SetActive(true);
             secondcorrect=true;
         }
@@ -175,14 +167,5 @@ public class BirdBehaviour : MonoBehaviour
         instructions.SetActive(true);
         
     }
-
-    // public void ChangeStimuliSet();
-    // {
-    //     foreach (GameObject stimulus in stimuliset1)
-    //     {
-    //         stimulus.SetActive(false);
-    //     } 
-    // }
-    
    
 }

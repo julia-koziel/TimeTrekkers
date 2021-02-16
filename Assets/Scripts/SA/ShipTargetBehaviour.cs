@@ -6,8 +6,6 @@ public class ShipTargetBehaviour : MonoBehaviour
 {
     private float time;
     private float x;
-
-    private GameLogicPirateAttack gameLogic;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +16,7 @@ public class ShipTargetBehaviour : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        gameLogic.ship1on();
-        x = -1 + time * gameLogic.velocity;
+        
 
         gameObject.transform.position = new Vector3(x, 0, 0);
 
@@ -27,7 +24,6 @@ public class ShipTargetBehaviour : MonoBehaviour
         {
             time = 0;
             gameObject.transform.position = new Vector3(-13, 0, 0);
-            gameLogic.ship1off();
             gameObject.SetActive(false);
         }  
     }

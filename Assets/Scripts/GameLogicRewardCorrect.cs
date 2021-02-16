@@ -27,10 +27,8 @@ public class GameLogicRewardCorrect : MonoBehaviour
     public int trial = 1;
     public int n_trials = 40;
     private int comissionerror = 0;
-    private int good = 0;
     private float startTime = 0;
     private float reactionTime = 0;
-    private int correct_flag = 0;
     public int hitrate = 0;
     private double dprime = 0;
     private int prev_correct_bar = 0;
@@ -213,7 +211,6 @@ public class GameLogicRewardCorrect : MonoBehaviour
     public IEnumerator correcthouse(int chest)
     {
         hitrate += 1;
-        correct_flag = 1;
         sounds[1].Play();
         chests[chest].SetActive(false);
         chests[chest+4].SetActive(true);
@@ -234,7 +231,6 @@ public class GameLogicRewardCorrect : MonoBehaviour
     public IEnumerator wronghouse(int chest)
     {
         comissionerror += 1;
-        correct_flag = 0;
         sounds[0].Play();
         chests[chest].SetActive(false);
         chests[chest + 8].SetActive(true);

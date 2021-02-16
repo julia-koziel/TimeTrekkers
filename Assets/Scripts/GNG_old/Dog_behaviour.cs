@@ -13,8 +13,6 @@ public class Dog_behaviour : MonoBehaviour
     private int randomprob = 7;
     private float x;
     private float time;
-    private float stopTime = 0;
-    private float startTime = 0;
     private float velocity;
 
     public int ngood = 0;

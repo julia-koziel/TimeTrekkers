@@ -14,7 +14,6 @@ public class IntroGameLogic : MonoBehaviour
     public GameObject pretest;
     private startDemo demoClick;
     private GameLogicPirateAttack localtime;
-    private GameObject text;
     private float time; 
 
    
@@ -24,7 +23,6 @@ public class IntroGameLogic : MonoBehaviour
       StartButton.SetActive(true);
       DemoButton.SetActive(true);
       ExitButton.SetActive(true);  
-      text.SetActive(true);
     }
 
     // Update is called once per frame
@@ -46,7 +44,6 @@ public class IntroGameLogic : MonoBehaviour
             instructions.SetActive(false);
             instructions2.SetActive(true);
             introscreen.SetActive(false);
-            text.SetActive(false);
 
         }
 

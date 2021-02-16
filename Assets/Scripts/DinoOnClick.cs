@@ -6,8 +6,6 @@ public class DinoOnClick : MonoBehaviour
 {
     public GameObject[] otherbuttons;
     public GameObject zoomed;
-    public GameObject oldtext;
-    public GameObject text;
     public GameObject DinoIcon;
     public bool DinoClick;
 
@@ -38,8 +36,6 @@ public class DinoOnClick : MonoBehaviour
             other.SetActive(false);
         }
         zoomed.SetActive(true);
-        text.SetActive(true);
-        oldtext.SetActive(false);
         DinoIcon.SetActive(false);
        
     }

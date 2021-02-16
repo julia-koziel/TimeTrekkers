@@ -5,7 +5,8 @@ using ToolShed.Android.OS;
 
 public class KittyBehaviour : MonoBehaviour
 
-{    public GameObject[] cats;
+{   
+    public GameObject[] cats;
     public GameObject[] sleepycats;
     private AudioSource purring;
     public GameObject singlebed2;
@@ -13,31 +14,30 @@ public class KittyBehaviour : MonoBehaviour
     public GameObject text;
     public GameObject placeholder;
     public GameObject placeholder2;
-
+    public GameObject sleepbubble;
     public GameObject instructions;
+    private GamelogictrialsKitty gameLogic;
+
     private float time; 
     public int firstcat;
     public int secondcat;
     private Vector3[] positions;
-    private GamelogictrialsKitty gameLogic;
+    
     public int trialset;
     public int amplitudeset;
     
     public int vibrationpresentation;
 
     public int[] loweramplitude =  {0,1,2,3,4,5,6,7,8,9};
-    public int[] higheramplitude
-     = {0,1,2,3,4,5,6,7,8,9};
+    public int[] higheramplitude= {0,1,2,3,4,5,6,7,8,9};
 
     private bool vibrationHasStarted;
     public bool sleepyactive;
     public int firstamplevel; 
     public int secondamplevel;
-    public GameObject sleepbubble;
     
     public bool firstcorrect;
     public bool secondcorrect;
-    private bool g = true;
     public bool firstincorrect;
     public bool secondincorrect;
 

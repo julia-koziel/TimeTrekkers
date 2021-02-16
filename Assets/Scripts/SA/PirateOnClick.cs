@@ -10,8 +10,6 @@ public class PirateOnClick : MonoBehaviour
     public GameObject oldtext;
     public GameObject text;
     public bool PirateClick;
-
-    private new AudioSource chime;
     // Start is called before the first frame update
  
      void Start()
@@ -26,7 +24,6 @@ public class PirateOnClick : MonoBehaviour
     
     public void OnMouseDown()
     {
-        chime.Play(); 
         foreach (GameObject other in otherbuttons)
         {
             other.SetActive(false);

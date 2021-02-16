@@ -44,14 +44,13 @@ public class SH_StimuliManager : MonoBehaviour
     Vector3 right = new Vector3(-4, 3, 0);
     Vector3 centre = new Vector3(0, 0, 0);
 
-    int missedHits = 0;
     // Start is called before the first frame update
 
     public void OnStartTrial()
     {
         inputVariablesManager.updateInputVariables();
         
-        if(trial>30 && blockTrial>9)
+        if(trial>20 && blockTrial>9)
         {
             ChooseOpponent();
         }
@@ -105,7 +104,6 @@ public class SH_StimuliManager : MonoBehaviour
 
     public void Reset()
     {
-        missedHits = 0;
         inputVariablesManager.Reset();
     }
 

@@ -11,7 +11,6 @@ public class Ship2BehaviourPractice : MonoBehaviour
     private float clickTime;
     public int trial;
     private float shipX, shipY, mouseX, mouseY;
-    private int shipType = 0;
     private string shipName;
     private float startTime;
     public bool wasclicked = false;
