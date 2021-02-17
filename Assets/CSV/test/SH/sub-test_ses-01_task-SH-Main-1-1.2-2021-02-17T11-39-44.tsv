@@ -1,0 +1,17 @@
+participant_id	trial	trial_type	response_time	correct
+test	0	1	0.6542776	0
+test	1	1	0.3978076	0
+test	2	1	0.9687328	0
+test	3	1	0.4334679	0
+test	4	1	1.432745	0
+test	5	1	1.732407	0
+test	6	1	1.620678	0
+test	7	1	9.879505	0
+test	8	1	0.1845627	0
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN
+NaN	NaN	NaN	NaN	NaN

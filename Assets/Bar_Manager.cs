@@ -6,7 +6,7 @@ public class Bar_Manager : MonoBehaviour
 {
     public IntVariable block;
     public GameObject machine;
-    public Vector2 dest;
+    public Vector2[] dest;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class Bar_Manager : MonoBehaviour
 
     public void MoveShip()
     {
-        float speed = 6;
+        float speed = 3;
         float frameRate = 0.02f;
         float baseStep = speed * frameRate;
         float step;
@@ -30,7 +30,7 @@ public class Bar_Manager : MonoBehaviour
             {
                 step = baseStep * Mathf.Abs(block-i-1);
                 Vector3 currentPos = machine.transform.position;
-                machine.transform.position = Vector3.MoveTowards(currentPos, dest, step);
+                machine.transform.position = Vector3.MoveTowards(currentPos, dest[block], step);
             }
     }
 }   

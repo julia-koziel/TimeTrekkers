@@ -38,7 +38,6 @@ public class GameLogicRewardSocial : MonoBehaviour
     private int bad = -1;
     private float startTime = 0;
     private float reactionTime = 0;
-    private int incorrect_flag = 0;
     private int hitrate = 0;
     private double dprime = 0;
     private int pos = -1;
@@ -201,7 +200,6 @@ public class GameLogicRewardSocial : MonoBehaviour
         omissionerror -= 1;
         omissiontrial -= 1;
         hitrate += 1;
-        incorrect_flag = 0;
     }
 
     public void startcorrecthouse(){
@@ -212,8 +210,6 @@ public class GameLogicRewardSocial : MonoBehaviour
     public void wronghouse()
     {
         comissionerror += 1;
-        incorrect_flag = 1;
-
     }
 
     public void Quit()

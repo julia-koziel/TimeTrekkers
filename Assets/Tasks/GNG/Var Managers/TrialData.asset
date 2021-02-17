@@ -15,12 +15,10 @@ MonoBehaviour:
   variables:
   - {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
   - {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
-  - {fileID: 11400000, guid: b8cd776117f6e4e17853a9422e6cf11c, type: 2}
-  - {fileID: 11400000, guid: 18cefac58d8c540c9a584dc1a5b5191b, type: 2}
-  - {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
+  - {fileID: 11400000, guid: 763630f8a756541ae8991ae10817bace, type: 2}
+  - {fileID: 11400000, guid: eb96c9364d4d843bcb7d7e49141f8b65, type: 2}
   headers:
   - participant_id
   - trial
-  - trial_type
-  - response_time
-  - correct
+  - ChosenChild
+  - Score

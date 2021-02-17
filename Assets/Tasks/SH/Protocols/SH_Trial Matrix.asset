@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVariablesManager: {fileID: 11400000, guid: d3ff66459f23e4ed09c891681acf492e,
     type: 2}
+  shuffle: 0
   rowArray:
   - row:
     - 1
@@ -40,10 +41,100 @@ MonoBehaviour:
   - row:
     - 2
   - row:
+    - 1
+  - row:
     - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
+  - row:
+    - 0
+  - row:
+    - 2
+  - row:
+    - 1
   - row:
     - 2
   - row:
     - 0
   - row:
-    - 1
+    - 2

@@ -554,28 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cf1312735d04a8ea72ad90294cfbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textboxes:
-  - {fileID: 1135378309}
-  - {fileID: 461139730}
-  - {fileID: 1833573255}
-  StageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
-  ships:
-  - {fileID: 496719650}
-  - {fileID: 801893577}
-  - {fileID: 11589936}
-  target: {fileID: 1563027163}
-  Theo: {fileID: 254305650}
-  repeatButton: {fileID: 0}
-  continueButton: {fileID: 0}
-  demo: {fileID: 438826252}
-  intro: {fileID: 1418227720}
-  background: {fileID: 707779243}
-  audioOn: 0
-  subtitleOn: 0
-  move: 0
-  time: 0
-  velocity: 1
-  x: 0
 --- !u!224 &43206426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8407,7 +8385,7 @@ MonoBehaviour:
   loggedCarType: {fileID: 11400000, guid: cb591306cedb143e18f8130990b47d27, type: 2}
   nTrials: {fileID: 11400000, guid: f4c8d070f3ad34caf944543b266ae4ef, type: 2}
   maxMissedHits: 5
-  separationDistance: 6
+  separationDistance: 20
 --- !u!1 &1319715930
 GameObject:
   m_ObjectHideFlags: 0
