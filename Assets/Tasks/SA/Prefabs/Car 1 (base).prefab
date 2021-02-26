@@ -222,23 +222,23 @@ PrefabInstance:
         type: 3}
       propertyPath: loggedId
       value: 
-      objectReference: {fileID: 11400000, guid: 940629f75a86a458d85a4f170a71feba,
+      objectReference: {fileID: 11400000, guid: fc4cbcbe60f55415cbf922f96a6011ea,
         type: 2}
     - target: {fileID: 5343480088823952173, guid: 9ee7765125d07421c88994e2572ca9e2,
         type: 3}
       propertyPath: startPosition.x
-      value: -13
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5343480088823952173, guid: 9ee7765125d07421c88994e2572ca9e2,
         type: 3}
       propertyPath: endPosition.x
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5343480088823952173, guid: 9ee7765125d07421c88994e2572ca9e2,
         type: 3}
       propertyPath: speed
       value: 
-      objectReference: {fileID: 11400000, guid: 165618dd16a144bef9a1941ea59530c5,
+      objectReference: {fileID: 11400000, guid: d40a1d737b40e4a15af06d62cbbc4ae8,
         type: 2}
     - target: {fileID: 5374041349204971882, guid: 9ee7765125d07421c88994e2572ca9e2,
         type: 3}

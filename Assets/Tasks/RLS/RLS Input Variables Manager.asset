@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RLS Input Variables Manager
   m_EditorClassIdentifier: 
   inputVariables:
-  - {fileID: 11400000, guid: d02d885556eb149bf805a1decce782ae, type: 2}
+  - {fileID: 11400000, guid: 6c5cec66e02104fb79c87e47a0a4b811, type: 2}
   trial: {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
   nTrials: {fileID: 11400000, guid: f4c8d070f3ad34caf944543b266ae4ef, type: 2}

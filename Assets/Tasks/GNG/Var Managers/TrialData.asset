@@ -16,9 +16,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
   - {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
   - {fileID: 11400000, guid: 763630f8a756541ae8991ae10817bace, type: 2}
+  - {fileID: 11400000, guid: fc4cbcbe60f55415cbf922f96a6011ea, type: 2}
   - {fileID: 11400000, guid: eb96c9364d4d843bcb7d7e49141f8b65, type: 2}
   headers:
   - participant_id
   - trial
-  - ChosenChild
-  - Score
+  - chosen_child
+  - current_child
+  - score

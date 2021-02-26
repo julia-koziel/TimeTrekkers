@@ -17,11 +17,8 @@ MonoBehaviour:
   shuffle: 1
   rowArray:
   - row:
-    - 1
     - 0
-  - row:
     - 1
-    - 0
   - row:
     - 1
     - 0
@@ -29,17 +26,8 @@ MonoBehaviour:
     - 0
     - 1
   - row:
-    - 1
     - 0
-  - row:
-    - 1
     - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
   - row:
     - 0
     - 1
@@ -50,14 +38,20 @@ MonoBehaviour:
     - 1
     - 1
   - row:
+    - 1
+    - 1
+  - row:
     - 0
     - 0
   - row:
     - 1
-    - 1
+    - 0
   - row:
     - 1
     - 0
+  - row:
+    - 0
+    - 1
   - row:
     - 1
     - 1
@@ -74,16 +68,10 @@ MonoBehaviour:
     - 1
     - 0
   - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
     - 1
     - 1
   - row:
-    - 0
+    - 1
     - 0
   - row:
     - 1
@@ -91,12 +79,6 @@ MonoBehaviour:
   - row:
     - 1
     - 1
-  - row:
-    - 0
-    - 0
-  - row:
-    - 1
-    - 0
   - row:
     - 1
     - 1
@@ -109,96 +91,6 @@ MonoBehaviour:
   - row:
     - 1
     - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
   - row:
     - 0
     - 0
@@ -216,6 +108,84 @@ MonoBehaviour:
     - 0
   - row:
     - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 0
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 0
     - 1
   - row:
     - 1
@@ -225,6 +195,9 @@ MonoBehaviour:
     - 0
   - row:
     - 0
+    - 0
+  - row:
+    - 1
     - 0
   - row:
     - 1
@@ -243,6 +216,21 @@ MonoBehaviour:
     - 0
   - row:
     - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 1
+  - row:
+    - 0
+    - 0
+  - row:
+    - 1
     - 0
   - row:
     - 1
@@ -252,7 +240,19 @@ MonoBehaviour:
     - 1
   - row:
     - 1
+    - 0
+  - row:
+    - 0
     - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
   - row:
     - 1
     - 0

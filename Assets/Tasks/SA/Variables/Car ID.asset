@@ -14,15 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value: 0
   weighted: 0
-  weights: 0100000001000000010000000100000001000000
+  weights: 0100000001000000010000000100000001000000010000000100000001000000
   variables:
   - {fileID: 11400000, guid: cd96df4bda95441a4b949feb217028a1, type: 2}
   - {fileID: 11400000, guid: da98672b20f02448f8cbacc9ceda22a8, type: 2}
   - {fileID: 11400000, guid: 4a66b705e9bf342f7bd5d5eb53980748, type: 2}
   - {fileID: 11400000, guid: 6ba617cb3601f40148281aa4755739cd, type: 2}
   - {fileID: 11400000, guid: 25470474aa3eb46a4bcaa06fa1e0a038, type: 2}
+  - {fileID: 11400000, guid: 3e69fd7e025d44fb09b60940fad1da0f, type: 2}
+  - {fileID: 11400000, guid: 52eb609e40484477d9b8c800dcea7b03, type: 2}
+  - {fileID: 11400000, guid: f34220877333a4c559530a765d76cc59, type: 2}
   controlSpacing: 0
   minSpacing:
+  - 0
+  - 0
+  - 0
   - 0
   - 0
   - 0

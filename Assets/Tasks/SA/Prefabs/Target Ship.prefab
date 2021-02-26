@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 1802683560349069827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e3aa26e4a292143fe92f829e0c55dad3, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -39,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 751756003565191012, guid: 4f32333eecfdf4d3fb463482a31b2391,
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 751756003565191012, guid: 4f32333eecfdf4d3fb463482a31b2391,
         type: 3}
@@ -86,7 +86,7 @@ PrefabInstance:
         type: 3}
       propertyPath: loggedId
       value: 
-      objectReference: {fileID: 11400000, guid: 940629f75a86a458d85a4f170a71feba,
+      objectReference: {fileID: 11400000, guid: fc4cbcbe60f55415cbf922f96a6011ea,
         type: 2}
     - target: {fileID: 4735165832679096661, guid: 4f32333eecfdf4d3fb463482a31b2391,
         type: 3}
