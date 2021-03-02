@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
-
+// TODO try to change to subclasses with Type parameter
 [Serializable]
 public class Stage : IComparable
 {
-    public enum StageType { UI, Demo, Parent, Trials, Basic, End, Custom }
+    public enum StageType { UI, Demo, Parent, Trials, Basic, End, Custom, Prompts }
     public StageType stageType;
     public string stageName;
     public int stageId;
@@ -28,11 +28,15 @@ public class Stage : IComparable
     public DataHolder dataHolder;
     public bool hasPresetMatrix;
     public TrialMatrix presetMatrix;
+    public bool hasTrialSetter;
+    public TrialSetter trialSetter;
     public bool hasDemoProtocol;
     public DemoProtocol demoProtocol;
     public bool hasOpeningAudio;
     public TranslatableAudioClip openingAudio;
     public GameObject stageGameObject;
+    public int nPrompts;
+    public TranslatableString[] prompts;
     public int CompareTo(System.Object obj)
     {
         if (obj == null) return 1;

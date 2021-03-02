@@ -1422,59 +1422,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319870834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfcebc42130684b6086227fbb572e9c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8357e33963280486c9e8f37645ec67d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trialEnd: {fileID: 11400000, guid: 36b81ca759beb4ebaba0332a3584b93a, type: 2}
-  StageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
+  trialEnd: {fileID: 0}
+  StageEnd: {fileID: 0}
   inputVariablesManager: {fileID: 11400000, guid: 6dcc0580bb08347e9be89741f7012f32,
     type: 2}
-  participantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
-  trialType: {fileID: 11400000, guid: b8cd776117f6e4e17853a9422e6cf11c, type: 2}
-  AUDITORY: {fileID: 11400000, guid: cf4bb063d449142ef95b459a8d331516, type: 2}
-  CATCH: {fileID: 11400000, guid: 8ec4f511bcff8464a8790ad65f58c76b, type: 2}
-  side: {fileID: 11400000, guid: d02d885556eb149bf805a1decce782ae, type: 2}
-  LEFT: {fileID: 11400000, guid: f09511e89c72b46e0af1f9970873160a, type: 2}
-  RIGHT: {fileID: 11400000, guid: b25a4752157924ccea2e4fc8ce1b83b1, type: 2}
-  order: {fileID: 11400000, guid: 0a5d3857f1f0043b595fa4363d437522, type: 2}
-  FIRST: {fileID: 11400000, guid: a69a69c3776e643e090943a333ed51df, type: 2}
-  SECOND: {fileID: 11400000, guid: b62143e4c870d43c5a0699b1a5c61c7d, type: 2}
-  correct: {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
-  trial: {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
-  leftSpaceship: {fileID: 768636659}
-  rightSpaceship: {fileID: 1435082478}
-  comparisonFrequency: {fileID: 11400000, guid: 0ffbce8f8f1a649d7a9fb84a823ff8d2,
-    type: 2}
-  highestTone: {fileID: 8300000, guid: c15454a160c994cfa849524288a188df, type: 3}
-  tones:
-  - {fileID: 8300000, guid: 2463569a5911a44388f0c636314f9fcb, type: 3}
-  - {fileID: 8300000, guid: 99e3c9395c24c4620b436832ec7a892f, type: 3}
-  - {fileID: 8300000, guid: 0d435e906b37b4b93aa525c81a4663ae, type: 3}
-  - {fileID: 8300000, guid: 316b011a6ad1142e6bcf7e9e93fa36b7, type: 3}
-  - {fileID: 8300000, guid: 7ca33bd10a7374fe49760b8769de9945, type: 3}
-  - {fileID: 8300000, guid: ce9923f1b25664444ba9bfe509b17c98, type: 3}
-  - {fileID: 8300000, guid: 642ddbec9b1924f12947d6a700524e9e, type: 3}
-  - {fileID: 8300000, guid: ab76e1a8f0cad493593dffff63a1a402, type: 3}
-  - {fileID: 8300000, guid: 43055e2fe649e433d828a0f4a92b26ce, type: 3}
-  - {fileID: 8300000, guid: 6dd24b1aa68874738b44bb00a2a04655, type: 3}
-  - {fileID: 8300000, guid: 119e490a1009343189b733fe319a99ff, type: 3}
-  - {fileID: 8300000, guid: 692133e4d98db44bcbe3ddccda1a2b57, type: 3}
-  - {fileID: 8300000, guid: ac2147fbe59504b96b2f1ae1b30c7942, type: 3}
-  - {fileID: 8300000, guid: 8b1952db62a61447dabd89eefc7dfbce, type: 3}
-  - {fileID: 8300000, guid: f5bb707393c664c2c89f3d96a78ec9cd, type: 3}
-  - {fileID: 8300000, guid: 24317b69a54ed40cabb2f960a5294111, type: 3}
-  - {fileID: 8300000, guid: 166fcd709c64e49fcae9cb9d2b0bbf06, type: 3}
-  - {fileID: 8300000, guid: abb6bddde4de64731ae118ac196dcbe3, type: 3}
-  - {fileID: 8300000, guid: ddc203dc39e194536a8b0db26f381fd1, type: 3}
-  - {fileID: 8300000, guid: 1f07187a1a56747e88bd85eff4d1b96e, type: 3}
-  signallerCorrect: {fileID: 679956942}
-  signallerIncorrect: {fileID: 259554637}
-  asteroids: {fileID: 1928994214}
+  participantsGo: {fileID: 0}
+  trialType: {fileID: 0}
+  AUDITORY: {fileID: 0}
+  CATCH: {fileID: 0}
+  side: {fileID: 0}
+  LEFT: {fileID: 0}
+  RIGHT: {fileID: 0}
+  order: {fileID: 0}
+  FIRST: {fileID: 0}
+  SECOND: {fileID: 0}
+  correct: {fileID: 0}
+  trial: {fileID: 0}
+  leftSpaceship: {fileID: 0}
+  rightSpaceship: {fileID: 0}
+  comparisonFrequency: {fileID: 0}
+  highestTone: {fileID: 0}
+  tones: []
+  signallerCorrect: {fileID: 0}
+  signallerIncorrect: {fileID: 0}
+  asteroids: {fileID: 0}
   comparisonIndex: 0
   previous: 0
   reversal: 0
-  stimulusDuration: 1.5
-  ITI: 0.5
+  stimulusDuration: 0
+  ITI: 0
 --- !u!82 &1319870840
 AudioSource:
   m_ObjectHideFlags: 0

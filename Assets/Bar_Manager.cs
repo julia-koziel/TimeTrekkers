@@ -5,7 +5,9 @@ using UnityEngine;
 public class Bar_Manager : MonoBehaviour
 {
     public IntVariable block;
+    public IntVariable trial;
     public GameObject machine;
+    public GameObject sparkles;
     public Vector2[] dest;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,11 @@ public class Bar_Manager : MonoBehaviour
     void Update()
     {
         MoveShip();
+
+        if (trial==59)
+        {
+        
+        }
     }
 
     public void MoveShip()

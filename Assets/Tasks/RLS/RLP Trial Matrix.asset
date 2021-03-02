@@ -14,20 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVariablesManager: {fileID: 11400000, guid: 10c15ed4a81cb41cab98adb2b82e60ea,
     type: 2}
-  shuffle: 1
+  shuffle: 0
   rowArray:
   - row:
-    - 0
-    - 1
-  - row:
     - 1
     - 0
   - row:
-    - 0
     - 1
-  - row:
-    - 0
-    - 0
+    - 1
   - row:
     - 0
     - 1
@@ -37,15 +31,6 @@ MonoBehaviour:
   - row:
     - 1
     - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 0
-  - row:
-    - 1
-    - 0
   - row:
     - 1
     - 0
@@ -63,25 +48,13 @@ MonoBehaviour:
     - 0
   - row:
     - 1
-    - 0
-  - row:
     - 1
-    - 0
   - row:
-    - 1
+    - 0
     - 1
   - row:
     - 1
     - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
   - row:
     - 1
     - 1
@@ -93,19 +66,7 @@ MonoBehaviour:
     - 0
   - row:
     - 0
-    - 0
-  - row:
     - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 0
   - row:
     - 1
     - 0
@@ -114,13 +75,13 @@ MonoBehaviour:
     - 1
   - row:
     - 1
-    - 1
+    - 0
   - row:
     - 1
-    - 1
+    - 0
   - row:
     - 1
-    - 1
+    - 0
   - row:
     - 0
     - 1
@@ -138,25 +99,10 @@ MonoBehaviour:
     - 0
   - row:
     - 1
+    - 1
+  - row:
     - 0
-  - row:
-    - 0
-    - 0
-  - row:
     - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 0
   - row:
     - 1
     - 1
@@ -172,24 +118,6 @@ MonoBehaviour:
   - row:
     - 1
     - 0
-  - row:
-    - 1
-    - 0
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 1
-    - 1
-  - row:
-    - 0
-    - 1
-  - row:
-    - 1
-    - 1
   - row:
     - 1
     - 0
@@ -215,8 +143,26 @@ MonoBehaviour:
     - 1
     - 0
   - row:
+    - 0
+    - 1
+  - row:
     - 1
     - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 0
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
   - row:
     - 1
     - 1
@@ -227,6 +173,57 @@ MonoBehaviour:
     - 0
     - 1
   - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 0
+    - 0
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 1
+  - row:
     - 0
     - 0
   - row:
@@ -239,14 +236,11 @@ MonoBehaviour:
     - 1
     - 1
   - row:
-    - 1
+    - 0
     - 0
   - row:
-    - 0
     - 1
-  - row:
     - 1
-    - 0
   - row:
     - 1
     - 0
@@ -255,4 +249,10 @@ MonoBehaviour:
     - 0
   - row:
     - 1
+    - 1
+  - row:
     - 0
+    - 0
+  - row:
+    - 1
+    - 1

@@ -10,6 +10,7 @@ public class DemoShipBehaviour : MonoBehaviour
     private float x;
     private PirateAttackDemoLogic gameLogic;
     public GameObject clicked;
+    public AudioSource cannon;
 
     private Animator animator;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class DemoShipBehaviour : MonoBehaviour
         gameLogic = FindObjectOfType<PirateAttackDemoLogic>();
         animator = GetComponent<Animator>();
         handclick = FindObjectOfType<PirateAttackCursorBehaviour>();
+        cannon = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class DemoShipBehaviour : MonoBehaviour
 
         if(handclick.clicked)
         {
-            clicked.SetActive(true);
+            cannon.Play();
         }
 
         if (x > 13)

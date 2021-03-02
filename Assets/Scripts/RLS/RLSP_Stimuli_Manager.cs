@@ -13,6 +13,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public IntVariable clickedId;
     public IntVariable rewardedId;
     public IntVariable unrewardedId;
+    public GameObject food;
     
     public BoolVariable correct;
     public BoolVariable participantsGo;
@@ -25,8 +26,12 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     Stimulus[] _rs;
     Stimulus[] _urs;
     Stimulus swapStimulus;
+    public Stimulus[] all;
     public Transform leftPos;
+    public Transform centrePos;
     public Transform rightPos;
+
+    public Vector3 position;
     public float rewardDuration;
 
     void OnEnable()
@@ -37,21 +42,24 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public void OnStartTrial()
     {
         inputVariablesManager.updateInputVariables();
+        food.transform.position = centrePos.position;
+        food.SetActive(true);
+        Debug.Log(probindex);
 
-        if (participantsGo && trial == 0)
+        if (participantsGo && trial == 0 && trial==1)
         {
             rewardedStimuli[0].transform.position = leftPos.position;
             rewardedStimuli[1].transform.position = rightPos.position;
             rewardedStimuli.ForEach(s => s.SetActive(true));
         }
-        else if (participantsGo && trial == 1)
+        else if (participantsGo && trial == 2)
         {
             unrewardedStimuli[0].transform.position = leftPos.position;
             unrewardedStimuli[1].transform.position = rightPos.position;
             unrewardedStimuli.ForEach(s => s.SetActive(true));
         }
 
-        else 
+        else if (trial <40)
         {
             if (probindex==0)
             {
@@ -60,6 +68,43 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             
                 var rewarded = rewardedStimuli[Random.Range(0, 2)];
                 var unrewarded = unrewardedStimuli[Random.Range(0, 2)];
+
+                rewardedId.Value = rewarded.id;
+                unrewardedId.Value = unrewarded.id;
+
+                rewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
+                unrewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                rewarded.SetActive(true);
+                unrewarded.SetActive(true);
+            }
+
+            else if(probindex==1)
+            {
+                rewardedStimuli.ForEach(s => s.correct = true);
+                unrewardedStimuli.ForEach(s => s.correct = false);
+            
+                var rewarded = unrewardedStimuli[Random.Range(0, 2)];
+                var unrewarded = rewardedStimuli[Random.Range(0, 2)];
+
+                rewardedId.Value = rewarded.id;
+                unrewardedId.Value = unrewarded.id;
+
+                rewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
+                unrewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                rewarded.SetActive(true);
+                unrewarded.SetActive(true);
+            }
+        }
+
+            else
+            {
+                if (probindex==0)
+            {
+                rewardedStimuli.ForEach(s => s.correct = true);
+                unrewardedStimuli.ForEach(s => s.correct = false);
+            
+                var rewarded = unrewardedStimuli[Random.Range(0, 2)];
+                var unrewarded = rewardedStimuli[Random.Range(0, 2)];
 
                 rewardedId.Value = rewarded.id;
                 unrewardedId.Value = unrewarded.id;
@@ -87,7 +132,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
                 unrewarded.SetActive(true);
             }
 
-        }
+            }
+
     }
 
     // Priority listener
@@ -121,12 +167,16 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
 
         }
         
-        // TODO replace with 'rewarded'
         score.Value = correct ? score + 1 : score - 1;
+        position = all[clickedId].transform.position;
+        position.y = position.y-2;
+        food.transform.position = position;
+
 
           this.In(rewardDuration).Call(() => 
         {
             ITI.SetActive(true);
+            food.SetActive(false);
 
 
             this.In(1).Call(() => 

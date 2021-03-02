@@ -19,7 +19,6 @@ public class DemoRewardNonSocial : MonoBehaviour
     public GameObject[] textboxes;
     public GameObject MM;
     public GameObject trials;
-    
     public GameObject startButton;
     public GameObject repeatButton;
     private bool buttonClicked = false;
@@ -30,6 +29,9 @@ public class DemoRewardNonSocial : MonoBehaviour
     
     private bool audioOn;
     private bool subtitleOn;
+
+    public GameEvent stageEnd;
+
 
     private enum State {
         None,
@@ -223,6 +225,8 @@ public class DemoRewardNonSocial : MonoBehaviour
                 chestGood.SetActive(false);
                 chestGoodOpen.SetActive(false);
                 chestBad2.SetActive(false);
+                chestBad.transform.position = positions[1-magicPos];
+                chestBadOpen.transform.position = positions[1-magicPos];
                 chestBadOpen.SetActive(false);
                 coin.SetActive(false);
                 Theo.SetActive(false);
@@ -252,8 +256,10 @@ public class DemoRewardNonSocial : MonoBehaviour
                 finishStateLoad();
                 repeatButton.SetActive(false);
                 startButton.SetActive(false);
-                trials.SetActive(true);
+                textboxes[5].SetActive(false);
+                stageEnd.Raise();
                 gameObject.SetActive(false);
+
                 break;
             
             case State.None:

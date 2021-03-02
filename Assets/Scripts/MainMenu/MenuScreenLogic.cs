@@ -108,35 +108,35 @@ public class MenuScreenLogic : MonoBehaviour
 
     public void TreasureLoad()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
         gameObject.SetActive(false);
        
     }
 
     public void DinoGoLoad()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(9);
         gameObject.SetActive(false);
         
     }
 
     public void QueensLoad()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(5);
         gameObject.SetActive(false);
         
     }
 
     public void SHLoad()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(8);
         gameObject.SetActive(false);
         
     }
 
     public void AFLoad()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(9);
         gameObject.SetActive(false);
         
     }

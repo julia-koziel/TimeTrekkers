@@ -942,7 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stages:
   - stageType: 3
-    stageName: Trials Probabilisric
+    stageName: Trials Probabilistic
     stageId: 1
     nViews: 0
     hasTopText: 0
@@ -963,14 +963,18 @@ MonoBehaviour:
     maxViewings: 0
     nTrials: 80
     iti: 0.5
-    dataHolder: {fileID: 11400000, guid: f13ab607d233a4ad79b1104b4dd3be39, type: 2}
+    dataHolder: {fileID: 11400000, guid: 59632edce9a9c4028b05ab7e1affe74a, type: 2}
     hasPresetMatrix: 1
     presetMatrix: {fileID: 11400000, guid: bf7095434ba8448ae9a2d45b9488f63e, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1514332231}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Animation
     stageId: 0
@@ -996,11 +1000,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1610052945}
+    nPrompts: 0
+    prompts: []
   currentStageName: {fileID: 0}
   currentStageViews: {fileID: 0}
   currentStage:
@@ -1029,13 +1037,17 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 0}
+    nPrompts: 0
+    prompts: []
   stageIds: 
-  deletedIds: 
+  deletedIds: 02000000
 --- !u!4 &56168595
 Transform:
   m_ObjectHideFlags: 0
@@ -2183,6 +2195,10 @@ GameObject:
   m_Component:
   - component: {fileID: 98949297}
   - component: {fileID: 98949296}
+  - component: {fileID: 98949299}
+  - component: {fileID: 98949298}
+  - component: {fileID: 98949301}
+  - component: {fileID: 98949300}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -2295,6 +2311,8 @@ MonoBehaviour:
   - {fileID: 1351741479}
   - {fileID: 1351741479}
   - {fileID: 1351741479}
+  coinsound: {fileID: 11400000, guid: eb66107b0b3c5462282205a5eb32f857, type: 2}
+  losssound: {fileID: 11400000, guid: 268245fe32d1a4c7c8967aedd943df89, type: 2}
   lastActive: -1
 --- !u!4 &98949297
 Transform:
@@ -2390,6 +2408,174 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &98949298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98949295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a97b6710c4a9483dbabfb382a2f3b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 98949296}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  priority: 0
+--- !u!114 &98949299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98949295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a97b6710c4a9483dbabfb382a2f3b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: af9fc788790a243df8c362da0ee02719, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 98949296}
+        m_MethodName: OnResponseWindowEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  priority: 0
+--- !u!114 &98949300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98949295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b0f682afb6e47b5b65b8e4f8c5d13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 98949301}
+  spokenAudioEnabled: {fileID: 11400000, guid: 90ce3f59f4c5a4de0a6175e095232ff1, type: 2}
+  playOnAwake: 0
+--- !u!82 &98949301
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98949295}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &107754164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6739,7 +6925,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 21300000, guid: f2590b336f6464bdb8430927a0107405,
+      objectReference: {fileID: 21300000, guid: d32d459c9e8394a1d9313933d93beea6,
         type: 3}
     - target: {fileID: 2421000954961632990, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
@@ -6806,7 +6992,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f2590b336f6464bdb8430927a0107405,
+      objectReference: {fileID: 21300000, guid: d32d459c9e8394a1d9313933d93beea6,
         type: 3}
     - target: {fileID: 5393665879834740957, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
@@ -6857,7 +7043,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 21300000, guid: f2590b336f6464bdb8430927a0107405,
+      objectReference: {fileID: 21300000, guid: d32d459c9e8394a1d9313933d93beea6,
         type: 3}
     - target: {fileID: 7459892027725188882, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
@@ -6947,7 +7133,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 45953e3730d2c4401a5d2a08e63987d0,
+          m_ObjectArgument: {fileID: 21300000, guid: 1414178993e494f4da58e0bd0c89ae59,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -6962,7 +7148,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 34226a1d7c5814a20978469e18a85607,
+          m_ObjectArgument: {fileID: 21300000, guid: 56458f7b323054d56b4bcaf5f43d0217,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -10697,7 +10883,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.714286, y: 4.285714}
+    oldSize: {x: 800, y: 600}
     newSize: {x: 4, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -22423,6 +22609,7 @@ MonoBehaviour:
   clickedId: {fileID: 11400000, guid: fc4cbcbe60f55415cbf922f96a6011ea, type: 2}
   rewardedId: {fileID: 11400000, guid: 02303c03094134aef92d85814be1cfba, type: 2}
   unrewardedId: {fileID: 11400000, guid: f7f42a77e9b6744ba8b60a2251d6c8b5, type: 2}
+  food: {fileID: 1867175045}
   correct: {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
   participantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
   score: {fileID: 11400000, guid: 03288eaf83ad14a9aad106350dd227db, type: 2}
@@ -22434,8 +22621,15 @@ MonoBehaviour:
   unrewardedStimuli:
   - {fileID: 543673256}
   - {fileID: 678583674}
+  all:
+  - {fileID: 765482987}
+  - {fileID: 75035569}
+  - {fileID: 543673256}
+  - {fileID: 678583674}
   leftPos: {fileID: 1262085406}
+  centrePos: {fileID: 82710422}
   rightPos: {fileID: 1115193226}
+  position: {x: 0, y: 0, z: 0}
   rewardDuration: 1
 --- !u!1 &1523644024
 GameObject:

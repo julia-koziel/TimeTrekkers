@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a5c9a9abdc646538c96e8a223d30fe, type: 3}
+  m_Name: SAC_TrialSetter
+  m_EditorClassIdentifier: 
+  inputVariablesManager: {fileID: 11400000, guid: e681fcf4d016f4426bcad7b1b2a791a0,
+    type: 2}
+  patternList: {fileID: 11400000, guid: d1c46ffef8f1a47979719eadc194b9c4, type: 2}
+  trialType: {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}
+  stimuliIds: {fileID: 11400000, guid: 2a69c9598e9e840bdb5801e804dd02e5, type: 2}
+  minSpacing: 2
+  blockLength: 7

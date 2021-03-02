@@ -12,47 +12,48 @@ using System;
 public class StageListEditor : Editor
 {
     ReorderableList stages;
-    string[] stageNames 
-    { 
-        get 
-        { 
+    string[] stageNames
+    {
+        get
+        {
             var size = stages.serializedProperty.arraySize;
-            if (size == 0) return new string[] {"No Stages Added"};
+            if (size == 0) return new string[] { "No Stages Added" };
             else
             {
                 return (new string[size]).Select((s, i) => stages.serializedProperty.GetArrayElementAtIndex(i).FindPropertyRelative("stageName").stringValue).ToArray();
             }
-        } 
+        }
     }
-    int[] stageIds 
-    { 
-        get 
-        { 
+    int[] stageIds
+    {
+        get
+        {
             var size = stages.serializedProperty.arraySize;
-            if (size == 0) return new int[] {};
+            if (size == 0) return new int[] { };
             else
             {
                 return (new int[size]).Select((s, i) => stages.serializedProperty.GetArrayElementAtIndex(i).FindPropertyRelative("stageId").intValue).ToArray();
             }
-        } 
+        }
     }
     SerializedProperty deletedIds;
 
-    void OnEnable() 
+    void OnEnable()
     {
         stages = CreateList(serializedObject, serializedObject.FindProperty("stages"));
         deletedIds = serializedObject.FindProperty("deletedIds");
     }
 
-    ReorderableList CreateList (SerializedObject obj, SerializedProperty prop)
+    ReorderableList CreateList(SerializedObject obj, SerializedProperty prop)
     {
         ReorderableList list = new ReorderableList(obj, prop, true, true, true, true);
 
         List<float> heights = new List<float>(prop.arraySize);
 
-        list.drawElementCallback = (rect, index, active, focused) => {
+        list.drawElementCallback = (rect, index, active, focused) =>
+        {
             var element = list.serializedProperty.GetArrayElementAtIndex(index);
-            
+
             float heightUnit = EditorGUIUtility.singleLineHeight * 1.25f;
             float heightMargin = EditorGUIUtility.singleLineHeight * 0.125f;
             float height = heightUnit;
@@ -73,25 +74,25 @@ public class StageListEditor : Editor
 
             if (active)
             {
-                
+
                 height += heightUnit;
                 rect.y += heightUnit;
                 if (stageType.IsEnumVal(typeof(ST), ST.Basic, ST.End))
                 {
                     var rects = rect.DivideHorizontally(2);
                     EditorGUI.LabelField(rects[0], "Stage GameObject");
-                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("stageGameObject"), GUIContent.none); 
+                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("stageGameObject"), GUIContent.none);
                 }
                 else if (stageType.IsEnumVal(typeof(ST), ST.Demo, ST.Parent, ST.Trials))
                 {
                     var rects = rect.DivideHorizontally(2);
                     EditorGUI.LabelField(rects[0], "No. Trials");
-                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("nTrials"), GUIContent.none); 
+                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("nTrials"), GUIContent.none);
                     height += heightUnit;
                     rect.y += heightUnit;
                     rects = rect.DivideHorizontally(2);
                     EditorGUI.LabelField(rects[0], "ITI");
-                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("iti"), GUIContent.none); 
+                    EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("iti"), GUIContent.none);
                     height += heightUnit;
                     rect.y += heightUnit;
                     rects = rect.DivideHorizontally(2);
@@ -115,13 +116,23 @@ public class StageListEditor : Editor
                     {
                         var hasPresetMatrix = element.FindPropertyRelative("hasPresetMatrix");
                         hasPresetMatrix.boolValue = EditorGUI.ToggleLeft(rects[0], "Preset Trial Matrix", hasPresetMatrix.boolValue);
-                        if (hasPresetMatrix.boolValue) 
+                        if (hasPresetMatrix.boolValue)
                         {
                             EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("presetMatrix"), GUIContent.none);
                         }
+
+                        height += heightUnit;
+                        rect.y += heightUnit;
+                        rects = rect.DivideHorizontally(2);
+                        var hasTrialSetter = element.FindPropertyRelative("hasTrialSetter");
+                        hasTrialSetter.boolValue = EditorGUI.ToggleLeft(rects[0], "Trial Setter", hasTrialSetter.boolValue);
+                        if (hasTrialSetter.boolValue)
+                        {
+                            EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("trialSetter"), GUIContent.none);
+                        }
                     }
 
-                    
+
 
                     if (stageType.IsEnumVal(typeof(ST), ST.Trials))
                     {
@@ -129,14 +140,14 @@ public class StageListEditor : Editor
                         rect.y += heightUnit;
                         rects = rect.DivideHorizontally(2);
                         EditorGUI.LabelField(rects[0], "Data Holder");
-                        EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("dataHolder"), GUIContent.none); 
+                        EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("dataHolder"), GUIContent.none);
                         height += heightUnit;
                         rect.y += heightUnit;
                         rects = rect.DivideHorizontally(2);
 
                         var hasOpeningAudio = element.FindPropertyRelative("hasOpeningAudio");
                         hasOpeningAudio.boolValue = EditorGUI.ToggleLeft(rects[0], "Opening Audio", hasOpeningAudio.boolValue);
-                        if (hasOpeningAudio.boolValue) 
+                        if (hasOpeningAudio.boolValue)
                         {
                             EditorGUI.PropertyField(rects[1], element.FindPropertyRelative("openingAudio"), GUIContent.none);
                         }
@@ -159,10 +170,10 @@ public class StageListEditor : Editor
 
                             EditorGUI.LabelField(rect2, "Go to");
                             repeatIndex = EditorGUI.Popup(rect3, repeatIndex, stageNames);
-                            
+
                             repeatStage.intValue = stageIds[repeatIndex];
                         }
-                    } 
+                    }
                 }
                 else if (stageType.IsEnumVal(typeof(ST), ST.UI))
                 {
@@ -223,7 +234,7 @@ public class StageListEditor : Editor
 
                         var repeatText = element.FindPropertyRelative("repeatText");
                         var repeatStage = element.FindPropertyRelative("repeatStage");
-                        
+
                         var repeatIndex = stageIds.IndexOf(repeatStage.intValue);
                         if (repeatIndex < 0) repeatIndex = index;
 
@@ -231,7 +242,7 @@ public class StageListEditor : Editor
                         EditorGUI.PropertyField(rect2, repeatText, GUIContent.none);
                         EditorGUI.LabelField(rect3, "Go to");
                         repeatIndex = EditorGUI.Popup(rect4, repeatIndex, stageNames);
-                        
+
                         repeatStage.intValue = stageIds[repeatIndex];
                     }
                     else
@@ -250,7 +261,7 @@ public class StageListEditor : Editor
 
                         var customText = element.FindPropertyRelative("customText");
                         var customStage = element.FindPropertyRelative("customStage");
-                        
+
                         var customIndex = stageIds.IndexOf(customStage.intValue);
                         if (customIndex < 0) customIndex = index;
 
@@ -258,7 +269,7 @@ public class StageListEditor : Editor
                         EditorGUI.PropertyField(rect2, customText, GUIContent.none);
                         EditorGUI.LabelField(rect3, "Go to");
                         customIndex = EditorGUI.Popup(rect4, customIndex, stageNames);
-                        
+
                         customStage.intValue = stageIds[customIndex];
                     }
                     else
@@ -277,7 +288,7 @@ public class StageListEditor : Editor
 
                         var continueText = element.FindPropertyRelative("continueText");
                         var continueStage = element.FindPropertyRelative("continueStage");
-                        
+
                         var continueIndex = stageIds.IndexOf(continueStage.intValue);
                         if (continueIndex < 0) continueIndex = index;
 
@@ -285,7 +296,7 @@ public class StageListEditor : Editor
                         EditorGUI.PropertyField(rect2, continueText, GUIContent.none);
                         EditorGUI.LabelField(rect3, "Go to");
                         continueIndex = EditorGUI.Popup(rect4, continueIndex, stageNames);
-                        
+
                         continueStage.intValue = stageIds[continueIndex];
                     }
                     else
@@ -318,48 +329,86 @@ public class StageListEditor : Editor
                     }
                     else maxViewings.intValue = 0;
                 }
+                else if (stageType.IsEnumVal(typeof(ST), ST.Prompts))
+                {
+                    var rects = rect.DivideHorizontally(2);
+                    var nPrompts = element.FindPropertyRelative("nPrompts");
+
+                    EditorGUI.LabelField(rects[0], "Number of Prompts");
+                    nPrompts.intValue = EditorGUI.IntField(rects[1], GUIContent.none, nPrompts.intValue);
+
+                    var prompts = element.FindPropertyRelative("prompts");
+                    prompts.arraySize = nPrompts.intValue;
+
+                    serializedObject.ApplyModifiedProperties();
+
+                    if (nPrompts.intValue > 0)
+                    {
+                        height += heightUnit;
+                        rect.y += heightUnit;
+                        rects = rect.DivideHorizontally(nPrompts.intValue);
+                        for (int i = 0; i < nPrompts.intValue; i++)
+                        {
+                            EditorGUI.PropertyField(rects[i], prompts.GetArrayElementAtIndex(i), GUIContent.none);
+                        }
+                    }
+                }
             }
 
             height += heightMargin;
 
-            try {
+            try
+            {
                 heights[index] = height;
-            } catch (ArgumentOutOfRangeException e) {
-                Debug.LogWarning (e.Message);
-            } finally {
-                float[] floats = heights.ToArray ();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Debug.LogWarning(e.Message);
+            }
+            finally
+            {
+                float[] floats = heights.ToArray();
                 Array.Resize(ref floats, prop.arraySize);
-                heights = floats.ToList ();
+                heights = floats.ToList();
             }
         };
 
-        list.elementHeightCallback = (index) => {
-            Repaint ();
+        list.elementHeightCallback = (index) =>
+        {
+            Repaint();
             float height = 0;
 
-            try {
+            try
+            {
                 height = heights[index];
-            } catch (ArgumentOutOfRangeException e) {
-                Debug.LogWarning (e.Message);
-            } finally {
-                float[] floats = heights.ToArray ();
-                Array.Resize (ref floats, prop.arraySize);
-                heights = floats.ToList ();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Debug.LogWarning(e.Message);
+            }
+            finally
+            {
+                float[] floats = heights.ToArray();
+                Array.Resize(ref floats, prop.arraySize);
+                heights = floats.ToList();
             }
 
             return height;
         };
 
-        list.drawHeaderCallback = (Rect rect) => {
+        list.drawHeaderCallback = (Rect rect) =>
+        {
             EditorGUI.LabelField(rect, "Stages");
         };
 
-        list.onAddDropdownCallback = (Rect buttonRect, ReorderableList l) => {
+        list.onAddDropdownCallback = (Rect buttonRect, ReorderableList l) =>
+        {
             var menu = new GenericMenu();
 
             foreach (string type in Enum.GetNames(typeof(ST)))
             {
-                menu.AddItem(new GUIContent($"Create New/{type}"), false, () => { 
+                menu.AddItem(new GUIContent($"Create New/{type}"), false, () =>
+                {
                     var newId = getNewStageId();
                     var index = l.serializedProperty.arraySize;
                     l.serializedProperty.arraySize++;
@@ -379,23 +428,25 @@ public class StageListEditor : Editor
                     element.FindPropertyRelative("hasCustomStage").boolValue = false;
                     element.FindPropertyRelative("hasMaxViewings").boolValue = false;
                     element.FindPropertyRelative("hasPresetMatrix").boolValue = false;
+                    element.FindPropertyRelative("hasTrialSetter").boolValue = false;
                     element.FindPropertyRelative("hasDemoProtocol").boolValue = false;
                     element.FindPropertyRelative("hasOpeningAudio").boolValue = false;
                     serializedObject.ApplyModifiedProperties();
                 });
             }
-            
+
             menu.ShowAsContext();
         };
 
-        list.onRemoveCallback = (ReorderableList l) => {
+        list.onRemoveCallback = (ReorderableList l) =>
+        {
             var idx = l.index;
             var deletedId = stageIds[idx];
             var referencingIdxs = getIdxsOfStagesReferencingStage(deletedId);
-            if (referencingIdxs.Length > 0 && !EditorUtility.DisplayDialog("Warning!", 
-    	        "The following stages have references to this stage:\n\n" + 
-                $"{", ".Join(referencingIdxs.Select(i => stageNames[i]))}\n\n" + 
-                "Deleting this stage will reset all those references. Are you sure you want to continue?", 
+            if (referencingIdxs.Length > 0 && !EditorUtility.DisplayDialog("Warning!",
+                "The following stages have references to this stage:\n\n" +
+                $"{", ".Join(referencingIdxs.Select(i => stageNames[i]))}\n\n" +
+                "Deleting this stage will reset all those references. Are you sure you want to continue?",
                 "Yes", "No"))
             {
                 return;
@@ -405,7 +456,7 @@ public class StageListEditor : Editor
                 resetReferencesTo(deletedId);
                 l.index = -1;
                 deletedIds.arraySize++;
-                deletedIds.GetArrayElementAtIndex(deletedIds.arraySize-1).intValue = deletedId;
+                deletedIds.GetArrayElementAtIndex(deletedIds.arraySize - 1).intValue = deletedId;
                 l.serializedProperty.DeleteArrayElementAtIndex(idx);
                 serializedObject.ApplyModifiedProperties();
             }
@@ -462,7 +513,7 @@ public class StageListEditor : Editor
             var continueStage = stage.FindPropertyRelative("continueStage");
 
             if (repeatStage.intValue == id) repeatStage.intValue = stageIds[i];
-            if(customStage.intValue == id) customStage.intValue = stageIds[i];
+            if (customStage.intValue == id) customStage.intValue = stageIds[i];
             if (continueStage.intValue == id) continueStage.intValue = stageIds[i];
         }
     }
@@ -478,7 +529,7 @@ public class StageListEditor : Editor
 
     }
 
-    private void clickHandler(object target) 
+    private void clickHandler(object target)
     {
         var iv = (InputVariable)target;
         var index = stages.serializedProperty.arraySize;

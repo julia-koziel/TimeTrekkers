@@ -14,6 +14,6 @@ public class UploadData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       SceneManager.LoadScene(7); 
+       SceneManager.LoadScene(11); 
     }
 }

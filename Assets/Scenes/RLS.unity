@@ -4338,6 +4338,7 @@ MonoBehaviour:
   participantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
   score: {fileID: 11400000, guid: 03288eaf83ad14a9aad106350dd227db, type: 2}
   trialEnd: {fileID: 11400000, guid: 36b81ca759beb4ebaba0332a3584b93a, type: 2}
+  StageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
   food: {fileID: 1564280271}
   rewardedStimuli:
   - {fileID: 1632916690}
@@ -4345,7 +4346,11 @@ MonoBehaviour:
   unrewardedStimuli:
   - {fileID: 1285934590}
   - {fileID: 1947124607}
-  all: []
+  all:
+  - {fileID: 1632916690}
+  - {fileID: 1045443069}
+  - {fileID: 1285934590}
+  - {fileID: 1947124607}
   leftPos: {fileID: 1983124263}
   rightPos: {fileID: 1894011607}
   rewardDuration: 0.5
@@ -8730,36 +8735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stages:
-  - stageType: 4
-    stageName: Animation
-    stageId: 0
-    nViews: 0
-    hasTopText: 0
-    hasBottomText: 0
-    hasRepeatStage: 0
-    hasContinueStage: 0
-    hasCustomStage: 0
-    topText: {fileID: 0}
-    bottomText: {fileID: 0}
-    repeatText: {fileID: 0}
-    customText: {fileID: 0}
-    continueText: {fileID: 0}
-    repeatStage: 0
-    customStage: 0
-    continueStage: 0
-    maxViewingsStage: 0
-    hasMaxViewings: 0
-    maxViewings: 0
-    nTrials: 0
-    iti: 0
-    dataHolder: {fileID: 0}
-    hasPresetMatrix: 0
-    presetMatrix: {fileID: 0}
-    hasDemoProtocol: 0
-    demoProtocol: {fileID: 0}
-    hasOpeningAudio: 0
-    openingAudio: {fileID: 0}
-    stageGameObject: {fileID: 2024402893}
   - stageType: 3
     stageName: Main-Reversal
     stageId: 1
@@ -8790,6 +8765,36 @@ MonoBehaviour:
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1029905027}
+  - stageType: 4
+    stageName: Animation
+    stageId: 0
+    nViews: 0
+    hasTopText: 0
+    hasBottomText: 0
+    hasRepeatStage: 0
+    hasContinueStage: 0
+    hasCustomStage: 0
+    topText: {fileID: 0}
+    bottomText: {fileID: 0}
+    repeatText: {fileID: 0}
+    customText: {fileID: 0}
+    continueText: {fileID: 0}
+    repeatStage: 0
+    customStage: 0
+    continueStage: 0
+    maxViewingsStage: 0
+    hasMaxViewings: 0
+    maxViewings: 0
+    nTrials: 0
+    iti: 0
+    dataHolder: {fileID: 0}
+    hasPresetMatrix: 0
+    presetMatrix: {fileID: 0}
+    hasDemoProtocol: 0
+    demoProtocol: {fileID: 0}
+    hasOpeningAudio: 0
+    openingAudio: {fileID: 0}
+    stageGameObject: {fileID: 2024402893}
   - stageType: 4
     stageName: End
     stageId: 3
@@ -9648,7 +9653,7 @@ PrefabInstance:
     - target: {fileID: 4728937619616880081, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393665879834740957, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RLS_Stimuli_Manager : MonoBehaviour
 {   
@@ -16,6 +17,7 @@ public class RLS_Stimuli_Manager : MonoBehaviour
     public BoolVariable participantsGo;
     public IntVariable score;
     public GameEvent trialEnd;
+    public GameEvent StageEnd;
     public GameObject food;
     [Space(10)]
     public List<Stimulus> rewardedStimuli;
@@ -26,6 +28,9 @@ public class RLS_Stimuli_Manager : MonoBehaviour
     public Stimulus[] all;
     public Transform leftPos;
     public Transform rightPos;
+    public Transform centre;
+
+    public Vector3 position;
     public float rewardDuration;
 
     void OnEnable()
@@ -36,6 +41,8 @@ public class RLS_Stimuli_Manager : MonoBehaviour
     public void OnStartTrial()
     {
         inputVariablesManager.updateInputVariables();
+        food.SetActive(true);
+        food.transform.position = centre.position;
 
         if (participantsGo && trial == 0)
         {
@@ -49,7 +56,7 @@ public class RLS_Stimuli_Manager : MonoBehaviour
             unrewardedStimuli[1].transform.position = rightPos.position;
             unrewardedStimuli.ForEach(s => s.SetActive(true));
         }
-        else if (participantsGo && trial<20)
+        else if (participantsGo && trial<19)
         {
             var rewarded = rewardedStimuli[Random.Range(0, 2)];
             var unrewarded = unrewardedStimuli[Random.Range(0, 2)];
@@ -111,12 +118,20 @@ public class RLS_Stimuli_Manager : MonoBehaviour
                 rewardedStimuli.Add(swapStimulus);
             }
 
+            else if (trial>39)
+            {
+                StageEnd.Raise();
+                SceneManager.LoadScene(7);
+            }
+
         }
         
         // TODO replace with 'rewarded'
 
-        food.transform.position = all[clickedId].transform.position;
         score.Value = correct ? score + 1 : score - 1;
+        position = all[clickedId].transform.position;
+        position.y = position.y-2;
+        food.transform.position = position;
 
         this.In(rewardDuration).Call(trialEnd.Raise);
     }

@@ -21,6 +21,7 @@ public class IntroScreenLogic : MonoBehaviour
     public void StartTrials()
     {
         StageEnd.Raise();
+        Debug.Log("clicked");
     }
 
     public void StartDemo()

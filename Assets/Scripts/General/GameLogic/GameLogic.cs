@@ -96,6 +96,7 @@ public class GameLogic : MonoBehaviour
                 nTrials.Value = stage.nTrials;
                 trialRunner.interTrialInterval = stage.iti;
                 if (stage.hasPresetMatrix) stage.presetMatrix.SetTrialMatrix();
+                else if (stage.hasTrialSetter) stage.trialSetter.SetTrialMatrix();
                 csv.data = stage.dataHolder;
                 stage.stageGameObject.SetActive(true);
                 audioLength = stage.hasOpeningAudio ? audioTranslator.getLength(stage.openingAudio) : 0;

@@ -16,7 +16,9 @@ public class SA_StimuliManager : MonoBehaviour
     public IntVariable loggedTrial;
     public IntVariable loggedCarType;
     public IntVariable nTrials;
+    public BoolVariable Level1completed;
     public int maxMissedHits;
+
     public float separationDistance;
     int missedHits = 0;
     float speed;
@@ -30,9 +32,10 @@ public class SA_StimuliManager : MonoBehaviour
         inputVariablesManager.updateInputVariables();
 
         if (carType.Value == PIP) carId.Value = PIP;
-
+    
         Instantiate(carPrefabs[carId]);
-
+        Debug.Log(carPrefabs[carId]);
+        
         if (trial < nTrials - 1) this.In(separationDistance / speed).Call(trialEnd.Raise);
     }
 
@@ -47,12 +50,15 @@ public class SA_StimuliManager : MonoBehaviour
         if (missedHits == maxMissedHits) stageEnd.Raise();
 
         // Wait until all cars offscreen before ending trialRunner
-        if (loggedTrial == nTrials - 1) trialEnd.Raise();
+        if (loggedTrial == nTrials - 1) 
+        Debug.Log("trialended");
+        trialEnd.Raise();
     }
 
     public void Reset()
     {
         missedHits = 0;
         inputVariablesManager.Reset();
+        Level1completed.Value = 1;
     }
 }

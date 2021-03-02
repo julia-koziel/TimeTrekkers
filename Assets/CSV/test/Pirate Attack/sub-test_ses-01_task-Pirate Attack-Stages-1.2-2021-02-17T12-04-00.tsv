@@ -1,9 +1,0 @@
-participant_id	stage_name	views	top_text	bottom_text	button1	button2	button3	button_clicked
-test	Intro screen	1						Continue
-test	Animation	1						Continue
-test	Demo	1						Continue
-test	Demo UI	1			Repeat		Continue	Continue
-test	Pretest	1						
-test	Practice UI	1					Lets practice!	Lets practice!
-test	Practice	1						Continue
-test	Main UI	1			Repeat		Start the game!	Start the game!
