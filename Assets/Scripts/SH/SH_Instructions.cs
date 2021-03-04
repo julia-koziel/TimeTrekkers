@@ -14,6 +14,7 @@ public class SH_Instructions : MonoBehaviour
     public GameObject win;
     [Space(10)]
 
+    public TranslatableAudioClip HiThere;
     public TranslatableAudioClip RockCard;
     public TranslatableAudioClip ScissorsCard;
     public TranslatableAudioClip PaperCard;
@@ -40,14 +41,15 @@ public class SH_Instructions : MonoBehaviour
 
         this.BuildMovement()
             
-            .First(() => {audioTranslator.Play(ScissorsCard); scissors.SetActive(true);})
+            .First(() => {audioTranslator.Play(HiThere); scissors.SetActive(true);})
+            .Then(duration: (audioTranslator.getLength(HiThere)), run: dt => {})
+            .Then(() => {audioTranslator.Play(ScissorsCard); scissors.SetActive(true);})
             .Then(duration: (audioTranslator.getLength(ScissorsCard)), run: dt => {})
             .Then(() => {audioTranslator.Play(RockCard); SetActive(rock);})
             .Then(duration: (audioTranslator.getLength(RockCard)), run: dt => {})
             .Then(() => { audioTranslator.Play(PaperCard); SetActive(paper);})
             .Then(duration: (audioTranslator.getLength(PaperCard)), run: dt => {})
-            .Then(() => {audioTranslator.Play(LetMeShowYou); })
-            .Then(duration: audioTranslator.getLength(LetMeShowYou), run: dt => {})
+            
             .Then(1, false, false, Move(scissors.transform, from: scissorsv, to: paperv, duration: 1),
                                    Move(scissors.transform, from: paperv, to: scissorsv, duration: 1))
             .Then(() => { audioTranslator.Play(ScissorsWins); win.SetActive(true); })
@@ -62,6 +64,8 @@ public class SH_Instructions : MonoBehaviour
             .Then(() => { audioTranslator.Play(RockWins); win.SetActive(true); })
             .Then(() => {win.SetActive(false);})
             .Then(duration: audioTranslator.getLength(RockWins), run: dt => {})
+            .Then(() => {audioTranslator.Play(LetMeShowYou); })
+            .Then(duration: audioTranslator.getLength(LetMeShowYou), run: dt => {})
             .Then(stageEnd.Raise)
             .Start();
     }

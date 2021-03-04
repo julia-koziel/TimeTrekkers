@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0649bae73694277ab427df84fe3c91, type: 3}
   m_Name: SAC_1target Pattern
   m_EditorClassIdentifier: 
-  patterns: []
+  patterns:
+  - variables:
+    - {fileID: 11400000, guid: c5ecc07c49427428b932c54cd1b2b8a6, type: 2}

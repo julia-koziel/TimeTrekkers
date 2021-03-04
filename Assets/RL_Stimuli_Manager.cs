@@ -117,11 +117,9 @@ public class RL_Stimuli_Manager : MonoBehaviour
                 rewardedStimuli.Add(swapStimulus);
             }
 
-            else if (trial>39)
+            else if (trial>38)
             {
-                StageEnd.Raise();
                 SceneManager.LoadScene(6);
-
             }
 
         }

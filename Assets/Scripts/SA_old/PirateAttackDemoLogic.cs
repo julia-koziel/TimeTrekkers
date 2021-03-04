@@ -8,6 +8,10 @@ public class PirateAttackDemoLogic : MonoBehaviour
     public GameObject[] pipsCars;
     public GameObject[] otherCars;
     public GameObject[] subtitles;
+    public GameObject back;
+
+    public BoolVariable level1;
+    public BoolVariable level2;
 
     public GameEvent StageEnd;
     private PirateAttackCursorBehaviour handCursor;
@@ -81,6 +85,7 @@ public class PirateAttackDemoLogic : MonoBehaviour
     {
         time += Time.deltaTime;
         position = time * velocity;
+        back.SetActive(true);
         
         if (position > distBetweenCars)
         {

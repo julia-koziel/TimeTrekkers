@@ -251,7 +251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 381, y: 179}
+  m_AnchoredPosition: {x: 386, y: 175}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29125484
@@ -3078,11 +3078,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1540474604}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Animation
     stageId: 0
@@ -3108,11 +3112,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1485636321}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Demo
     stageId: 17
@@ -3138,11 +3146,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 852005840}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Demo UI
     stageId: 7
@@ -3168,11 +3180,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Pretest
     stageId: 6
@@ -3198,11 +3214,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 76da1f4188a444ac69315ab5aae5c31d, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Practice UI
     stageId: 11
@@ -3228,11 +3248,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Practice
     stageId: 12
@@ -3258,11 +3282,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 37c51d1b39f0c488092215ac8d8a51be, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1205251377}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Main UI
     stageId: 3
@@ -3288,11 +3316,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1221504386}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Main
     stageId: 14
@@ -3318,11 +3350,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 37c51d1b39f0c488092215ac8d8a51be, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1205251377}
+    nPrompts: 0
+    prompts: []
   - stageType: 5
     stageName: New End Stage
     stageId: 4
@@ -3348,11 +3384,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1221504386}
+    nPrompts: 0
+    prompts: []
   currentStageName: {fileID: 0}
   currentStageViews: {fileID: 0}
   currentStage:
@@ -3381,11 +3421,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 0}
+    nPrompts: 0
+    prompts: []
   stageIds: 
   deletedIds: 01000000100000000f00000008000000050000000a0000000d00000009000000
 --- !u!4 &660672300
@@ -8951,7 +8995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1540474605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9561,7 +9605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1552, y: 205}
+  m_AnchoredPosition: {x: 1598, y: 211}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880802410
@@ -10380,11 +10424,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1540474604}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Animation
     stageId: 0
@@ -10410,11 +10458,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1485636321}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Demo
     stageId: 17
@@ -10440,11 +10492,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 852005840}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Demo UI
     stageId: 7
@@ -10470,11 +10526,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 2
     stageName: Pretest Parent
     stageId: 5
@@ -10500,11 +10560,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Pretest parent UI
     stageId: 1
@@ -10530,11 +10594,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1221504386}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Pretest
     stageId: 6
@@ -10560,11 +10628,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 76da1f4188a444ac69315ab5aae5c31d, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 1
     openingAudio: {fileID: 11400000, guid: 7f216fb5af9834080baf3ccff8818c60, type: 2}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Parent practice UI
     stageId: 11
@@ -10590,11 +10662,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 2
     stageName: Parent Practice
     stageId: 10
@@ -10620,11 +10696,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1205251377}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Practice UI
     stageId: 15
@@ -10650,11 +10730,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1221504386}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Practice
     stageId: 12
@@ -10680,11 +10764,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 37c51d1b39f0c488092215ac8d8a51be, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 1
     openingAudio: {fileID: 11400000, guid: be9d7a9d11f584d16b880b472b585806, type: 2}
     stageGameObject: {fileID: 1205251377}
+    nPrompts: 0
+    prompts: []
   - stageType: 0
     stageName: Main UI
     stageId: 13
@@ -10710,11 +10798,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 762416953}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Main
     stageId: 14
@@ -10740,11 +10832,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 37c51d1b39f0c488092215ac8d8a51be, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1205251377}
+    nPrompts: 0
+    prompts: []
   - stageType: 5
     stageName: New End Stage
     stageId: 4
@@ -10770,11 +10866,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1221504386}
+    nPrompts: 0
+    prompts: []
   currentStageName: {fileID: 0}
   currentStageViews: {fileID: 0}
   currentStage:
@@ -10803,11 +10903,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 0}
+    nPrompts: 0
+    prompts: []
   stageIds: 
   deletedIds: 08000000030000000900000010000000
 --- !u!4 &1959969537
@@ -11059,7 +11163,7 @@ RectTransform:
   m_GameObject: {fileID: 2059153499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: -1}
   m_Children: []
   m_Father: {fileID: 1221504387}
   m_RootOrder: 3
@@ -11274,7 +11378,7 @@ Transform:
   m_GameObject: {fileID: 2131385244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -99}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.9, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -11318,7 +11422,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f4a8f34361404e5083db3bf9f99d41e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5418fddb7070e48bdadf11bda6f49e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -287,7 +287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c583f0234f00740b7974d38f769a133c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26394c677410c4b1a9d863ca651b4ded, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -574,7 +574,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 5.764801, y: 50.64407}
+  m_Offset: {x: -0.21551514, y: 50.64407}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -585,7 +585,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 211.7887, y: 96.28826}
+  m_Size: {x: 199.82806, y: 96.28826}
   m_EdgeRadius: 0
 --- !u!114 &188191677
 MonoBehaviour:
@@ -654,9 +654,9 @@ GameObject:
   - component: {fileID: 205284272}
   - component: {fileID: 205284277}
   - component: {fileID: 205284276}
-  - component: {fileID: 205284275}
   - component: {fileID: 205284274}
   - component: {fileID: 205284273}
+  - component: {fileID: 205284275}
   m_Layer: 0
   m_Name: Asteroids
   m_TagString: Untagged
@@ -814,16 +814,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 205284271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4613045e891446f9712b0517191edf, type: 3}
+  m_Script: {fileID: 11500000, guid: 9453bbda3f306486e9c8bafba39e194e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   otherbuttons:
   - {fileID: 1622606068}
-  - {fileID: 188191673}
-  - {fileID: 1581863118}
   zoomed: {fileID: 1362794109}
-  DinoIcon: {fileID: 205284271}
-  DinoClick: 0
+  AFIcon: {fileID: 205284271}
+  AFClicked: 0
 --- !u!114 &205284276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,8 +2528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1894, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 1928, y: -3.5}
+  m_SizeDelta: {x: 96.41606, y: 99.38745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902293561
 MonoBehaviour:
@@ -2857,6 +2855,7 @@ GameObject:
   - component: {fileID: 1113867746}
   - component: {fileID: 1113867745}
   - component: {fileID: 1113867743}
+  - component: {fileID: 1113867744}
   m_Layer: 0
   m_Name: SH zoomed
   m_TagString: Untagged
@@ -2873,14 +2872,14 @@ RectTransform:
   m_GameObject: {fileID: 1113867741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.045, z: 0}
   m_Children: []
   m_Father: {fileID: 902293560}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 24.6, y: -9}
+  m_AnchoredPosition: {x: 21.8, y: -6.4}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0, y: 0}
 --- !u!82 &1113867743
@@ -2979,6 +2978,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1113867744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113867741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871ab56c600074d1da326fa16f837432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHClicked: 0
 --- !u!114 &1113867745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3620,8 +3632,8 @@ GameObject:
   - component: {fileID: 1362794110}
   - component: {fileID: 1362794114}
   - component: {fileID: 1362794113}
-  - component: {fileID: 1362794112}
   - component: {fileID: 1362794111}
+  - component: {fileID: 1362794112}
   m_Layer: 0
   m_Name: Asteroids Zoomed
   m_TagString: Untagged
@@ -3753,10 +3765,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362794109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61f2550b212e4ae58e60f703de57f0f, type: 3}
+  m_Script: {fileID: 11500000, guid: b973381295a514ff49633baf21f38421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DinoClick: 0
+  AFClicked: 0
 --- !u!114 &1362794113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4332,7 +4344,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 71.490776, y: 43.364132}
+  m_Offset: {x: 71.490776, y: 45.571922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4343,7 +4355,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 193.26839, y: 96.728264}
+  m_Size: {x: 193.26839, y: 101.143845}
   m_EdgeRadius: 0
 --- !u!114 &1622606072
 MonoBehaviour:

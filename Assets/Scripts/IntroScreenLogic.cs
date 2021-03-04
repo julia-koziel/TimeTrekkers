@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class IntroScreenLogic : MonoBehaviour
 {
     public GameEvent StageEnd;
+
     // Start is called before the first frame update
     void Start()
     {

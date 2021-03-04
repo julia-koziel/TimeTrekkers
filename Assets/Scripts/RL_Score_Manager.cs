@@ -7,7 +7,7 @@ public class RL_Score_Manager : MonoBehaviour
     public IntVariable nTrials;
     public GameObject[] coins;
     public TranslatableAudioClip coinsound;
-    public TranslatableAudioClip losssound;
+    public TranslatableAudioClip lossSound;
     public int lastActive = -1;
 
     AudioTranslator audioTranslator;
@@ -27,7 +27,7 @@ public class RL_Score_Manager : MonoBehaviour
 
         else if (score < lastActive + 1) 
         {coins[lastActive--].SetActive(false);
-        audioTranslator.Play(losssound);
+        audioTranslator.Play(lossSound);
         }
     }
 

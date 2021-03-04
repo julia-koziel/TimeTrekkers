@@ -18,4 +18,4 @@ MonoBehaviour:
   trialType: {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}
   stimuliIds: {fileID: 11400000, guid: 2a69c9598e9e840bdb5801e804dd02e5, type: 2}
   minSpacing: 2
-  blockLength: 7
+  blockLength: 10

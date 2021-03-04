@@ -15,8 +15,7 @@ public class SAC_StimuliManager : MonoBehaviour
     [Space(10)]
     public Stimulus[] stimuli;
     public BoolVariable correct;
-    public StageList stages;
-    public PatternDisplayer template;
+    // public StageList stages;
     public GameObject pattern;
     public int maxMissedHits;
     int missedHits = 0;
@@ -46,8 +45,8 @@ public class SAC_StimuliManager : MonoBehaviour
             else missedHits = 0;
         }
 
-        if (missedHits == maxMissedHits) stageEnd.Raise();
-        else SceneManager.LoadScene(2);
+        if (missedHits == maxMissedHits) SceneManager.LoadScene(2);
+        else trialEnd.Raise();
     }
 
     public void Reset()

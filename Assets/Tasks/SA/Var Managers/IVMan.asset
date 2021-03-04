@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IVMan
   m_EditorClassIdentifier: 
   inputVariables:
-  - {fileID: 11400000, guid: 6c47a2d8d02514d4681919730be60a15, type: 2}
+  - {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}
   - {fileID: 11400000, guid: 44e573bb973b84fdd88107cc0cfc860c, type: 2}
   trial: {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
   nTrials: {fileID: 11400000, guid: f4c8d070f3ad34caf944543b266ae4ef, type: 2}

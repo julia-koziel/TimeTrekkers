@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a5c9a9abdc646538c96e8a223d30fe, type: 3}
   m_Name: New SA_Trial Setter
   m_EditorClassIdentifier: 
-  inputVariablesManager: {fileID: 11400000, guid: e681fcf4d016f4426bcad7b1b2a791a0,
+  inputVariablesManager: {fileID: 11400000, guid: 01dbd4c8be6cd4005b60b9f6c8934893,
     type: 2}
   patternList: {fileID: 11400000, guid: 4c771f7d4196940dcb71b71e6d8ddf2b, type: 2}
-  trialType: {fileID: 0}
-  stimuliIds: {fileID: 0}
+  trialType: {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}
+  stimuliIds: {fileID: 11400000, guid: 44e573bb973b84fdd88107cc0cfc860c, type: 2}
   minSpacing: 2
   blockLength: 7

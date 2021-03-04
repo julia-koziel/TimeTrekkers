@@ -115,7 +115,7 @@ public class MenuScreenLogic : MonoBehaviour
 
     public void DinoGoLoad()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(10);
         gameObject.SetActive(false);
         
     }
