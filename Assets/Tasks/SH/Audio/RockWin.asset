@@ -16,7 +16,7 @@ MonoBehaviour:
   translatedAudioClips:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 8300000, guid: 9d1b017510e48449b8084e2d3f8a461b, type: 3}
+  - {fileID: 8300000, guid: bd406f0aafc224d18a2f2a6978f34d49, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   isMuteable: 1

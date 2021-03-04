@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f583fb53cc7a4f68a8b6a2dd6306a75, type: 3}
-  m_Name: Let me show you how to play
+  m_Name: This is scissors
   m_EditorClassIdentifier: 
   languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
   translatedAudioClips:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 8300000, guid: 50ec3dc395c0447869325b2376e8c1a5, type: 3}
+  - {fileID: 8300000, guid: 4df9317e226d745bc945ec888822673a, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   isMuteable: 1
