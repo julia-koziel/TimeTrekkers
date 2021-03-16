@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Side
   m_EditorClassIdentifier: 
   Value: 0
-  weighted: 0
+  weighted: 1
   weights: 0100000001000000
   variables:
   - {fileID: 11400000, guid: f09511e89c72b46e0af1f9970873160a, type: 2}

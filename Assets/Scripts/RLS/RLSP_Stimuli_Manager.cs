@@ -41,18 +41,18 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     }
     public void OnStartTrial()
     {
+        Debug.Log(side.Value);
         inputVariablesManager.updateInputVariables();
         food.transform.position = centrePos.position;
         food.SetActive(true);
-        Debug.Log(probindex);
 
-        if (participantsGo && trial == 0 && trial==1)
+        if (participantsGo && trial == 0)
         {
             rewardedStimuli[0].transform.position = leftPos.position;
             rewardedStimuli[1].transform.position = rightPos.position;
             rewardedStimuli.ForEach(s => s.SetActive(true));
         }
-        else if (participantsGo && trial == 2)
+        else if (participantsGo && trial == 1)
         {
             unrewardedStimuli[0].transform.position = leftPos.position;
             unrewardedStimuli[1].transform.position = rightPos.position;
@@ -63,6 +63,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
         {
             if (probindex==0)
             {
+
                 rewardedStimuli.ForEach(s => s.correct = false);
                 unrewardedStimuli.ForEach(s => s.correct = true);
             
@@ -89,8 +90,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
                 rewardedId.Value = rewarded.id;
                 unrewardedId.Value = unrewarded.id;
 
-                rewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
-                unrewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                rewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                unrewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
                 rewarded.SetActive(true);
                 unrewarded.SetActive(true);
             }
@@ -100,6 +101,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             {
                 if (probindex==0)
             {
+
                 rewardedStimuli.ForEach(s => s.correct = true);
                 unrewardedStimuli.ForEach(s => s.correct = false);
             
@@ -126,8 +128,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
                 rewardedId.Value = rewarded.id;
                 unrewardedId.Value = unrewarded.id;
 
-                rewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
-                unrewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                rewarded.transform.position = side.Value == RIGHT ? leftPos.position : rightPos.position;
+                unrewarded.transform.position = side.Value == LEFT ? leftPos.position : rightPos.position;
                 rewarded.SetActive(true);
                 unrewarded.SetActive(true);
             }

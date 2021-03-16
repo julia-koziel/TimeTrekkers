@@ -14,20 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVariablesManager: {fileID: 11400000, guid: 6dcc0580bb08347e9be89741f7012f32,
     type: 2}
+  shuffle: 0
   rowArray:
   - row:
-    - 1
     - 0
-    - 0
-  - row:
-    - 2
-    - 2
-    - 0
-  - row:
-    - 1
     - 1
     - 0
   - row:
     - 1
-    - 2
+    - 0
+    - 0
+  - row:
+    - 1
+    - 0
     - 0

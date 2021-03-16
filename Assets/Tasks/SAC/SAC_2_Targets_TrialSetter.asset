@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVariablesManager: {fileID: 11400000, guid: e681fcf4d016f4426bcad7b1b2a791a0,
     type: 2}
+  randomisationSeeds:
+  - seed: 99
+    used: 1
   patternList: {fileID: 11400000, guid: 09b2ef1bbb5c84ec1b7a1965f44a3901, type: 2}
   trialType: {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}
   stimuliIds: {fileID: 11400000, guid: 2a69c9598e9e840bdb5801e804dd02e5, type: 2}
   minSpacing: 3
-  blockLength: 15
+  blockLength: 12

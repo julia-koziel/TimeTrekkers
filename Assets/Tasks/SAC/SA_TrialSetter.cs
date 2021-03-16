@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-// using EasyButtons;
+using EasyButtons;
 
 [CreateAssetMenu(menuName = "Custom/Tasks/SA/TrialSetter")]
 public class SA_TrialSetter : TrialSetter
@@ -37,18 +37,20 @@ public class SA_TrialSetter : TrialSetter
         var patterns = patternList.patterns.Select(p => p.variables.Select(v => v.Value).ToList()).ToList();
         int nPatterns = patterns.Count();
 
+        var rng = getRng(); // gets fixed randomiser if specified, otherwise new Random Number Generator (rng)
+
         // Build trial matrix 1 block at a time
         for (int i = 0; i < nBlocks; i++)
         {
             block.ForEach(x => FOIL);
-            idBlock = block.Select(f => idVars[Random.Range(0, idVars.Length)]).ToArray();
+            idBlock = block.Select(f => idVars[rng.Next(idVars.Length)]).ToArray();
 
-            var patternIndex = Random.Range(0, nPatterns);
+            var patternIndex = rng.Next(nPatterns);
             var pattern = patterns[patternIndex];
             var patternLength = pattern.Count;
             buffer += patternLength - 1;
 
-            var targetIndex = Random.Range(buffer, blockLength);
+            var targetIndex = rng.Next(buffer, blockLength);
             block[targetIndex] = TARGET;
             idBlock[targetIndex] = pattern.Last();
 
@@ -58,10 +60,8 @@ public class SA_TrialSetter : TrialSetter
                 block[targetIndex - j] = PATTERN;
                 idBlock[targetIndex - j] = pattern[pattern.Count - 1 - j];
             }
-
             columnBuilder.AddRange(block);
             idColumnBuilder.AddRange(idBlock);
-
             // Calculate buffer needed at beginning of next block
             buffer = minSpacing - (lastIndexOfBlock - targetIndex);
             buffer = Mathf.Max(0, buffer);
@@ -80,7 +80,6 @@ public class SA_TrialSetter : TrialSetter
             }
             else break;
         }
-
         // Helper function, checks
         // - first num matches first num of pattern
         // - enough nums after for pattern to be possible
@@ -93,11 +92,10 @@ public class SA_TrialSetter : TrialSetter
                     trialTypeColumn[index + pattern.Count - 1] != TARGET &&
                     idColumn.Slice(index, index + pattern.Count).SequenceEqual(pattern);
         }
-
         // to avoid re-making pattern
         var valsToAvoid = new List<float>[idColumn.Length];
         valsToAvoid.ForEach(l => new List<float>());
-
+    
         bool columnContainsPattern;
         do
         {
@@ -120,9 +118,8 @@ public class SA_TrialSetter : TrialSetter
                             {
                                 var oldVal = idColumn[j];
                                 valsToAvoid[j].Add(oldVal);
-
                                 var possVals = idVars.Except(valsToAvoid[j]).ToArray();
-                                idColumn[j] = possVals[Random.Range(0, possVals.Length)];
+                                idColumn[j] = possVals[rng.Next(possVals.Length)];
                                 break; // break when one val in accidental pattern changed
                             }
                         }
@@ -131,14 +128,20 @@ public class SA_TrialSetter : TrialSetter
             }
         } while (columnContainsPattern);
 
+        if (debug)
+        {
+            // Debug.Log("\n".Join(valsToAvoid.Select((list, i) => new {list, i}).Where(pair => pair.list.Count > 0).Select(pair => $"{pair.i}: {", ".Join(pair.list)}")));
+            var colours = new string[] {"red", "yellow", "orange", "pink", "grey", "green", "blue", "magenta", "black"};
+            string colourString(float num) => $"<color={colours[(int)num]}>{num}</color>";
 
-        // if (debug)
-        // {
-        //     Debug.Log(patterns.Count);
-        //     Debug.Log($"patterns: {"||".Join(patterns.Select(p => ",".Join(p)))}");
-        //     Debug.Log("\n".Join(valsToAvoid.Select((list, i) => new {list, i}).Where(pair => pair.list.Count > 0).Select(pair => $"{pair.i}: {", ".Join(pair.list)}")));
-        //     Debug.Log($"column:\n {"\n".Join(trialTypeColumn.Select((f, i) => $"{i}: {f} - {idColumn[i]}"))}");
-        // }
+            Debug.Log($"patterns: {"||".Join(patterns.Select(p => " ".Join(p.Select(f => colourString(f)))))}");
+            var patternString = " ".Join(trialTypeColumn.Select((f, i) => {
+                var col = colourString(idColumn[i]);
+                if (f > 0) col = $"<b><i>{col}</i></b>";
+                return col;
+            }));
+            Debug.Log(patternString);
+        }
 
         var iTrialType = ivs.IndexOf(trialType);
         var iId = ivs.IndexOf(stimuliIds);
@@ -148,13 +151,12 @@ public class SA_TrialSetter : TrialSetter
         inputVariablesManager.TrialMatrix = matrix;
     }
 
-    // [Button]
-    // public void Test(int nTrials)
-    // {
-    //     inputVariablesManager.nTrials.Value = nTrials;
-    //     debug = true;
-    //     SetTrialMatrix();
-    //     debug = false;
-    // }
-
+    [Button]
+    public void Test(int nTrials)
+    {
+        inputVariablesManager.nTrials.Value = nTrials;
+        debug = true;
+        SetTrialMatrix();
+        debug = false;
+    }
 }

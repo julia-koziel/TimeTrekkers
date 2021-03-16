@@ -51,7 +51,9 @@ MonoBehaviour:
   isParticipantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
   participantId: {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
   session: {fileID: 11400000, guid: 0c3de7420d83a44a68f71e70e33e1fc9, type: 2}
+  batteryId: {fileID: 11400000, guid: 2df1e080fb82c4706b526f286cc55726, type: 2}
   version: {fileID: 11400000, guid: 751d5937d0b6340c3a92b43a09010b15, type: 2}
+  dataSubmission: {fileID: 11400000, guid: c0a59722c37b040b1a9ad8e3b131bb94, type: 2}
 --- !u!114 &2586468346934386041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,8 +81,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   priority: 0
 --- !u!114 &6732601326133198516
 MonoBehaviour:
@@ -120,6 +120,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   priority: 1

@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CsvReadWrite : MonoBehaviour
+public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, string)>
 {
     public DataHolder stageData;
     [HideInInspector]
@@ -14,7 +14,9 @@ public class CsvReadWrite : MonoBehaviour
     [Space(10)]
     public StringVariable participantId;
     public StringVariable session;
-    // public TranslatableString version;
+    public StringVariable batteryId;
+    public TranslatableString version;
+    public DataGameEvent dataSubmission;
     string taskCode { get { return SceneManager.GetActiveScene().name; } }
 
     List<string[]> stageCsv;
@@ -32,6 +34,16 @@ public class CsvReadWrite : MonoBehaviour
         set => _trialsCsv = value;
     }
     List<string[]> _trialsCsv;
+
+    void OnEnable() => RegisterListener();
+    void OnDisable() => UnregisterListener();
+    public void RegisterListener() => dataSubmission.RegisterListener(this, false);
+    public void UnregisterListener() => dataSubmission.UnregisterListener(this);
+    public void OnEventRaised((List<string[]>, string) dataTuple)
+    {
+        (List<string[]> data, string identifier) = dataTuple;
+        OutputData(data, identifier);
+    }
 
     void Start()
     {
@@ -56,9 +68,7 @@ public class CsvReadWrite : MonoBehaviour
 
     public void OutputStageData()
     {
-        var fileName = getFileName("Stages");
-        var contents = "\n".Join(stageCsv.Select(row => "\t".Join(row)));
-        writeTsv(fileName, contents);
+        OutputData(stageCsv, "Stages");
     }
 
     public void OutputTrialsData()
@@ -69,10 +79,18 @@ public class CsvReadWrite : MonoBehaviour
             {
                 trialsCsv.Add(data.missingRow);
             }
-            var fileName = getFileName(getStageName());
-            var contents = "\n".Join(trialsCsv.Select(row => "\t".Join(row)));
-            writeTsv(fileName, contents);
+            OutputData(trialsCsv, getStageName());
             trialsCsv = null;
+        }
+    }
+
+    public void OutputData(List<string[]> dataList, string identifier)
+    {
+        if (participantId.Value != "sfaritest nocsv")
+        {
+            var fileName = getFileName(identifier);
+            var contents = "\n".Join(dataList.Select(row => "\t".Join(row)));
+            writeTsv(fileName, contents);
         }
     }
 
@@ -96,7 +114,7 @@ public class CsvReadWrite : MonoBehaviour
     string getFileName(string stageName)
     {
         var timestamp = System.DateTime.Now.ToString("yyyy-MM-ddTHH-mm-ss");
-        return $"sub-{participantId}_ses-{session}_task-{taskCode}-{stageName}-{1.2}-{timestamp}.tsv";
+        return $"sub-{participantId}_ses-{session}_bat-{batteryId}_task-{taskCode}-{stageName}-{version}-{timestamp}.tsv";
     }
 
     string getFolderPath()

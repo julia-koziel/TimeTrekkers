@@ -33,6 +33,7 @@ public class CheckForDataCollected : MonoBehaviour
         {
            introscreen.SetActive(true);
            titlescreen.SetActive(false);
+           SceneManager.LoadScene(2);
         }
         
     }

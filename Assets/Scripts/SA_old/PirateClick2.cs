@@ -5,6 +5,7 @@ using UnityEngine;
 public class PirateClick2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float time;
     private MenuScreenLogic gameLogic;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PirateClick2 : MonoBehaviour
     void Update()
     {
        gameLogic.PirateClicked=true; 
+       gameLogic.TaskSelected=true;
     }
 }
 

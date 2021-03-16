@@ -8,14 +8,15 @@ public class DinoOnClick : MonoBehaviour
     public GameObject zoomed;
     public GameObject DinoIcon;
     public bool DinoClick;
+    public float time;
 
-
-    private MenuScreenLogic gameLogic;
+    public MenuScreenLogic gameLogic;
     // Start is called before the first frame update
  
      void Start()
     {
         gameLogic = GetComponent<MenuScreenLogic>();
+        
         // chime = GetComponent<AudioSource>();
 
     }

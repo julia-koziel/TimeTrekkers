@@ -10,6 +10,7 @@ public class SAC_StimuliManager : MonoBehaviour
     public CategoricalInputVariable trialType;
     public CategoricalInputVariable stimulusId;
     public IntVariable TARGET;
+    public IntVariable trial;
     public BoolVariable level1;
     public BoolVariable level2;
     [Space(10)]
@@ -22,16 +23,14 @@ public class SAC_StimuliManager : MonoBehaviour
 
     public void OnStartTrial()
     {
-        if (level1.Value==1)
-        {
-            stageEnd.Raise();
-        }
         inputVariablesManager.updateInputVariables();
 
         var stimulus = stimuli.Where(s => s.id == stimulusId.Value).First();
         stimulus.correct = trialType.Value == TARGET;
 
         Debug.Log(stimulus.correct);
+        level1.Value=1;
+        PlayerPrefs.SetInt("level1", 1);
 
         stimulus.SetActive(true);
         pattern.SetActive(true);
@@ -45,7 +44,9 @@ public class SAC_StimuliManager : MonoBehaviour
             else missedHits = 0;
         }
 
-        if (missedHits == maxMissedHits) SceneManager.LoadScene(2);
+        if (missedHits == maxMissedHits) 
+        {stageEnd.Raise();
+        }
         else trialEnd.Raise();
     }
 

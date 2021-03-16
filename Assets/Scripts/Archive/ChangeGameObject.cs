@@ -7,14 +7,13 @@ public class ChangeGameObject : MonoBehaviour
 
     public GameObject demo;
     public GameObject map;
-
     public GameEvent stageEnd;
 
     public float time;
     // Start is called before the first frame update
     void Start()
     {   
-
+        time=0;
         
     }
 
@@ -24,9 +23,13 @@ public class ChangeGameObject : MonoBehaviour
         time += Time.deltaTime;
         if (time>2.75f)
         {
-           gameObject.SetActive(false);
            map.SetActive(false);
            demo.SetActive(true);
+        }
+        
+        if (time>28)
+        {
+            stageEnd.Raise();
         }
     }
 }

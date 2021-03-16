@@ -8,7 +8,7 @@ public class SH_StimuliManager : MonoBehaviour
     public GameEvent trialEnd;
     public InputVariablesManager inputVariablesManager;
     public CategoricalInputVariable trialType;
-    public IntVariable CurrentChild;
+    public CategoricalInputVariable CurrentChild;
     public IntVariable Score;
     public IntVariable ChosenChild;
     public IntVariable block;
@@ -23,7 +23,9 @@ public class SH_StimuliManager : MonoBehaviour
     public Stimulus Theo;
     public Stimulus[] New;
     public GameObject[] outcomes;
-    public GameObject machine;      
+    public GameObject machine;  
+    public GameObject barfill;  
+    public GameObject text;  
 
     [Space(10)]
     public BoolVariable correct;
@@ -45,30 +47,55 @@ public class SH_StimuliManager : MonoBehaviour
     public Transform bottommid;
     public Transform bottomright;
 
+    public TranslatableAudioClip win;
+    public TranslatableAudioClip lose;
+    public TranslatableAudioClip chooseopp;
+
     Vector3 right = new Vector3(-4, 3, 0);
     Vector3 centre = new Vector3(0, 0, 0);
 
     // Start is called before the first frame update
+    AudioSource audioSource;
+    AudioTranslator audioTranslator;
+
+    
 
     public void OnEnable()
     {
         block.Value=0;
+        audioSource = GetComponent<AudioSource>();
+        audioTranslator = GetComponent<AudioTranslator>();
     }
 
     public void OnStartTrial()
     {
         inputVariablesManager.updateInputVariables();
         Score.Value = score;
+        trialType.Value= UnityEngine.Random.Range(0,3);
         
-        if(trial>5 && blockTrial>4)
+        if(trial>19 && blockTrial>9)
         {
             ChooseOpponent();
+            foreach (Stimulus cards in cards)
+            {
+                cards.SetActive(false); 
+            }
         }
 
-        else
+        else 
         {
-        children[game].SetActive(true);
-        
+            if(ChosenChild.Value<1)
+            {
+                children[0].SetActive(true);
+                CurrentChild.Value=0;
+            }
+
+            else
+            {
+                children[game].SetActive(true);
+                CurrentChild.Value= game;
+            }   
+          
         foreach (Stimulus cards in cards)
         {
             cards.SetActive(true); 
@@ -79,17 +106,15 @@ public class SH_StimuliManager : MonoBehaviour
             outcome.SetActive(false);
         }
 
-        }
-
         cards[0].transform.position = topleft.transform.position;
         cards[1].transform.position = topmid.transform.position;
         cards[2].transform.position = topright.transform.position;
         cards[3].transform.position = bottomleft.transform.position;
         cards[4].transform.position = bottommid.transform.position;
         cards[5].transform.position = bottomright.transform.position;
+        }
         
     }
-
 
     public void OnResponseWindowEnd()
     {
@@ -104,6 +129,10 @@ public class SH_StimuliManager : MonoBehaviour
                 Move(cards[trialType].transform, from: centre, to: right, duration: 0.5f);
                 this.In(2f).Call(() => 
             {
+                 if (trial==59)
+            {
+                barfill.SetActive(true);
+            }
                 trialEnd.Raise();
                 blockTrial++;
             });
@@ -124,7 +153,8 @@ public class SH_StimuliManager : MonoBehaviour
         if (trialType==0)
         {
             outcomes[1].SetActive(true);
-            Win(children[game]);
+            audioTranslator.Play(lose);
+            Win(children[CurrentChild]);
             oppscore++;
 
         }
@@ -132,7 +162,8 @@ public class SH_StimuliManager : MonoBehaviour
         else if (trialType==1)
         {
             outcomes[2].SetActive(true);
-            Lose(children[game]);
+            audioTranslator.Play(win);
+            Lose(children[CurrentChild]);
             score++;
         }
 
@@ -152,14 +183,16 @@ public class SH_StimuliManager : MonoBehaviour
         else if (trialType==1)
         {
             outcomes[1].SetActive(true);
-            Win(children[game]);
+            audioTranslator.Play(lose);
+            Win(children[CurrentChild]);
             oppscore++;
         }
 
         else 
         {
             outcomes[2].SetActive(true);
-            Lose(children[game]);
+            audioTranslator.Play(win);
+            Lose(children[CurrentChild]);
             score++;
         }
 
@@ -170,7 +203,8 @@ public class SH_StimuliManager : MonoBehaviour
         if (trialType==0)
         {
             outcomes[2].SetActive(true);
-            Lose(children[game]);
+            audioTranslator.Play(win);
+            Lose(children[CurrentChild]);
             score++;
         }
 
@@ -182,7 +216,8 @@ public class SH_StimuliManager : MonoBehaviour
         else
         {
             outcomes[1].SetActive(true);
-            Win(children[game]);
+            audioTranslator.Play(lose);
+            Win(children[CurrentChild]);
             oppscore++;
         }
 
@@ -190,12 +225,18 @@ public class SH_StimuliManager : MonoBehaviour
     
     public void ChooseOpponent()
     {
+         foreach (GameObject outcome in outcomes)
+        {
+            outcome.SetActive(false);
+        }
          this.In(1).Call(() => 
             {
-                CurrentChild++;
+                CurrentChild.Value++;
                 Debug.Log(CurrentChild);
                 block++;
                 machine.SetActive(true);
+                text.SetActive(true);
+                audioTranslator.Play(chooseopp);
                 
                 this.In(0.5f).Call(() => 
             { 
@@ -206,6 +247,11 @@ public class SH_StimuliManager : MonoBehaviour
                 oppscore=0;
             });
         }); 
+
+        foreach (Stimulus cards in cards)
+        {
+            cards.SetActive(false); 
+        }
     
     }
 
@@ -221,12 +267,15 @@ public class SH_StimuliManager : MonoBehaviour
             cards.SetActive(false); 
         }
         ChosenChild.Value=1;
+        text.SetActive(false);
     }
 
     public void OldGame()
     {
+        game++;
         blockTrial=0;
         ChosenChild.Value=0;
+        text.SetActive(false);
     }
 
 

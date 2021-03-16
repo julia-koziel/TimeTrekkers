@@ -190,11 +190,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 133ad3611ffc54462841010c14928602, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 11400000, guid: 39a97246acb8b4d2dbf1397279b64b8a, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 809376613}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: Demo
     stageId: 7
@@ -220,11 +224,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 133ad3611ffc54462841010c14928602, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 11400000, guid: 39a97246acb8b4d2dbf1397279b64b8a, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1681216595}
+    nPrompts: 0
+    prompts: []
   - stageType: 3
     stageName: Main
     stageId: 3
@@ -250,11 +258,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 7194ecb89fec04928b66502b804e456c, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 11400000, guid: 39a97246acb8b4d2dbf1397279b64b8a, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 2103159394}
+    nPrompts: 0
+    prompts: []
   - stageType: 5
     stageName: End
     stageId: 1
@@ -280,11 +292,15 @@ MonoBehaviour:
     dataHolder: {fileID: 11400000, guid: 133ad3611ffc54462841010c14928602, type: 2}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 11400000, guid: 39a97246acb8b4d2dbf1397279b64b8a, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1308155898}
+    nPrompts: 0
+    prompts: []
   currentStageName: {fileID: 0}
   currentStageViews: {fileID: 0}
   currentStage:
@@ -313,11 +329,15 @@ MonoBehaviour:
     dataHolder: {fileID: 0}
     hasPresetMatrix: 0
     presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
     hasDemoProtocol: 0
     demoProtocol: {fileID: 0}
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 0}
+    nPrompts: 0
+    prompts: []
   stageIds: 
   deletedIds: 0600000004000000020000000000000005000000
 --- !u!1 &100772441
@@ -2824,6 +2844,7 @@ GameObject:
   - component: {fileID: 824755780}
   - component: {fileID: 824755779}
   - component: {fileID: 824755778}
+  - component: {fileID: 824755781}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2882,10 +2903,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1200}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2913,6 +2934,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &824755781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824755776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c2b56900cc645e98d2869bf7af57ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WantedAspectRatio: {fileID: 11400000, guid: 1312ce82e261946eb82d86b333b6d1fe, type: 2}
 --- !u!1 &843057607
 GameObject:
   m_ObjectHideFlags: 0

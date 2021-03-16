@@ -48,29 +48,35 @@ public class ToggleConsent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
          foreach(Toggle toggle in consentBoxes) 
-         {
+        {
             
             if(toggle.isOn) {
                 start.SetActive(true);
                 error.SetActive(false);
                 inputField.interactable = true;
-            } else {
+                            } 
+            else {
                 error.SetActive(true);
                 start.SetActive(false);
                 inputField.interactable = false;
-            }
+                }
 
-             if(string.IsNullOrEmpty(inputField.text))
-         {
+            if(string.IsNullOrEmpty(inputField.text))
+            {
             error.SetActive(true);
             start.SetActive(false);
-         }
+            }
         }
+    }
 
-
+    public void TickAll()
+    {
+        foreach(Toggle toggle in consentBoxes) 
+        {
+            toggle.isOn=true;
+        }            
     }
 
 

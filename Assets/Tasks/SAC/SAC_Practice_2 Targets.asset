@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b52e0863a84214acfbfb592818fe4, type: 3}
+  m_Name: SAC_Practice_2 Targets
+  m_EditorClassIdentifier: 
+  inputVariablesManager: {fileID: 11400000, guid: e681fcf4d016f4426bcad7b1b2a791a0,
+    type: 2}
+  shuffle: 0
+  rowArray:
+  - row:
+    - 0
+    - 1
+  - row:
+    - 0
+    - 3
+  - row:
+    - 0
+    - 4
+  - row:
+    - 0
+    - 5
+  - row:
+    - 0
+    - 6
+  - row:
+    - 1
+    - 7
+  - row:
+    - 0
+    - 0
+  - row:
+    - 0
+    - 2
+  - row:
+    - 0
+    - 1
+  - row:
+    - 0
+    - 5
+  - row:
+    - 0
+    - 5
+  - row:
+    - 0
+    - 4
+  - row:
+    - 0
+    - 3
+  - row:
+    - 0
+    - 1
+  - row:
+    - 0
+    - 0
+  - row:
+    - 0
+    - 6
+  - row:
+    - 0
+    - 5
+  - row:
+    - 0
+    - 5
+  - row:
+    - 0
+    - 6
+  - row:
+    - 1
+    - 7
+  - row:
+    - 0
+    - 0
+  - row:
+    - 0
+    - 0
+  - row:
+    - 0
+    - 6
+  - row:
+    - 1
+    - 7
+  - row:
+    - 1
+    - 1
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 3
+  - row:
+    - 1
+    - 7
+  - row:
+    - 1
+    - 4
+  - row:
+    - 1
+    - 2

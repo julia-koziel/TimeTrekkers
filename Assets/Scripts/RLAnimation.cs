@@ -12,6 +12,7 @@ public class RLAnimation : MonoBehaviour
     public GameObject Theo;
     public GameObject demo;
     public GameObject background;
+    public GameObject introscreenback;
     private ShipsBehaviourAnimation s;
 
     public bool audioOn;
@@ -48,6 +49,7 @@ public class RLAnimation : MonoBehaviour
         aSources = GetComponents<AudioSource>();  
         s = FindObjectOfType<ShipsBehaviourAnimation>();
         background.SetActive(true);
+        introscreenback.SetActive(false);
         introscreen.SetActive(false);
         
     }

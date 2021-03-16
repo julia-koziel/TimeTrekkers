@@ -7,8 +7,8 @@ public class Bar_Manager : MonoBehaviour
     public IntVariable block;
     public IntVariable trial;
     public GameObject machine;
-    public GameObject sparkles;
     public Vector2[] dest;
+    public GameObject barfill;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,6 @@ public class Bar_Manager : MonoBehaviour
     void Update()
     {
         MoveShip();
-
-        if (trial==59)
-        {
-        
-        }
     }
 
     public void MoveShip()
@@ -35,7 +30,7 @@ public class Bar_Manager : MonoBehaviour
         
         for (int i = 0; i < block; i++)
             {
-                step = baseStep * Mathf.Abs(block-i-1);
+                step = baseStep * Mathf.Abs(block);
                 Vector3 currentPos = machine.transform.position;
                 machine.transform.position = Vector3.MoveTowards(currentPos, dest[block], step);
             }

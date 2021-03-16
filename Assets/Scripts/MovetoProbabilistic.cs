@@ -14,6 +14,6 @@ public class MovetoProbabilistic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(6);
     }
 }

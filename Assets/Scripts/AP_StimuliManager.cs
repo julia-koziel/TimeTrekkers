@@ -62,8 +62,7 @@ public class AP_StimuliManager : MonoBehaviour
         previous=correct.Value;
         if (participantsGo)
         {
-            if (trial.Value.In(10)) trialType.Value = CATCH;
-            else trialType.Value = AUDITORY;
+           trialType.Value = AUDITORY;
         }
 
         // Check trial type

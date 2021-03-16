@@ -45,7 +45,6 @@ public class PirateAttackAnimation : MonoBehaviour
     {
         string prefsKey = PrefsKeys.Keys.SpokenAudio.ToString();
         audioOn = PlayerPrefs.GetInt(prefsKey, 0) == 1;
-        background.SetActive(false);
 
         string prefsKey2 = PrefsKeys.Keys.Subtitle.ToString();
         subtitleOn = PlayerPrefs.GetInt(prefsKey2, 0) == 1;

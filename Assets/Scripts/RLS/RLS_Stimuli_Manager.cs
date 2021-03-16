@@ -17,6 +17,7 @@ public class RLS_Stimuli_Manager : MonoBehaviour
     public BoolVariable participantsGo;
     public IntVariable score;
     public GameEvent trialEnd;
+    public GameObject ITI;
     public GameEvent StageEnd;
     public GameObject food;
     [Space(10)]
@@ -133,7 +134,19 @@ public class RLS_Stimuli_Manager : MonoBehaviour
         position.y = position.y-2;
         food.transform.position = position;
 
-        this.In(rewardDuration).Call(trialEnd.Raise);
+         this.In(rewardDuration).Call(() => 
+        {
+            ITI.SetActive(true);
+            food.SetActive(false);
+
+
+            this.In(1).Call(() => 
+            {
+                ITI.SetActive(false);
+                trialEnd.Raise();
+
+        });
+     });
     }
     
 

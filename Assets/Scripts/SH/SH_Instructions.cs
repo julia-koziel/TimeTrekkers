@@ -37,11 +37,11 @@ public class SH_Instructions : MonoBehaviour
 
     void OnEnable()
     {
-
+        scissors.SetActive(false);
 
         this.BuildMovement()
             
-            .First(() => {audioTranslator.Play(HiThere); scissors.SetActive(true);})
+            .First(() => {audioTranslator.Play(HiThere);})
             .Then(duration: (audioTranslator.getLength(HiThere)), run: dt => {})
             .Then(() => {audioTranslator.Play(ScissorsCard); scissors.SetActive(true);})
             .Then(duration: (audioTranslator.getLength(ScissorsCard)), run: dt => {})
@@ -49,7 +49,7 @@ public class SH_Instructions : MonoBehaviour
             .Then(duration: (audioTranslator.getLength(RockCard)), run: dt => {})
             .Then(() => { audioTranslator.Play(PaperCard); SetActive(paper);})
             .Then(duration: (audioTranslator.getLength(PaperCard)), run: dt => {})
-            
+            .Then(() => {arrows.SetActive(true);})
             .Then(1, false, false, Move(scissors.transform, from: scissorsv, to: paperv, duration: 1),
                                    Move(scissors.transform, from: paperv, to: scissorsv, duration: 1))
             .Then(() => { audioTranslator.Play(ScissorsWins); win.SetActive(true); })

@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
   m_Name: SHChild
   m_EditorClassIdentifier: 
-  Value: 0
-  weighted: 1
-  weights: 01000000010000000100000001000000
+  Value: 1
+  weighted: 0
+  weights: 0100000001000000010000000100000001000000
   variables:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d88efcd8f0b7e426ea4f55cde9bee717, type: 2}
+  - {fileID: 11400000, guid: b242af525867a48b89facfa0232d81d8, type: 2}
+  - {fileID: 11400000, guid: 4ce3c0ac18d9949638bb08f6f09c0c1d, type: 2}
+  - {fileID: 11400000, guid: a24929914d4b14a76bd44e542bcbc97c, type: 2}
+  - {fileID: 11400000, guid: c04afe28222e74d9db5680ee61b2006a, type: 2}
   controlSpacing: 0
   minSpacing:
+  - 0
   - 0
   - 0
   - 0

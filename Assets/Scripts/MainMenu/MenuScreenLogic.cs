@@ -9,8 +9,16 @@ public class MenuScreenLogic : MonoBehaviour
     public GameObject button;
     public GameObject dataUpload;
 
+    public GameObject level1button;
+    public GameObject level2button;
+    public GameObject level3button;
+
     public bool wasClicked;
+    public bool TaskSelected;
     public bool sceneLoaded;
+
+    public BoolVariable level1;
+    public BoolVariable level2;
 
     public bool DinoClicked;
     public bool PirateClicked;
@@ -29,14 +37,13 @@ public class MenuScreenLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime; 
+        int level1 = PlayerPrefs.GetInt("level1");
+        int level2= PlayerPrefs.GetInt("level2");
+        Debug.Log(level1);
 
-    if (wasClicked)
-    {
-        
+      
        if (DinoClicked)
        {
-        
            if (time>3)
            {
            DinoGoLoad();
@@ -44,11 +51,23 @@ public class MenuScreenLogic : MonoBehaviour
        }
 
        else if(PirateClicked)
-    { 
-
-        if (time>3)
+    {    
+        if (level1<1)
         {
-        PirateLoad();
+            level1button.SetActive(true);
+        }
+
+        else if(level1>0)
+        {
+            level1button.SetActive(true);
+            level2button.SetActive(true);
+        }
+
+        else if (level2>0)
+        {
+            level1button.SetActive(true);
+            level2button.SetActive(true);
+            level3button.SetActive(true);
         }
     }   
 
@@ -90,19 +109,31 @@ public class MenuScreenLogic : MonoBehaviour
     }  
 
     }
-    }
 
     public void ButtonClicked()
     {
-        wasClicked = true;
+        if (TaskSelected)
+        {
+        wasClicked=true;
         transitionscreen.SetActive(true);
         sceneLoaded = true;
         time =0;
+        }
 
     }
-     void PirateLoad()
+    public void PirateLoad()
     {  
             SceneManager.LoadScene(3);
+            gameObject.SetActive(false);    
+    }
+    public void PirateLevel2()
+    {  
+            SceneManager.LoadScene(12);
+            gameObject.SetActive(false);    
+    }
+    public void PirateLevel3()
+    {  
+            SceneManager.LoadScene(13);
             gameObject.SetActive(false);    
     }
 

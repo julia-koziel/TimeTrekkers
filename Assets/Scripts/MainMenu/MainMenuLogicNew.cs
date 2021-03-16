@@ -60,13 +60,11 @@ public class MainMenuLogicNew : MonoBehaviour
         participantId = PlayerPrefs.GetString("ID");
     }
 
-    public bool pirateClicked;
     // Start is called before the first frame update
     void Start()
     {
         machineClick = FindObjectOfType<MachineOnClick>();
-        id = FindObjectOfType<IDScript>();
-        pirateClicked = false;      
+        id = FindObjectOfType<IDScript>();    
         animator = GetComponent<Animator>();
         aSources = GetComponents<AudioSource>();  
         button.SetActive(false);
@@ -175,7 +173,7 @@ public class MainMenuLogicNew : MonoBehaviour
 
     public void SkiptoMM()
     {
-        stateToLoad = State.audioToggle;
+        stateToLoad = State.machineOpen;
         first = false;
     }
 

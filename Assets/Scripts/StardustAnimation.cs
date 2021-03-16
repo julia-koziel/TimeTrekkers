@@ -71,7 +71,7 @@ public class StardustAnimation : MonoBehaviour
             case State.Zoom:
                 
                 audioInfo = new AudioBundle[] {
-                    new AudioBundle(index: 0, delay: 0.5f),
+                    new AudioBundle(index: 0, delay: 1),
                 };
                 if (subtitleOn)
                 {

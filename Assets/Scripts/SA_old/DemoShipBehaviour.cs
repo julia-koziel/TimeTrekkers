@@ -9,7 +9,7 @@ public class DemoShipBehaviour : MonoBehaviour
      private PirateAttackCursorBehaviour handclick;
     private float x;
     private PirateAttackDemoLogic gameLogic;
-    public GameObject clicked;
+    // public GameObject clicked;
     public AudioSource cannon;
 
     private Animator animator;
@@ -40,7 +40,7 @@ public class DemoShipBehaviour : MonoBehaviour
             time = 0;
             gameObject.transform.position = new Vector3(-13, -1, 0);
             gameObject.SetActive(false);
-            clicked.SetActive(false);
+            // clicked.SetActive(false);
         }
     }
 
@@ -49,6 +49,6 @@ public class DemoShipBehaviour : MonoBehaviour
         time = 0;
         gameObject.transform.position = new Vector3(-13, -1, 0);
         gameObject.SetActive(false);
-        clicked.SetActive(false);
+        // clicked.SetActive(false);
     }
 }
