@@ -111,7 +111,7 @@ public class CategoricalInputVariableEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        serializedObject.Update ();
+        serializedObject.Update();
 
         EditorGUILayout.Space();
         

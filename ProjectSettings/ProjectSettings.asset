@@ -168,7 +168,7 @@ PlayerSettings:
     Android: com.EUAIMS.Battery6to11
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 15
+  AndroidBundleVersionCode: 16
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 29
   AndroidPreferredInstallLocation: 1
@@ -245,7 +245,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: Key1.keystore'
+  AndroidKeystoreName: /Users/juliakoziel/Desktop/CogBatTab-juliadev/Key1.keystore
   AndroidKeyaliasName: key1
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

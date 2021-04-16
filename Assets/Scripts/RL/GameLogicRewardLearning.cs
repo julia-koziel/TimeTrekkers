@@ -159,8 +159,6 @@ public class GameLogicRewardLearning : MonoBehaviour
             //Debug.Log("D-Prime: " + dprime);
             Debug.Log("Reaction time: " + reactionTime);
             trial += 1;
-            comissiontrial = 0;
-            omissiontrial = 0;
 
         }
 

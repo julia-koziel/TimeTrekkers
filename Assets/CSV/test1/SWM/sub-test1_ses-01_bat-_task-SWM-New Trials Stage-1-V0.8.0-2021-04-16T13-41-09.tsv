@@ -1,0 +1,13 @@
+participant_id	trial	correct	response_time	length
+test1	0	0	1.729481	6
+test1	1	0	0.4909689	4
+test1	2	0	1.112156	8
+test1	3	0	0.5476704	6
+test1	4	0	0.2880106	4
+test1	5	0	0.242918	8
+test1	6	0	0.3816557	6
+test1	7	1	0.2511005	4
+test1	8	0	2.143645	8
+test1	9	0	0.3162842	6
+test1	10	0	0.2647228	4
+test1	11	0	0.1932163	8

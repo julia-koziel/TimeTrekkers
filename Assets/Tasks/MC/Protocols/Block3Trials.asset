@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b52e0863a84214acfbfb592818fe4, type: 3}
+  m_Name: Block3Trials
+  m_EditorClassIdentifier: 
+  inputVariablesManager: {fileID: 11400000, guid: f95fa70cbc60f43efac583d1a0bff895,
+    type: 2}
+  shuffle: 1
+  rowArray:
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 0
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 0.8
+    - 2
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 0
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 2
+  - row:
+    - 1
+    - 2

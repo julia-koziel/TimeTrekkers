@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
   translatedStrings:
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
+  - V0.8.0
+  - V0.8.0
+  - V0.8.0
+  - V0.8.0
+  - V0.8.0

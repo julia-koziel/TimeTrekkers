@@ -11,8 +11,11 @@ public class CategoricalInputVariable : InputVariable
     public override float[] Sample(int? sampleSize = null)
     {
         var size = sampleSize ?? (weighted ? weights.Sum() : variables.Length);
+        if (!weighted) weights.ForEach(w => 1);
         
-        var block = variables.Select((v, i) => Enumerable.Repeat(v.Value, weights[i])).SelectMany(v => v).ToArray();
+        var block = variables.Select((v, i) => Enumerable.Repeat(v.Value, weights[i]))
+                             .SelectMany(v => v)
+                             .ToArray();
 
         return block.RepeatForSize(size).ToArray();
     }

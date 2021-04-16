@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3e16739fd6432182d7abacf7ac237, type: 3}
   m_Name: Child's Go Touch the bubble as fast as you can
   m_EditorClassIdentifier: 
-  languageManager: {fileID: 0}
-  translatedStrings: []
+  languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
+  translatedStrings:
+  - 
+  - 
+  - 
+  - 
+  - 

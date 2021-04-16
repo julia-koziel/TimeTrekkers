@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipTargetBehaviour : MonoBehaviour
 {
     private float time;
-    private float x;
+    public float x;
     // Start is called before the first frame update
     void Start()
     {

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
   m_Name: Side
   m_EditorClassIdentifier: 
-  Value: 0
-  weighted: 1
+  Value: 2
+  weighted: 0
   weights: 0100000001000000
   variables:
   - {fileID: 11400000, guid: f09511e89c72b46e0af1f9970873160a, type: 2}
