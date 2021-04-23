@@ -24,6 +24,8 @@ public class SnowballParticleSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         // if (isOn)
         // {
         //     if (nSnowballs > goalNumParticles)
@@ -39,6 +41,7 @@ public class SnowballParticleSystem : MonoBehaviour
 
     void createSnowballs()
     {
+        
         while (nSnowballs < goalNumParticles)
         {
             createNewSnowball();
