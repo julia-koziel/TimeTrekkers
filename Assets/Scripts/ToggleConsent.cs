@@ -72,7 +72,7 @@ public class ToggleConsent : MonoBehaviour
                 "I understand what participation in this study involves", 
                 "I have had the opportunity to consider the information and to ask questions. A researcher answered my questions satisfactorily.", 
                 "I understand that my child will be assigned a 6-digit study code upon enrolment in the study and that his/her responses  will be only recorded under this study code.  Personal information will be stored securely and confidential  and separate from responses on any of the study measures.", 
-                "I understand that my son/daughter’s participation is voluntary and that we are free to withdraw at any time,  without having to give any reason.", 
+                "I understand that my son/daughter’s participation is voluntary and that we are free to withdraw at any time  without having to give any reason.", 
                 "I agree for my son/daughter to play cognitive games on a tablet/smartphone", 
                 "I agree to fill in some questionnaires about my child’s behavior."});
                 
