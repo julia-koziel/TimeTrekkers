@@ -189,7 +189,6 @@ public class MainMenuLogicNew : MonoBehaviour
     {
         wasClicked=false;
         console.SetActive(true);
-        Debug.Log("console");
         machine.SetActive(false);
         button.SetActive(true);
 
@@ -201,7 +200,6 @@ public class MainMenuLogicNew : MonoBehaviour
 
         for (int i = 0; i < audioInfo.Length; i++)
         {
-            Debug.Log(audioInfo[i].text);
             currentAudio = aSources[audioInfo[i].index];
             currentAudio.Play();
             yield return new WaitForSeconds(currentAudio.clip.length + audioInfo[i].delay);

@@ -2311,40 +2311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stages:
-  - stageType: 4
-    stageName: Intro Scene
-    stageId: 0
-    nViews: 0
-    hasTopText: 0
-    hasBottomText: 0
-    hasRepeatStage: 0
-    hasContinueStage: 0
-    hasCustomStage: 0
-    topText: {fileID: 0}
-    bottomText: {fileID: 0}
-    repeatText: {fileID: 0}
-    customText: {fileID: 0}
-    continueText: {fileID: 0}
-    repeatStage: 0
-    customStage: 0
-    continueStage: 0
-    maxViewingsStage: 0
-    hasMaxViewings: 0
-    maxViewings: 0
-    nTrials: 30
-    iti: 0.5
-    dataHolder: {fileID: 11400000, guid: dfd0f38db12764964a14a99af1f869ac, type: 2}
-    hasPresetMatrix: 0
-    presetMatrix: {fileID: 0}
-    hasTrialSetter: 0
-    trialSetter: {fileID: 0}
-    hasDemoProtocol: 0
-    demoProtocol: {fileID: 0}
-    hasOpeningAudio: 0
-    openingAudio: {fileID: 0}
-    stageGameObject: {fileID: 1598925874}
-    nPrompts: 0
-    prompts: []
   - stageType: 3
     stageName: Main
     stageId: 1
@@ -2362,6 +2328,40 @@ MonoBehaviour:
     repeatStage: 1
     customStage: 1
     continueStage: 1
+    maxViewingsStage: 0
+    hasMaxViewings: 0
+    maxViewings: 0
+    nTrials: 50
+    iti: 0.5
+    dataHolder: {fileID: 11400000, guid: dfd0f38db12764964a14a99af1f869ac, type: 2}
+    hasPresetMatrix: 0
+    presetMatrix: {fileID: 0}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
+    hasDemoProtocol: 0
+    demoProtocol: {fileID: 0}
+    hasOpeningAudio: 0
+    openingAudio: {fileID: 0}
+    stageGameObject: {fileID: 1598925874}
+    nPrompts: 0
+    prompts: []
+  - stageType: 4
+    stageName: Intro Scene
+    stageId: 0
+    nViews: 0
+    hasTopText: 0
+    hasBottomText: 0
+    hasRepeatStage: 0
+    hasContinueStage: 0
+    hasCustomStage: 0
+    topText: {fileID: 0}
+    bottomText: {fileID: 0}
+    repeatText: {fileID: 0}
+    customText: {fileID: 0}
+    continueText: {fileID: 0}
+    repeatStage: 0
+    customStage: 0
+    continueStage: 0
     maxViewingsStage: 0
     hasMaxViewings: 0
     maxViewings: 0
@@ -4502,7 +4502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1951153413
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartZoom : MonoBehaviour
 {
     private Animator animator;
-    private MainMenuLogic gameLogic;
+    private MainMenuLogicNew gameLogic;
    
     public GameObject text;
     public GameObject DinoButton;
@@ -29,7 +29,7 @@ public class StartZoom : MonoBehaviour
     {
         text.SetActive(true);
         animator = GetComponent<Animator>();
-        gameLogic = FindObjectOfType<MainMenuLogic>();
+        gameLogic = FindObjectOfType<MainMenuLogicNew>();
         DinoButton.SetActive(false);
         PirateButton.SetActive(false);
         TreasureButton.SetActive(false);

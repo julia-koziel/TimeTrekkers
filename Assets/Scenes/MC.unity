@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 5581907885541291001, guid: 9f12aede7967d4eccb788ca6109c22b5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5581907885541291001, guid: 9f12aede7967d4eccb788ca6109c22b5,
         type: 3}
@@ -3463,40 +3463,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stages:
-  - stageType: 4
-    stageName: Animation
-    stageId: 9
-    nViews: 0
-    hasTopText: 0
-    hasBottomText: 0
-    hasRepeatStage: 0
-    hasContinueStage: 0
-    hasCustomStage: 0
-    topText: {fileID: 0}
-    bottomText: {fileID: 0}
-    repeatText: {fileID: 0}
-    customText: {fileID: 0}
-    continueText: {fileID: 11400000, guid: 2e382dbc7bc7b46c59ee3f5bb5c43e6c, type: 2}
-    repeatStage: 9
-    customStage: 9
-    continueStage: 9
-    maxViewingsStage: 0
-    hasMaxViewings: 0
-    maxViewings: 0
-    nTrials: 24
-    iti: 1
-    dataHolder: {fileID: 11400000, guid: fe4df168b916f4519bae5a0cada36950, type: 2}
-    hasPresetMatrix: 0
-    presetMatrix: {fileID: 11400000, guid: 8c31a116c12454d988ab791277f04ae3, type: 2}
-    hasTrialSetter: 0
-    trialSetter: {fileID: 0}
-    hasDemoProtocol: 0
-    demoProtocol: {fileID: 0}
-    hasOpeningAudio: 0
-    openingAudio: {fileID: 0}
-    stageGameObject: {fileID: 563382971}
-    nPrompts: 0
-    prompts: []
   - stageType: 1
     stageName: Demo
     stageId: 6
@@ -3529,6 +3495,40 @@ MonoBehaviour:
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1405057699}
+    nPrompts: 0
+    prompts: []
+  - stageType: 4
+    stageName: Animation
+    stageId: 9
+    nViews: 0
+    hasTopText: 0
+    hasBottomText: 0
+    hasRepeatStage: 0
+    hasContinueStage: 0
+    hasCustomStage: 0
+    topText: {fileID: 0}
+    bottomText: {fileID: 0}
+    repeatText: {fileID: 0}
+    customText: {fileID: 0}
+    continueText: {fileID: 11400000, guid: 2e382dbc7bc7b46c59ee3f5bb5c43e6c, type: 2}
+    repeatStage: 9
+    customStage: 9
+    continueStage: 9
+    maxViewingsStage: 0
+    hasMaxViewings: 0
+    maxViewings: 0
+    nTrials: 24
+    iti: 1
+    dataHolder: {fileID: 11400000, guid: fe4df168b916f4519bae5a0cada36950, type: 2}
+    hasPresetMatrix: 0
+    presetMatrix: {fileID: 11400000, guid: 8c31a116c12454d988ab791277f04ae3, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
+    hasDemoProtocol: 0
+    demoProtocol: {fileID: 0}
+    hasOpeningAudio: 0
+    openingAudio: {fileID: 0}
+    stageGameObject: {fileID: 563382971}
     nPrompts: 0
     prompts: []
   - stageType: 3
