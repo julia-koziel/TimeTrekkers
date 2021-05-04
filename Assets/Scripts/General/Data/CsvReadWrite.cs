@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, string)>
 {
@@ -18,6 +19,7 @@ public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, s
     public TranslatableString version;
     public DataGameEvent dataSubmission;
     string taskCode { get { return SceneManager.GetActiveScene().name; } }
+    Regex badChars;
 
     List<string[]> stageCsv;
     List<string[]> trialsCsv
@@ -49,6 +51,7 @@ public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, s
     {
         stageCsv = new List<string[]>();
         stageCsv.Add(stageData.headers);
+        badChars = new Regex(@"[’',\n\t]", RegexOptions.Compiled);
     }
 
     public void LogTrialsData()
@@ -84,12 +87,17 @@ public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, s
         }
     }
 
-    public void OutputData(List<string[]> dataList, string identifier)
+   public void OutputData(List<string[]> dataList, string identifier)
     {
+
         if (participantId.Value != "sfaritest nocsv")
         {
             var fileName = getFileName(identifier);
             var contents = "\n".Join(dataList.Select(row => "\t".Join(row)));
+            var contents = "\n".Join(
+                dataList.Select(row => "\t".Join(
+                    row.Select(var => badChars.Replace(var, string.Empty))
+                )));
             writeTsv(fileName, contents);
         }
     }
