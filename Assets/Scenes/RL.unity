@@ -929,29 +929,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc3b3f5baa224c698f2ba34ba066822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Theo: {fileID: 1951145515}
-  chestGood: {fileID: 1961085933}
-  chestGoodOpen: {fileID: 1812591805}
-  chestBad: {fileID: 1627621078}
-  chestBad2: {fileID: 917460825}
-  chestBadOpen: {fileID: 1980905795}
-  coin: {fileID: 493394807}
-  crab: {fileID: 1458177758}
-  ITI: {fileID: 952604525}
-  oldtext: {fileID: 13449359}
-  textboxes:
-  - {fileID: 642424182}
-  - {fileID: 1885262368}
-  - {fileID: 635051295}
-  - {fileID: 786479674}
-  - {fileID: 717893620}
-  - {fileID: 369070030}
-  MM: {fileID: 0}
-  trials: {fileID: 0}
-  startButton: {fileID: 1813471188}
-  repeatButton: {fileID: 117238833}
-  time: 0
-  stageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
 --- !u!4 &81070956
 Transform:
   m_ObjectHideFlags: 0
@@ -23535,29 +23512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc3b3f5baa224c698f2ba34ba066822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Theo: {fileID: 1783394020}
-  chestGood: {fileID: 1606976755}
-  chestGoodOpen: {fileID: 2026949689}
-  chestBad: {fileID: 2086415610}
-  chestBad2: {fileID: 2131589053}
-  chestBadOpen: {fileID: 1037813785}
-  coin: {fileID: 866120031}
-  crab: {fileID: 620254295}
-  ITI: {fileID: 1830238244}
-  oldtext: {fileID: 151948278}
-  textboxes:
-  - {fileID: 1183641675}
-  - {fileID: 273255508}
-  - {fileID: 81221291}
-  - {fileID: 1188802687}
-  - {fileID: 601684026}
-  - {fileID: 1375494108}
-  MM: {fileID: 0}
-  trials: {fileID: 0}
-  startButton: {fileID: 1930454004}
-  repeatButton: {fileID: 510441809}
-  time: 0
-  stageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
 --- !u!82 &1094394682
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26171,7 +26125,7 @@ MonoBehaviour:
     nPrompts: 0
     prompts: []
   - stageType: 3
-    stageName: Trials Reversal
+    stageName: TrialsReversal
     stageId: 1
     nViews: 0
     hasTopText: 0

@@ -3202,7 +3202,7 @@ MonoBehaviour:
     nPrompts: 0
     prompts: []
   - stageType: 3
-    stageName: Trials-Level3
+    stageName: Trials
     stageId: 0
     nViews: 0
     hasTopText: 0

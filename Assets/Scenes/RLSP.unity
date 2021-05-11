@@ -5082,6 +5082,40 @@ MonoBehaviour:
     stageGameObject: {fileID: 974711804}
     nPrompts: 0
     prompts: []
+  - stageType: 3
+    stageName: Trials
+    stageId: 1
+    nViews: 0
+    hasTopText: 0
+    hasBottomText: 0
+    hasRepeatStage: 0
+    hasContinueStage: 0
+    hasCustomStage: 0
+    topText: {fileID: 0}
+    bottomText: {fileID: 0}
+    repeatText: {fileID: 0}
+    customText: {fileID: 0}
+    continueText: {fileID: 0}
+    repeatStage: 1
+    customStage: 1
+    continueStage: 1
+    maxViewingsStage: 0
+    hasMaxViewings: 0
+    maxViewings: 0
+    nTrials: 80
+    iti: 0.5
+    dataHolder: {fileID: 11400000, guid: 26604528cdea34c95a155a368b711526, type: 2}
+    hasPresetMatrix: 1
+    presetMatrix: {fileID: 11400000, guid: bf7095434ba8448ae9a2d45b9488f63e, type: 2}
+    hasTrialSetter: 0
+    trialSetter: {fileID: 0}
+    hasDemoProtocol: 0
+    demoProtocol: {fileID: 0}
+    hasOpeningAudio: 0
+    openingAudio: {fileID: 0}
+    stageGameObject: {fileID: 610928633}
+    nPrompts: 0
+    prompts: []
   - stageType: 4
     stageName: End
     stageId: 2
@@ -5114,40 +5148,6 @@ MonoBehaviour:
     hasOpeningAudio: 0
     openingAudio: {fileID: 0}
     stageGameObject: {fileID: 1650111618}
-    nPrompts: 0
-    prompts: []
-  - stageType: 3
-    stageName: Probabilistic
-    stageId: 1
-    nViews: 0
-    hasTopText: 0
-    hasBottomText: 0
-    hasRepeatStage: 0
-    hasContinueStage: 0
-    hasCustomStage: 0
-    topText: {fileID: 0}
-    bottomText: {fileID: 0}
-    repeatText: {fileID: 0}
-    customText: {fileID: 0}
-    continueText: {fileID: 0}
-    repeatStage: 1
-    customStage: 1
-    continueStage: 1
-    maxViewingsStage: 0
-    hasMaxViewings: 0
-    maxViewings: 0
-    nTrials: 80
-    iti: 0.5
-    dataHolder: {fileID: 11400000, guid: 26604528cdea34c95a155a368b711526, type: 2}
-    hasPresetMatrix: 1
-    presetMatrix: {fileID: 11400000, guid: bf7095434ba8448ae9a2d45b9488f63e, type: 2}
-    hasTrialSetter: 0
-    trialSetter: {fileID: 0}
-    hasDemoProtocol: 0
-    demoProtocol: {fileID: 0}
-    hasOpeningAudio: 0
-    openingAudio: {fileID: 0}
-    stageGameObject: {fileID: 610928633}
     nPrompts: 0
     prompts: []
   currentStageName: {fileID: 0}

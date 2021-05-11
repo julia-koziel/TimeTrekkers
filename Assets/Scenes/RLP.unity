@@ -874,7 +874,7 @@ MonoBehaviour:
     nPrompts: 0
     prompts: []
   - stageType: 3
-    stageName: Trials Probabilistic
+    stageName: Trials
     stageId: 1
     nViews: 0
     hasTopText: 0

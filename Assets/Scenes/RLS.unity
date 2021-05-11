@@ -9062,7 +9062,7 @@ MonoBehaviour:
     nPrompts: 0
     prompts: []
   - stageType: 3
-    stageName: Main-Reversal
+    stageName: TrialsReversal
     stageId: 1
     nViews: 0
     hasTopText: 0
