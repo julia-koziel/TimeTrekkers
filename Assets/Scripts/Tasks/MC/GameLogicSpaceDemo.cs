@@ -10,7 +10,7 @@ public class GameLogicSpaceDemo : MonoBehaviour
     public GameObject canvas;
     private Animator starsAnimator;
     public GameObject spaceshipsContainer;
-    private SnowballParticleSystem spaceships;
+    private SpaceshipParticleSystem spaceships;
     public GameObject trials;
     public GameObject startButton;
     public GameObject demoButton;
@@ -42,7 +42,7 @@ public class GameLogicSpaceDemo : MonoBehaviour
     void Start()
     {
         handBehaviour = hand.GetComponent<HandBehaviourSpace>();
-        spaceships = spaceshipsContainer.GetComponent<SnowballParticleSystem>();
+        spaceships = spaceshipsContainer.GetComponent<SpaceshipParticleSystem>();
         aSources = GetComponents<AudioSource>();
         starsAnimator = canvas.GetComponent<Animator>();
         spaceships.setParams(dir: Vector3.left, coh: 1);

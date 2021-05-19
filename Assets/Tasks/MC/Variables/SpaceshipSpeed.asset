@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c98653d4f6a46a4bf2c165690343a9, type: 3}
   m_Name: SpaceshipSpeed
   m_EditorClassIdentifier: 
-  Value: 4
+  Value: 0.7

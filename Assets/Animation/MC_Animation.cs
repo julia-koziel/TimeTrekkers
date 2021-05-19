@@ -7,6 +7,7 @@ using UnityEngine;
 public class MC_Animation : MonoBehaviour
 {
     Movement sequence;
+    public GameObject background;
     public GameObject Theo;
     public GameObject sabertooth;
     public GameObject mammoth;
@@ -18,7 +19,7 @@ public class MC_Animation : MonoBehaviour
     float defaultSpeed;
     float slowerSpeed = 0.7f;
     float defaultLifetime;
-    float longLifetime = 100;
+
     Vector3 camStart = new Vector3(0, 0, -10);
     Vector3 camEnd = new Vector3(0, 0, -10);
     float camStartSize = 10;
@@ -64,7 +65,7 @@ public class MC_Animation : MonoBehaviour
                             SetActive(snow);
             }, duration:2)
             .Then(run: time => {
-                            SetNonactive(sabertooth, mammoth, Theo, shelter);
+                            SetNonactive(background, sabertooth, mammoth, Theo, shelter);
                             SetActive(left, right); 
                             snowballs.switchOn();
                         }, duration: 8)
