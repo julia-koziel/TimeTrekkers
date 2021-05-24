@@ -12,8 +12,8 @@ public class Gamelogicbees : MonoBehaviour
     private Animator alienAnimator;
     public GameObject continueButton;
     public GameObject trialsContainer;
-    public GameObject SnowballsContainer;
-    private SnowballParticleSystem Snowballs;
+    public GameObject spaceshipsContainer;
+    private SpaceshipParticleSystem spaceships;
     public GameObject instructions;
     public GameObject MM;
     private CsvReadWriteBees csv;
@@ -43,8 +43,8 @@ public class Gamelogicbees : MonoBehaviour
     {
         csv = FindObjectOfType<CsvReadWriteBees>();
         alienAnimator = alien.GetComponent<Animator>();
-        Snowballs = SnowballsContainer.GetComponent<SnowballParticleSystem>();
-        // Snowballs.switchOn(false);
+        spaceships = spaceshipsContainer.GetComponent<SpaceshipParticleSystem>();
+        // spaceships.switchOn(false);
         csv.csvstart();
         Random.InitState(42);
         dir = Random.Range(0, 2);
@@ -62,7 +62,7 @@ public class Gamelogicbees : MonoBehaviour
             {
                 case 1:
                     coherence = 1;
-                    Snowballs.setParams(dir, coherence);
+                    spaceships.setParams(dir, coherence);
 
                     flag = false;
                     break;
@@ -87,7 +87,7 @@ public class Gamelogicbees : MonoBehaviour
                         rng.Shuffle(trialCoherences);
                     }
                     coherence = trialCoherences[trial];
-                    Snowballs.setParams(dir, coherence);
+                    spaceships.setParams(dir, coherence);
                     flag = false;
                     break;
             }
@@ -97,7 +97,7 @@ public class Gamelogicbees : MonoBehaviour
         {
             time = 0;
             alien.SetActive(false);
-            // Snowballs.switchOn(true);
+            // spaceships.switchOn(true);
             trialNeedsStarting = false;
         }
     }
@@ -119,14 +119,14 @@ public class Gamelogicbees : MonoBehaviour
             time = 0;
             prev_dir = dir;
             dir = Random.Range(0, 2);
-            Snowballs.setDirection(dir);
+            spaceships.setDirection(dir);
             // change blocks
             if (block == 1)
             {
                 block1trialsCorrect = correct ? block1trialsCorrect+1 : 0;
             }
 
-            // Snowballs.switchOn(false);
+            // spaceships.switchOn(false);
 
             if (trial == n_trials || block1trialsCorrect == 5)
             {

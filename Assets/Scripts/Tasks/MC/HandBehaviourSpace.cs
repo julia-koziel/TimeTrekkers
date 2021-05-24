@@ -11,8 +11,8 @@ public class HandBehaviourSpace : MonoBehaviour
     public GameObject alienContainer;
     public GameObject alien;
     private Animator alienAnimator;
-    public GameObject SnowballsContainer;
-    private SnowballParticleSystem Snowballs;
+    public GameObject spaceshipsContainer;
+    private SpaceshipParticleSystem spaceships;
     private int clickTrigger = Animator.StringToHash("isClicked");
     private IEnumerator clickRoutine;
     public enum State {
@@ -34,8 +34,8 @@ public class HandBehaviourSpace : MonoBehaviour
         animator = GetComponent<Animator>();
         alienAnimator = alien.GetComponent<Animator>();
         gameLogic = FindObjectOfType<GameLogicSpaceDemo>();
-        // Snowballs = SnowballsRect.GetComponent<SnowballsBehaviour>();
-        Snowballs = SnowballsContainer.GetComponent<SnowballParticleSystem>();
+        // spaceships = spaceshipsRect.GetComponent<SpaceshipsBehaviour>();
+        spaceships = spaceshipsContainer.GetComponent<SpaceshipParticleSystem>();
         startPosition = transform.position;
     }
 
@@ -137,7 +137,7 @@ public class HandBehaviourSpace : MonoBehaviour
         animator.SetTrigger(clickTrigger);
         yield return new WaitForSeconds(0.1f);
         animator.SetTrigger(clickTrigger);
-        // Snowballs.switchOn(false);
+        // spaceships.switchOn(false);
         Vector3 pos = alienContainer.transform.position;
         pos.x = transform.position.x;
         alienContainer.transform.position = pos;

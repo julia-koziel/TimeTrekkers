@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
   m_Name: CoherenceCat
   m_EditorClassIdentifier: 
-  Value: 1
+  Value: 0.9
   weighted: 0
-  weights: 010000000200000002000000
+  weights: 0200000002000000
   variables:
-  - {fileID: 11400000, guid: c0197ed303e734875a8e0463b84d109a, type: 2}
   - {fileID: 11400000, guid: 49eb553ecdc864b49943976884c7134d, type: 2}
   - {fileID: 11400000, guid: 6d7d56419c75c44efb11155091cc29e1, type: 2}
   controlSpacing: 0
   minSpacing:
-  - 0
   - 0
   - 0
