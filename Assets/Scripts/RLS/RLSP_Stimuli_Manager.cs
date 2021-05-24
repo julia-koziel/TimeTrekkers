@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RLSP_Stimuli_Manager : MonoBehaviour
 {   
@@ -17,6 +18,11 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     
     public BoolVariable correct;
     public BoolVariable participantsGo;
+    public BoolVariable criterionReached;
+    public BoolVariable RL;
+    public BoolVariable RLS;
+    public IntVariable criterion;
+    public IntVariable criterionTracker;
     public IntVariable score;
     public GameEvent trialEnd;
     public GameObject ITI;
@@ -32,7 +38,11 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public Transform rightPos;
 
     public Vector3 position;
+    public int CrValue;
     public float rewardDuration;
+
+    List<int>Cr = new List<int>();
+    
 
     void OnEnable()
     {
@@ -40,13 +50,13 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
         _urs = unrewardedStimuli.ToArray();
     }
     public void OnStartTrial()
-    {
-        Debug.Log(side.Value);
+    {   
+        Debug.Log(probindex);
         inputVariablesManager.updateInputVariables();
         food.transform.position = centrePos.position;
         food.SetActive(true);
 
-        if (participantsGo && trial == 0)
+        if (participantsGo && trial== 0)
         {
             rewardedStimuli[0].transform.position = leftPos.position;
             rewardedStimuli[1].transform.position = rightPos.position;
@@ -84,8 +94,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
                 rewardedStimuli.ForEach(s => s.correct = true);
                 unrewardedStimuli.ForEach(s => s.correct = false);
             
-                var rewarded = unrewardedStimuli[Random.Range(0, 2)];
-                var unrewarded = rewardedStimuli[Random.Range(0, 2)];
+                var rewarded = rewardedStimuli[Random.Range(0, 2)];
+                var unrewarded = unrewardedStimuli[Random.Range(0, 2)];
 
                 rewardedId.Value = rewarded.id;
                 unrewardedId.Value = unrewarded.id;
@@ -97,7 +107,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             }
         }
 
-            else
+            else if (trial>39 && criterionReached.Value>0)
             {
                 if (probindex==0)
             {
@@ -136,6 +146,18 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
 
             }
 
+            else if (trial==40 && criterionReached.Value==0)
+            {
+                if (RL==1)
+                {
+                    SceneManager.LoadScene(4);
+                }
+                else
+                {
+                    SceneManager.LoadScene(3);
+                }
+            }
+
     }
 
     // Priority listener
@@ -143,6 +165,12 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     {
         if (participantsGo)
         {
+            CalculateCriterion();
+            if(criterionTracker.Value>4)
+            {
+                criterionReached.Value=1;
+            }
+
             if (trial == 0)
             {
                 rewardedId.Value = clickedId;
@@ -168,6 +196,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             }
 
         }
+
         
         score.Value = correct ? score + 1 : score - 1;
         position = all[clickedId].transform.position;
@@ -200,4 +229,11 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
         rewardedStimuli.ForEach(s => s.correct = true);
         rewardedStimuli.ForEach(s => s.correct = true);
     }
+
+    public void CalculateCriterion()
+        {
+            CrValue = correct ? 1 : 0;
+            Cr.Add(CrValue); 
+            criterionTracker.Value = Cr.Skip(trial-8).Take(8).Sum();
+        }
 }

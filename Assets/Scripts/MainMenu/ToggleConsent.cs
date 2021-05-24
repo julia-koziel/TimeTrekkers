@@ -10,10 +10,14 @@ public class ToggleConsent : MonoBehaviour
     public GameObject start;
     public GameObject error;
     public InputField inputField;
+    public InputField idInputField;
 
     public GameObject placeholder;
+    public GameObject placeholderID;
+    private string id;
     private string signature;
     private Text placeholderText;
+    private Text placeholderIDText;
     public GameEvent StageEnd;
     public DataGameEvent dataSubmission;
 
@@ -21,18 +25,27 @@ public class ToggleConsent : MonoBehaviour
     void Awake()
     {
         inputField.onEndEdit.AddListener(AcceptStringInput);
+        idInputField.onEndEdit.AddListener(AcceptIDInput);
     }
     
     void OnEnable()
     {
         placeholderText = placeholder.GetComponent<Text>();
         string newText = signature;
+        placeholderIDText = placeholderID.GetComponent<Text>();
+        string idText = id;
     }
 
     void AcceptStringInput(string userInput)
     {
         userInput = userInput.ToLower();
         signature = userInput;
+    }
+
+    void AcceptIDInput (string userInput)
+    {
+        userInput = userInput.ToLower();
+        id = userInput;
     }
 
 
@@ -74,7 +87,7 @@ public class ToggleConsent : MonoBehaviour
     public void ConsentUpload()
     {
                 var data = new List<string[]>();
-                data.Add(new string[] {"name", 
+                data.Add(new string[] {"id", "name", 
                 "I confirm that I have read and understand the information sheet. Access the information sheet", 
                 "I understand what participation in this study involves", 
                 "I have had the opportunity to consider the information and to ask questions. A researcher answered my questions satisfactorily.", 
@@ -83,6 +96,7 @@ public class ToggleConsent : MonoBehaviour
                 "I agree for my son/daughter to play cognitive games on a tablet/smartphone", 
                 "I agree to fill in some questionnaires about my child’s behavior."});
                 
+                var ID = id;
                 var name = signature;
                 var statement1 = consentBoxes[0].isOn ? 1:0;
                 var statement2 = consentBoxes[1].isOn ? 1:0;
@@ -92,8 +106,7 @@ public class ToggleConsent : MonoBehaviour
                 var statement6 = consentBoxes[5].isOn ? 1:0;
                 var statement7 = consentBoxes[6].isOn ? 1:0;
                 
-                data.Add(new string[] {signature, $"{statement1}", $"{statement2}",$"{statement3}", $"{statement4}", $"{statement5}", $"{statement6}", $"{statement7}" });
-                Debug.Log(signature);
+                data.Add(new string[] {id, signature, $"{statement1}", $"{statement2}",$"{statement3}", $"{statement4}", $"{statement5}", $"{statement6}", $"{statement7}" });
                 dataSubmission.Raise(data, "consent form");
                 StageEnd.Raise();
     }

@@ -73,6 +73,7 @@ public class DemoLogicStardust : MonoBehaviour
 	void Update () 
     {
         time += Time.deltaTime;
+
         if(time>7)
             {
             startButton.SetActive(true);
@@ -200,9 +201,9 @@ public class DemoLogicStardust : MonoBehaviour
                 aSources[2].Play();
             }
 
-            
-
+        
             theo.SetActive(false);
+            Theo.SetActive(false);
             Theo2.SetActive(true);
             // StageEnd.Raise();
             

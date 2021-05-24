@@ -17,11 +17,6 @@ public class IDScript : MonoBehaviour
             inputText.SetActive(true);
             inputText.text = participantID.Value;
         }
-        else
-        {
-            noId = true;
-            print("no ID");
-        }
     }
 
     public void SaveToPlayerPrefs(string id)

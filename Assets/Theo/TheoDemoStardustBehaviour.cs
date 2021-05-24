@@ -7,7 +7,6 @@ public class TheoDemoStardustBehaviour : MonoBehaviour
    private AudioSource[] aSources;
     private Animator animator;
     private DemoLogicStardust logic;
-    public AudioSource trex;
 
     public GameObject stardust;
     private int clickTrigger = Animator.StringToHash("isClicked");
@@ -36,7 +35,6 @@ public class TheoDemoStardustBehaviour : MonoBehaviour
         logic = FindObjectOfType<DemoLogicStardust>();
         startPosition = transform.position;
         aSources = GetComponents<AudioSource>();
-        trex = GetComponent<AudioSource>();
 
     }
 

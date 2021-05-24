@@ -1,7 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class MenuScreenLogic : MonoBehaviour
 {
@@ -12,6 +15,8 @@ public class MenuScreenLogic : MonoBehaviour
     public GameObject level1button;
     public GameObject level2button;
     public GameObject level3button;
+
+     public StringVariable participant_id;
 
     public bool wasClicked;
     public bool TaskSelected;
@@ -26,11 +31,14 @@ public class MenuScreenLogic : MonoBehaviour
     public bool QueensClicked; 
     public bool SHClicked;
     public bool AFClicked;
+    public bool MCClicked;
+    public bool speedOptimised;
 
     public float time;
     // Start is called before the first frame update
     void Start()
     {
+        checkforBAO();
         button.SetActive(true);
     }
 
@@ -46,12 +54,21 @@ public class MenuScreenLogic : MonoBehaviour
        {
            if (time>3)
            {
-           DinoGoLoad();
+            if (speedOptimised)
+            {
+                DinoGoLoad();
+            }
+            else 
+            {
+                BAOLoad();
+            }
            }
        }
 
        else if(PirateClicked)
-    {    
+    {   
+        if (speedOptimised)
+    {
         if (level1<1)
         {
             level1button.SetActive(true);
@@ -69,6 +86,13 @@ public class MenuScreenLogic : MonoBehaviour
             level2button.SetActive(true);
             level3button.SetActive(true);
         }
+
+    }
+
+    else
+    {
+        BAOLoad();
+    }
     }   
 
     else if (QueensClicked)
@@ -121,6 +145,14 @@ public class MenuScreenLogic : MonoBehaviour
         }
 
     }
+
+    public void BAOLoad()
+        {
+            SceneManager.LoadScene(1);
+            gameObject.SetActive(false);
+        }
+    
+
     public void PirateLoad()
     {  
             SceneManager.LoadScene(3);
@@ -171,4 +203,37 @@ public class MenuScreenLogic : MonoBehaviour
         gameObject.SetActive(false);
         
     }
+
+
+    public void checkforBAO()
+    {
+        var id = participant_id.Value;
+        var files = new Queue<string>();
+        speedOptimised = false;
+        
+        if (Directory.Exists(getFolderPath(id)))
+        {
+            var tsvs = Directory.GetFiles(getFolderPath(id), "*.tsv", SearchOption.AllDirectories);
+            tsvs.Where(s => Regex.IsMatch(s, @".+task-BAO-Main.+\.tsv$")).ForEach(files.Enqueue);
+            speedOptimised = files.Count > 0;
+        }
+
+    }
+
+    string getFolderPath(string id)
+    {
+        string dataPath;
+        
+#if   UNITY_EDITOR
+        dataPath = Application.dataPath + "/CSV";
+#elif UNITY_ANDROID
+        dataPath = Application.persistentDataPath;
+#elif UNITY_IPHONE
+        dataPath = Application.persistentDataPath;
+#else
+        dataPath = Application.dataPath;
+#endif
+        return $"{dataPath}/{id}/";
+    }
+
 }

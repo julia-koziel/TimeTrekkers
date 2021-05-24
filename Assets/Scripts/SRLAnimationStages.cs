@@ -96,10 +96,11 @@ public class SRLAnimationStages : MonoBehaviour
 
         case State.Theo:
         audioInfo = new AudioBundle[] {
-                    new AudioBundle(index: 2, delay: 2f),
+                    new AudioBundle(index: 2, delay: 0f),
                 };
 
         Theo.SetActive(true);
+        farmer.SetActive(false);
         StartCoroutine(playAudio(audioInfo));
         finishStateLoad();
         if (subtitleOn)
@@ -112,6 +113,7 @@ public class SRLAnimationStages : MonoBehaviour
 
         case State.Demo:
 
+            textboxes[2].SetActive(false);
             gameObject.SetActive(false);
             map.SetActive(false);
             animation.SetActive(false);

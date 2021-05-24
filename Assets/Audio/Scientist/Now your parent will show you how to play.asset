@@ -15,8 +15,8 @@ MonoBehaviour:
   languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
   translatedAudioClips:
   - {fileID: 0}
-  - {fileID: 8300000, guid: 3c9363bf7f4414fdc86c6a2d79a2bfe3, type: 3}
-  - {fileID: 8300000, guid: 3c9363bf7f4414fdc86c6a2d79a2bfe3, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: af7321d3fdb664cea9166a24cd422572, type: 3}
+  - {fileID: 8300000, guid: 7fbaecf86b5b64ec497cbfada3c44358, type: 3}
+  - {fileID: 8300000, guid: f6003b936f9764d3e95fe62000a49c29, type: 3}
   - {fileID: 8300000, guid: 524f4631d80cc4581881cd33c7c0224b, type: 3}
   isMuteable: 1

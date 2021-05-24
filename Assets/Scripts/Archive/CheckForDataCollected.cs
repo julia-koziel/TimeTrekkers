@@ -46,7 +46,7 @@ public class CheckForDataCollected : MonoBehaviour
 
     public void LoadMM()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     string getFolderPath(string participantId)

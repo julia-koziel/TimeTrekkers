@@ -1,0 +1,7 @@
+participant_id	stage_name	views	top_text	bottom_text	button1	button2	button3	button_clicked
+test1	Animation	1						Continue
+test1	Demo	1						Continue
+test1	Pretest UI	1					Continue	Continue
+test1	Pretest	1						Continue
+test1	TrialsUI	1			Repeat		Start the game!	Start the game!
+test1	Block1	1						

@@ -14,6 +14,7 @@ public class DemoRewardSocial : MonoBehaviour
     public GameObject personBadReact;
     public GameObject food;
     public GameObject ITI; 
+    public BoolVariable RL;
     
     public GameObject startButton;
     public GameObject repeatButton;
@@ -47,6 +48,7 @@ public class DemoRewardSocial : MonoBehaviour
     {
         TheoBehaviour = Theo.GetComponent<TheoDemoRewardSocialBehaviour>();
         aSources = GetComponents<AudioSource>();
+        RL.Value=0;
 
         string prefsKey = PrefsKeys.Keys.SpokenAudio.ToString();
         audioOn = PlayerPrefs.GetInt(prefsKey, 0) == 1;
@@ -240,6 +242,7 @@ public class DemoRewardSocial : MonoBehaviour
                  if (subtitleOn)
                 {
                     textboxes[2].SetActive(false);
+                    textboxes[4].SetActive(false);
                 }
                 // finishStateLoad();
                 

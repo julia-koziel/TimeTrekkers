@@ -15,7 +15,7 @@ MonoBehaviour:
   languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
   translatedStrings:
   - 
-  - 
+  - Selecteer alle gebruikte aanwijzingen
   - Please select all prompts used
-  - 
-  - 
+  - "Veuillez s\xE9lectionner les sollicitations utilis\xE9es"
+  - "V\xE4nligen v\xE4lj alla prompts som anv\xE4nts"

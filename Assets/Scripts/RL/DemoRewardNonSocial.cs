@@ -21,6 +21,7 @@ public class DemoRewardNonSocial : MonoBehaviour
     public GameObject trials;
     public GameObject startButton;
     public GameObject repeatButton;
+    public BoolVariable RL;
     private bool buttonClicked = false;
     
     public float time = 0;

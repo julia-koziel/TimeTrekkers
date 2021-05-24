@@ -20,8 +20,7 @@ public class MainMenuExit : MonoBehaviour
 
     public void OnMouseDown()
     {
-        SceneManager.LoadScene(0);
-        gameObject.SetActive(false);
+        
     }
 }
 

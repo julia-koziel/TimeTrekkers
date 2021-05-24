@@ -1,0 +1,13 @@
+participant_id	trial	coherence	direction	response_time	correct
+test1	1	1	0	0.661438	1
+test1	2	1	0	0.617981	1
+test1	3	1	2	0.4687576	1
+test1	4	1	2	0.4327469	1
+test1	5	1	0	0.4643936	1
+test1	6	1	2	0.4080048	1
+test1	7	1	2	0.636673	1
+test1	8	1	0	0.4212036	1
+test1	9	1	0	0.7926254	1
+test1	10	1	2	0.8476715	1
+test1	11	1	2	0.6730652	1
+test1	12	1	0	0.4263306	1
