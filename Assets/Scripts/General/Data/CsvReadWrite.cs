@@ -93,7 +93,6 @@ public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, s
         if (participantId.Value != "sfaritest nocsv")
         {
             var fileName = getFileName(identifier);
-            var contents = "\n".Join(dataList.Select(row => "\t".Join(row)));
             var contents = "\n".Join(
                 dataList.Select(row => "\t".Join(
                     row.Select(var => badChars.Replace(var, string.Empty))

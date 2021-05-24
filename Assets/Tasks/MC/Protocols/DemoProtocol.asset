@@ -14,9 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trialMatrix: {fileID: 11400000, guid: 4158d5af7f7094fccaabef59c43609d5, type: 2}
   reactionTime: 2
-  trialNumbers: 
-  wrongClicks: 
+  trialNumbers: 000000000100000002000000
+  wrongClicks: 000000
   preClickClips:
+  - {fileID: 11400000, guid: 268b8bc62b47c4a62b2d7498de15d40a, type: 2}
+  - {fileID: 11400000, guid: 11047e52d07e842c383a4769cc2804c3, type: 2}
+  - {fileID: 11400000, guid: 1e40de384a8c04b448e6085ec2dcf775, type: 2}
   - {fileID: 0}
-  onClickClips: []
-  postClickClips: []
+  onClickClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  postClickClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

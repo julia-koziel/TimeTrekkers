@@ -9,13 +9,13 @@ public class TrialRunner : MonoBehaviour, IGameEventListener
     public GameEvent onEndStage;
     public IntVariable nTrials;
     public IntVariable trial;
-    float time;
+    public FloatVariable time;
     public float interTrialInterval;
     public bool running {get; set;} // TODO see what default is
     bool betweenTrials;
     public void StartTrials() 
     { 
-        time = interTrialInterval; 
+        time.Value = interTrialInterval; 
         trial.Value = 0; 
         running = true; 
         betweenTrials = true; 
@@ -33,7 +33,7 @@ public class TrialRunner : MonoBehaviour, IGameEventListener
     {
         if (betweenTrials && running) 
         {
-            time += Time.deltaTime;
+            time.Value += Time.deltaTime;
             if (time > interTrialInterval)
             {   
                 betweenTrials = false;
@@ -46,7 +46,7 @@ public class TrialRunner : MonoBehaviour, IGameEventListener
 
     public void OnEndTrial()
     {
-        time = 0;
+        time.Value = 0;
         trial++;
         betweenTrials = true;
     }
@@ -62,6 +62,6 @@ public class TrialRunner : MonoBehaviour, IGameEventListener
         betweenTrials = false;
         running = false;
         trial.intValue = 0; // TODO am i needed
-        time = 0;
+        time.Value = 0;
     }
 }

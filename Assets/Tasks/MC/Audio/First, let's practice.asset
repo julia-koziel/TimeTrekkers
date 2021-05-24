@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f583fb53cc7a4f68a8b6a2dd6306a75, type: 3}
-  m_Name: Always click on the shelter that most of the snow is travelling to
+  m_Name: First, let's practice
   m_EditorClassIdentifier: 
   languageManager: {fileID: 11400000, guid: 634fe890982b643a9959d01288f0278b, type: 2}
   translatedAudioClips:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 8300000, guid: 157e7244960a948969eb1c5f8b6f342d, type: 3}
+  - {fileID: 8300000, guid: 9a7ebe23af30849fda2af4eb5be08f51, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   isMuteable: 1

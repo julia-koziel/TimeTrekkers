@@ -20,12 +20,12 @@ public class MC_Animation : MonoBehaviour
     float slowerSpeed = 0.7f;
     float defaultLifetime;
 
-    Vector3 camStart = new Vector3(0, 0, -10);
+    Vector3 camStart = new Vector3(75, -45, -10);
     Vector3 camEnd = new Vector3(0, 0, -10);
-    float camStartSize = 10;
+    float camStartSize = 100;
     float camEndSize = 5f;
     float camZoomSize = 0.3f;
-    public SnowballParticleSystem snowballs;
+    public SpaceshipParticleSystem snowballs;
 
     public TranslatableAudioClip sabrina1;
     public TranslatableAudioClip sabrina2;
@@ -51,7 +51,12 @@ public class MC_Animation : MonoBehaviour
     {
         this.BuildMovement()
             
-            .First(() => {audioTranslator.Play(theo1);AnimateMovement(Theo);})
+            .First(run: time => {})
+                        .Then(() => {
+                            cam.orthographicSize = camStartSize;
+                            cam.transform.position = camStart;
+                        })
+            .Then(() => {audioTranslator.Play(theo1);AnimateMovement(Theo);})
             .Then(duration: (audioTranslator.getLength(theo1)), run: dt => {})
             .Then(() => {audioTranslator.Play(sabrina1);AnimateMovement(sabertooth);Stabilise(Theo);})
             .Then(duration: (audioTranslator.getLength(sabrina1)), run: dt => {})
@@ -60,8 +65,8 @@ public class MC_Animation : MonoBehaviour
             .Then(() => {audioTranslator.Play(sabrina2); AnimateMovement(sabertooth); Stabilise(Theo);})
             .Then(duration: 3, run: dt => {})
             .Then(run:time=> {
-                            cam.orthographicSize = camStartSize + (camEndSize - camStartSize) * Mathf.Pow(time, 10f);
-                            cam.transform.position = camStart + (camEnd - camStart) * Mathf.Pow(time, 10f);
+                            cam.orthographicSize = camStartSize + (camEndSize - camStartSize) * Mathf.Pow(time, 3f);
+                            cam.transform.position = camStart + (camEnd - camStart) * Mathf.Pow(time, 3f);
                             SetActive(snow);
             }, duration:2)
             .Then(run: time => {
