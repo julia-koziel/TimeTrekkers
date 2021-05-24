@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08bdcfd86c9b4cfbb055117ba6a179d, type: 3}
-  m_Name: participant_id
+  m_Script: {fileID: 11500000, guid: 93926387865154e8d881ccbf46f68765, type: 3}
+  m_Name: Timestamp
   m_EditorClassIdentifier: 
-  Value: test
+  format: HH:mm:ss

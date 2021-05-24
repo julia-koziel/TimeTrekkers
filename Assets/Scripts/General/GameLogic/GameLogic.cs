@@ -35,6 +35,11 @@ public class GameLogic : MonoBehaviour
         stageList.stages.ForEach(s => s.nViews = 0);
         isParticipantsGo.boolValue = false;
         audioTranslator = GetComponent<AudioTranslator>();
+
+        // Prep data for CsvReadWrite to log start time
+        currentStage = StageList.emptyStage;
+        LogData(currentStage.continueText);
+        stageName.Value = "StartTime";
     }
 
     void Start()

@@ -51,6 +51,7 @@ public class CsvReadWrite : MonoBehaviour, IGameEventListener<(List<string[]>, s
     {
         stageCsv = new List<string[]>();
         stageCsv.Add(stageData.headers);
+        LogStageData(); // To record start time
         badChars = new Regex(@"[’',\n\t]", RegexOptions.Compiled);
     }
 

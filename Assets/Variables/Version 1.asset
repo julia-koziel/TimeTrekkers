@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08bdcfd86c9b4cfbb055117ba6a179d, type: 3}
   m_Name: Version 1
   m_EditorClassIdentifier: 
-  Value: 0.5
+  Value: 0.5.2
