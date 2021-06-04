@@ -5116,7 +5116,7 @@ PrefabInstance:
         type: 3}
       propertyPath: batteryId
       value: 
-      objectReference: {fileID: 11400000, guid: 2df1e080fb82c4706b526f286cc55726,
+      objectReference: {fileID: 11400000, guid: 801c7e6bdb38445b8929454c4823eda5,
         type: 2}
     - target: {fileID: 8350414118993242129, guid: 1c2f34426efab481aa70ca9c8fe157c6,
         type: 3}
@@ -5557,10 +5557,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1200}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

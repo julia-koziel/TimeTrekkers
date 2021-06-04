@@ -45319,7 +45319,6 @@ MonoBehaviour:
   participantsGo: {fileID: 11400000, guid: 075a5cd566b104e318233e29f5a4fa58, type: 2}
   criterionReached: {fileID: 11400000, guid: 77321d259417f451c8ac3d67017dcaca, type: 2}
   RL: {fileID: 0}
-  RLS: {fileID: 0}
   criterion: {fileID: 11400000, guid: 24454ec1a7da14d90b60380595a37eb8, type: 2}
   criterionTracker: {fileID: 11400000, guid: 74b88bc082e4043f9b2df727a4a2280e, type: 2}
   score: {fileID: 11400000, guid: 03288eaf83ad14a9aad106350dd227db, type: 2}

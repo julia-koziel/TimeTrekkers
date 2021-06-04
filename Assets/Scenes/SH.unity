@@ -9366,7 +9366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: batteryId
       value: 
-      objectReference: {fileID: 11400000, guid: 2df1e080fb82c4706b526f286cc55726,
+      objectReference: {fileID: 11400000, guid: 801c7e6bdb38445b8929454c4823eda5,
         type: 2}
     - target: {fileID: 8350414118993242129, guid: 1c2f34426efab481aa70ca9c8fe157c6,
         type: 3}
