@@ -19,7 +19,7 @@ public class Stimulus : MonoBehaviour
     bool wasClicked = false;
     float startTime;
     float? responseTime;
-    void OnEnable() => clickable = false; 
+    void OnEnable() => clickable = false;
     public void StartResponseWindow()
     {
         startTime = Time.time;
@@ -32,10 +32,7 @@ public class Stimulus : MonoBehaviour
     {
         if (clickable)
         {
-            responseTime = Time.time - startTime;
-            clickable = false;
-            wasClicked = true;
-            onClick.Invoke();
+            RegisterClick();
         }
     }
     public void LogData()
@@ -46,7 +43,15 @@ public class Stimulus : MonoBehaviour
         responseWindowEnd.Raise();
     }
 
+    void RegisterClick()
+    {
+        responseTime = Time.time - startTime;
+        clickable = false;
+        wasClicked = true;
+        onClick.Invoke();
+    }
+
     // Used by scientist
-    public void Click() => onClick.Invoke();
+    public void Click() => RegisterClick();
     public void SetClickable(bool clickable) => this.clickable = clickable;
 }

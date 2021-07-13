@@ -177,7 +177,7 @@ public class GameLogic : MonoBehaviour
     void GoToMainMenu()
     {
         csv.OutputStageData();
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(2);
     }
 
     void OnApplicationQuit() 
