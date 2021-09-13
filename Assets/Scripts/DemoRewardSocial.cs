@@ -168,15 +168,13 @@ public class DemoRewardSocial : MonoBehaviour
                 
                 finishStateLoad();
                 StartCoroutine(playAudio(audioInfo));
-                Debug.Log("Trial2");
 
                 break;
 
             case State.Trial2Click:
                TheoBehaviour.move(TheoDemoRewardSocialBehaviour.State.ClickGoodChest);
-               Debug.Log("Trial2Click");
                Theo.transform.position = personGood.transform.position;
-                StartCoroutine(clickRoutine());
+               StartCoroutine(clickRoutine());
                finishStateLoad();
                 break;
 
@@ -259,7 +257,7 @@ public class DemoRewardSocial : MonoBehaviour
                 if (subtitleOn)
                 {
                     textboxes[2].SetActive(false);
-                    textboxes[3].SetActive(true);
+                    textboxes[3].SetActive(false);
                 }
 
                 break;
@@ -374,6 +372,5 @@ public class DemoRewardSocial : MonoBehaviour
     public void TheoClicked()
     {
        moveToNextState();
-       Debug.Log("theoclicked");
     }
 }

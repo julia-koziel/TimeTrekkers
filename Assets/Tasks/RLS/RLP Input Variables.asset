@@ -15,5 +15,6 @@ MonoBehaviour:
   inputVariables:
   - {fileID: 11400000, guid: 4d268cda1ba054b0d9892da7d870513c, type: 2}
   - {fileID: 11400000, guid: 6c5cec66e02104fb79c87e47a0a4b811, type: 2}
+  - {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
   trial: {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
   nTrials: {fileID: 11400000, guid: f4c8d070f3ad34caf944543b266ae4ef, type: 2}

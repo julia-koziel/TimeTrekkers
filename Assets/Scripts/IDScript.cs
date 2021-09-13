@@ -8,10 +8,13 @@ public class IDScript : MonoBehaviour
     public GameObject placeholder;
     public Text inputText;
     public StringVariable participantID;
-    bool noId = false;
+    public BoolVariable idEntered;
+    bool existingId = true;
     void Start()
     {
-        if (!string.IsNullOrEmpty(participantID.Value) && participantID.Value != "test")
+        existingId = idEntered && (!string.IsNullOrEmpty(participantID.Value) && participantID.Value != "test");
+
+        if (existingId)
         {
             placeholder.SetActive(false);
             inputText.SetActive(true);
@@ -23,7 +26,7 @@ public class IDScript : MonoBehaviour
     {
         if (string.IsNullOrEmpty(id))
         {
-            if (noId)
+            if (!existingId)
             {
                 participantID.SaveValue("test");
                 print("test");
@@ -32,5 +35,7 @@ public class IDScript : MonoBehaviour
         }
         else participantID.SaveValue(id);
         PlayerPrefs.SetString("ID", id);
+
+        idEntered.SaveValue(1);
     }
 }

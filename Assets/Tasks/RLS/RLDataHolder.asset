@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables:
   - {fileID: 11400000, guid: e922484f36dcb45c4808bcfe70f7a774, type: 2}
+  - {fileID: 11400000, guid: 4894592174ea54bd78bd9e55b9f6c5db, type: 2}
   - {fileID: 11400000, guid: 6c5cec66e02104fb79c87e47a0a4b811, type: 2}
   - {fileID: 11400000, guid: 02303c03094134aef92d85814be1cfba, type: 2}
   - {fileID: 11400000, guid: f7f42a77e9b6744ba8b60a2251d6c8b5, type: 2}
@@ -22,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
   headers:
   - participant_id
+  - trial
   - side
   - rewarded_id
   - unrewarded_id

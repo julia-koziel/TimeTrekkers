@@ -31,7 +31,7 @@ public class MC_Click2 : MonoBehaviour
 
     public void MCLoad()
     {
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(13);
         gameObject.SetActive(false);
         
     }

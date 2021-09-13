@@ -14,8 +14,12 @@ public class StimulusConditionalResponse : MonoBehaviour
 
     public void Respond()
     {
-        if (stimulus.correct) Rewarded.Invoke();
-        else Unrewarded.Invoke();
+        if (stimulus.correct) 
+        {
+           Rewarded.Invoke();
+        }
+
+        else Unrewarded.Invoke();        
     }
 
 }

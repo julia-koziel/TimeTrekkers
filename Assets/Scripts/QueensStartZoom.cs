@@ -9,12 +9,12 @@ public class QueensStartZoom : MonoBehaviour
     public GameObject zoomed;
     public GameObject oldtext;
     public GameObject text;
-    public bool QueensClick;
+    public MenuScreenLogic gameLogic;
     // Start is called before the first frame update
  
      void Start()
     {
-
+        gameLogic = FindObjectOfType<MenuScreenLogic>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,6 @@ public class QueensStartZoom : MonoBehaviour
         zoomed.SetActive(true);
         text.SetActive(true);
         oldtext.SetActive(false);
-        QueensClick = true;
-        gameObject.SetActive(false);
+        gameLogic.ButtonClicked();
     }
 }

@@ -28,14 +28,13 @@ public class IntroGameLogicQueens : MonoBehaviour
 
 public void StartInstructions()
 {
+    StageEnd.Raise();
+    gameObject.SetActive(false);  
     introScreen.SetActive(false);
-    instructions.SetActive(true);
-    
 }
 
 public void BacktoMM()
 {
-    gameObject.SetActive(false);
     MM.SetActive(true);
 }
 

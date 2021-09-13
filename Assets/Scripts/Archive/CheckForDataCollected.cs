@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 public class CheckForDataCollected : MonoBehaviour
 {
+    public StringVariable participantID;
     public string participantId;
     Queue<string> files;
     public GameObject titlescreen;
@@ -21,7 +22,7 @@ public class CheckForDataCollected : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        participantId = PlayerPrefs.GetString("ID");
+        participantId = participantID.Value;
         files = new Queue<string>();
         var tsvs = Directory.GetFiles(getFolderPath(participantId), "*.tsv", SearchOption.AllDirectories);
         tsvs.Where(s => Regex.IsMatch(s, @".+UPLOADED\.tsv$")).ForEach(files.Enqueue);

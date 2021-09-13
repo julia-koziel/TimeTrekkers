@@ -7,19 +7,8 @@ public class TreasureOnClick : MonoBehaviour
     public GameObject[] otherbuttons;
     public GameObject zoomed;
     public GameObject oldtext;
-    public GameObject text;
     public bool TreasureClick;
-    // Start is called before the first frame update
- 
-     void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    
     
     public void OnMouseDown()
     {
@@ -28,7 +17,6 @@ public class TreasureOnClick : MonoBehaviour
             other.SetActive(false);
         }
         zoomed.SetActive(true);
-        text.SetActive(true);
         oldtext.SetActive(false);
         TreasureClick = true;
         gameObject.SetActive(false);

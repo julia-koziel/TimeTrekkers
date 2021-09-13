@@ -3565,7 +3565,7 @@ MonoBehaviour:
     maxViewingsStage: 0
     hasMaxViewings: 0
     maxViewings: 0
-    nTrials: 3
+    nTrials: 40
     iti: 0.5
     dataHolder: {fileID: 11400000, guid: f934b6cf13c5f4c79b484ec2a4b71df7, type: 2}
     hasPresetMatrix: 0

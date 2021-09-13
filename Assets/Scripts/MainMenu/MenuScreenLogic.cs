@@ -28,7 +28,7 @@ public class MenuScreenLogic : MonoBehaviour
     public bool DinoClicked;
     public bool PirateClicked;
     public bool TreasureClicked;
-    public bool QueensClicked; 
+    public bool QueensClick; 
     public bool SHClicked;
     public bool AFClicked;
     public bool MCClicked;
@@ -38,22 +38,19 @@ public class MenuScreenLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        checkforBAO();
         button.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        checkforBAO();
         int level1 = PlayerPrefs.GetInt("level1");
         int level2= PlayerPrefs.GetInt("level2");
-        Debug.Log(level1);
 
       
        if (DinoClicked)
        {
-           if (time>3)
-           {
             if (speedOptimised)
             {
                 DinoGoLoad();
@@ -62,7 +59,6 @@ public class MenuScreenLogic : MonoBehaviour
             {
                 BAOLoad();
             }
-           }
        }
 
        else if(PirateClicked)
@@ -72,6 +68,8 @@ public class MenuScreenLogic : MonoBehaviour
         if (level1<1)
         {
             level1button.SetActive(true);
+            ButtonClicked();
+
         }
 
         else if(level1>0)
@@ -95,32 +93,20 @@ public class MenuScreenLogic : MonoBehaviour
     }
     }   
 
-    else if (QueensClicked)
+    else if (QueensClick)
     {
-
-        if (time>3)
-        {
-        QueensLoad();
-        }
+        ButtonClicked();
     }
 
     else if (TreasureClicked)
     {
-
-        if (time>3)
-        {
-        TreasureLoad();
-        }
+        ButtonClicked();
     }
 
     else if (SHClicked)
     {
 
-        if (time>3)
-        {
         SHLoad();
-        }
-
     }
 
     else if (AFClicked)
@@ -154,9 +140,9 @@ public class MenuScreenLogic : MonoBehaviour
     
 
     public void PirateLoad()
-    {  
-            SceneManager.LoadScene(3);
-            gameObject.SetActive(false);    
+    {       
+            gameObject.SetActive(false); 
+            SceneManager.LoadScene(3);    
     }
     public void PirateLevel2()
     {  
@@ -171,27 +157,25 @@ public class MenuScreenLogic : MonoBehaviour
 
     public void TreasureLoad()
     {
-        SceneManager.LoadScene(4);
+        transitionscreen.SetActive(true);
+        SceneManager.LoadScene(6);
         gameObject.SetActive(false);
        
     }
 
     public void DinoGoLoad()
-    {
+    {   
+        transitionscreen.SetActive(true);
         SceneManager.LoadScene(10);
         gameObject.SetActive(false);
         
     }
 
-    public void QueensLoad()
-    {
-        SceneManager.LoadScene(5);
-        gameObject.SetActive(false);
-        
-    }
+  
 
     public void SHLoad()
-    {
+    {   
+        transitionscreen.SetActive(true);
         SceneManager.LoadScene(8);
         gameObject.SetActive(false);
         
@@ -217,7 +201,6 @@ public class MenuScreenLogic : MonoBehaviour
             tsvs.Where(s => Regex.IsMatch(s, @".+task-BAO-Main.+\.tsv$")).ForEach(files.Enqueue);
             speedOptimised = files.Count > 0;
         }
-
     }
 
     string getFolderPath(string id)

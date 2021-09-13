@@ -42,10 +42,10 @@ public class AnimationStart : MonoBehaviour
             animator.SetTrigger("Click");
         }
 
-        if(Queens.QueensClick)
-        {
-            animator.SetTrigger("Click");
-        }
+        // if(Queens.QueensClick)
+        // {
+        //     animator.SetTrigger("Click");
+        // }
         
     }
 }

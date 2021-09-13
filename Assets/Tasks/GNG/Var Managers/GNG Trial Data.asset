@@ -18,9 +18,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b8cd776117f6e4e17853a9422e6cf11c, type: 2}
   - {fileID: 11400000, guid: 05589f753381f47ad8b973f6febdbcab, type: 2}
   - {fileID: 11400000, guid: 18cefac58d8c540c9a584dc1a5b5191b, type: 2}
+  - {fileID: 11400000, guid: 165618dd16a144bef9a1941ea59530c5, type: 2}
   headers:
   - participant_id
   - trial
   - trial_type
   - correct
   - response_time
+  - speed

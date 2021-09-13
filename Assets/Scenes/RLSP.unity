@@ -1933,7 +1933,7 @@ MonoBehaviour:
   instructions2: {fileID: 0}
   instructions3: {fileID: 0}
   trials: {fileID: 0}
-  StageEnd: {fileID: 0}
+  StageEnd: {fileID: 11400000, guid: 62998bd8804cb4e86abc2ff9b9426224, type: 2}
   MM: {fileID: 1754583147}
 --- !u!224 &321571915
 RectTransform:

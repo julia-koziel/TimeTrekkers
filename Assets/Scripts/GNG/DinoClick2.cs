@@ -19,17 +19,13 @@ public class DinoClick2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime; 
-       gameLogic.DinoClicked=true; 
+        time += Time.deltaTime;
+
+       gameLogic.TreasureClicked=true; 
        if (time>2)
        {
-           DinoGoLoad();
+           gameLogic.DinoClicked=true;
        }
     }
-    public void DinoGoLoad()
-    {
-        SceneManager.LoadScene(10);
-        gameObject.SetActive(false);
         
-    }
 }

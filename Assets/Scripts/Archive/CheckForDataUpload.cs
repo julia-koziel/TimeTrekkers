@@ -44,7 +44,7 @@ public class CheckForDataUpload : MonoBehaviour
 
     public void LoadData()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(14);
     }
 
     string getFolderPath()

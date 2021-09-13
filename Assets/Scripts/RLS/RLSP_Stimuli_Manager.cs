@@ -20,7 +20,6 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public BoolVariable participantsGo;
     public BoolVariable criterionReached;
     public BoolVariable RL;
-    public BoolVariable RLS;
     public IntVariable criterion;
     public IntVariable criterionTracker;
     public IntVariable score;
@@ -154,7 +153,7 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene(5);
                 }
             }
 

@@ -21,9 +21,7 @@ MonoBehaviour:
     used: 0
   - seed: 28
     used: 0
-  - seed: 72
-    used: 0
-  - seed: 72
+  - seed: 6
     used: 0
   patternList: {fileID: 11400000, guid: 4c771f7d4196940dcb71b71e6d8ddf2b, type: 2}
   trialType: {fileID: 11400000, guid: b3cba4fa133c049ee8c5b023d9adfdbe, type: 2}

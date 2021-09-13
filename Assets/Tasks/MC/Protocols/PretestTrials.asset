@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVariablesManager: {fileID: 11400000, guid: f95fa70cbc60f43efac583d1a0bff895,
     type: 2}
-  shuffle: 0
+  shuffle: 1
   rowArray:
   - row:
     - 1

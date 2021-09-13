@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PirateClick2 : MonoBehaviour
 {
@@ -18,8 +19,18 @@ public class PirateClick2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       gameLogic.PirateClicked=true; 
-       gameLogic.TaskSelected=true;
+       time += Time.deltaTime;
+
+       gameLogic.ButtonClicked();
+       if (time>2)
+       {
+           PirateLoad();
+       }
+    }
+    public void PirateLoad()
+    {
+        SceneManager.LoadScene(3);
+        gameObject.SetActive(false);
+        
     }
 }
-
