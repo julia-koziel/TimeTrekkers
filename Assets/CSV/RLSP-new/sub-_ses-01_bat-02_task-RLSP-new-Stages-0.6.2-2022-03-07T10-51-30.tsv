@@ -1,0 +1,6 @@
+participant_id	stage_name	views	top_text	bottom_text	button1	button2	button3	button_clicked	timestamp
+	StartTime	0							10:51:11
+	Animation	1							10:51:15
+	Animation UI	1			Repeat		Continue	Continue	10:51:17
+	Demo	1							10:51:21
+	Main UI	1			Repeat		Continue	Continue	10:51:25

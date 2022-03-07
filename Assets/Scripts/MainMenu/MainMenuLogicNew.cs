@@ -19,6 +19,7 @@ public class MainMenuLogicNew : MonoBehaviour
     public GameObject introscreen;
     public GameObject menuscreen;
     public GameObject console;
+    public GameObject Theo;
     public GameObject machine;
     private Animator animator;
     public GameObject button;
@@ -109,6 +110,7 @@ public class MainMenuLogicNew : MonoBehaviour
                     new AudioBundle(index: 1, delay: 0f),};
         consent.SetActive(false);
         intro.SetActive(true);
+        Theo.SetActive(true);
         StartCoroutine(playAudio(audioInfo));
 
         finishStateLoad();
@@ -119,6 +121,7 @@ public class MainMenuLogicNew : MonoBehaviour
                     new AudioBundle(index: 2, delay: 0f),};
 
         introscreen.SetActive(true);
+        Theo.SetActive(false);
         intro.SetActive(false);
         StartCoroutine(playAudio(audioInfo));
 

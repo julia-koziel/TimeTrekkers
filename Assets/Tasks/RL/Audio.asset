@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989e79ab82371491a8399935fa7025b4, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 1
   weighted: 1
   weights: 0100000001000000
   variables:

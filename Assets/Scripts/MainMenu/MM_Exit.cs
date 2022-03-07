@@ -14,6 +14,6 @@ public class MM_Exit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(14);
     }
 }

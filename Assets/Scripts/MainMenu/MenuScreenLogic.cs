@@ -95,7 +95,11 @@ public class MenuScreenLogic : MonoBehaviour
 
     else if (QueensClick)
     {
-        ButtonClicked();
+        if (time>3)
+        {
+        RLSLoad();
+        Debug.Log("RLSLoad");
+        }
     }
 
     else if (TreasureClicked)
@@ -107,6 +111,14 @@ public class MenuScreenLogic : MonoBehaviour
     {
 
         SHLoad();
+    }
+
+    else if (MCClicked)
+    {
+        if (time>3)
+        {
+        MCLoad();
+        }
     }
 
     else if (AFClicked)
@@ -163,6 +175,14 @@ public class MenuScreenLogic : MonoBehaviour
        
     }
 
+     public void RLSLoad()
+    {
+        transitionscreen.SetActive(true);
+        SceneManager.LoadScene(4);
+        gameObject.SetActive(false);
+       
+    }
+
     public void DinoGoLoad()
     {   
         transitionscreen.SetActive(true);
@@ -171,7 +191,12 @@ public class MenuScreenLogic : MonoBehaviour
         
     }
 
-  
+    public void MCLoad()
+    {
+        SceneManager.LoadScene(7);
+        gameObject.SetActive(false);
+        
+    }
 
     public void SHLoad()
     {   
@@ -187,6 +212,8 @@ public class MenuScreenLogic : MonoBehaviour
         gameObject.SetActive(false);
         
     }
+
+    
 
 
     public void checkforBAO()

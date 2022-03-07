@@ -7,6 +7,7 @@ public class RLS_Stimuli_Manager : MonoBehaviour
 {   
     public InputVariablesManager inputVariablesManager;
     public CategoricalInputVariable side;
+    public CategoricalInputVariable audio;
     public IntVariable LEFT;
     public IntVariable RIGHT;
     public IntVariable trial;
@@ -42,8 +43,7 @@ public class RLS_Stimuli_Manager : MonoBehaviour
     public void OnStartTrial()
     {
         inputVariablesManager.updateInputVariables();
-        food.SetActive(true);
-        food.transform.position = centre.position;
+        audio.Value = Random.Range(0,1);
 
         if (participantsGo && trial == 0)
         {
@@ -137,10 +137,8 @@ public class RLS_Stimuli_Manager : MonoBehaviour
          this.In(rewardDuration).Call(() => 
         {
             ITI.SetActive(true);
-            food.SetActive(false);
 
-
-            this.In(1).Call(() => 
+            this.In(2).Call(() => 
             {
                 ITI.SetActive(false);
                 trialEnd.Raise();

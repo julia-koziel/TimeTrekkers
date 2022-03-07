@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 public class DataUploader : MonoBehaviour 
 {
-    const string url = "http://psyc.bbk.ac.uk/teachbrite/scripts/getDataAms.php";
+    const string url = "https://psyc.bbk.ac.uk/teachbrite/scripts/getDataAms.php";
     public StringVariable participantId;
     public float maxNoSuccessTime;
     public float maxPartialSuccessTime;

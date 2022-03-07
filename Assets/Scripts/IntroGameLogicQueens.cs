@@ -12,11 +12,13 @@ public class IntroGameLogicQueens : MonoBehaviour
     public GameObject trials;
     public GameEvent StageEnd; 
 
+    public BoolVariable RL;
+
     public GameObject MM;
     // Start is called before the first frame update
     void Start()
     {
-        
+        RL.Value=0;
     }
 
     // Update is called once per frame
@@ -26,17 +28,16 @@ public class IntroGameLogicQueens : MonoBehaviour
     }
 
 
-public void StartInstructions()
-{
-    StageEnd.Raise();
-    gameObject.SetActive(false);  
-    introScreen.SetActive(false);
-}
+    public void StartInstructions()
+    {
+        instructions.SetActive(true);
+        introScreen.SetActive(false);
+    }
 
-public void BacktoMM()
-{
-    MM.SetActive(true);
-}
+    public void BacktoMM()
+    {
+        MM.SetActive(true);
+    }
 
 
 }

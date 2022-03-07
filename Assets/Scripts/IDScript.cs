@@ -35,7 +35,6 @@ public class IDScript : MonoBehaviour
         }
         else participantID.SaveValue(id);
         PlayerPrefs.SetString("ID", id);
-
         idEntered.SaveValue(1);
     }
 }

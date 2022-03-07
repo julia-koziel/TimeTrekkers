@@ -345,23 +345,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!114 &48815126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2581523635249298513, guid: f54deaa2688974df4bff3ea62f488c49,
@@ -1832,7 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 455476164}
@@ -1847,9 +1843,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 455476164}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &455476166
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2523,23 +2538,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!114 &633077968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2880316078142068161, guid: 89fde631409fc46f8afda156b381c125,
@@ -3829,7 +3840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 823164993}
@@ -3844,9 +3855,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 823164993}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &823164995
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4848,23 +4878,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!114 &971461578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1705382167029756626, guid: 562cc8dde330a40c88f564af8b1ff52d,
@@ -7298,23 +7324,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!114 &1344907619 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5061509366725391230, guid: 80984d3dfa8b64a629cac49bbde58c12,
@@ -7379,7 +7401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1350756094}
@@ -7394,9 +7416,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1350756094}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &1350756096
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8922,23 +8963,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!114 &1660914950 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 471071676612848094, guid: 4f32333eecfdf4d3fb463482a31b2391,

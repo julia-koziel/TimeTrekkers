@@ -36,6 +36,7 @@ public class MC_OnClick : MonoBehaviour
         }
         zoomed.SetActive(true);
         MCIcon.SetActive(false);
+        gameLogic.MCClicked=true;
        
     }
 }

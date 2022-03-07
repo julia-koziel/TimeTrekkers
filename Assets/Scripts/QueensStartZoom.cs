@@ -33,6 +33,7 @@ public class QueensStartZoom : MonoBehaviour
         zoomed.SetActive(true);
         text.SetActive(true);
         oldtext.SetActive(false);
-        gameLogic.ButtonClicked();
+        gameLogic.QueensClick=true;
+        Debug.Log(gameLogic.QueensClick);
     }
 }

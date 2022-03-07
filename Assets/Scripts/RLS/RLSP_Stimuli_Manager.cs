@@ -8,6 +8,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public InputVariablesManager inputVariablesManager;
     public CategoricalInputVariable side;
     public CategoricalInputVariable probindex;
+
+    public CategoricalInputVariable audio;
     public IntVariable LEFT;
     public IntVariable RIGHT;
     public IntVariable trial;
@@ -24,7 +26,8 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     public IntVariable criterionTracker;
     public IntVariable score;
     public GameEvent trialEnd;
-    public GameObject ITI;
+    public CsvReadWrite csv;
+    public GameObject[] ITI;
     [Space(10)]
     public List<Stimulus> rewardedStimuli;
     public List<Stimulus> unrewardedStimuli;
@@ -50,7 +53,6 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
     }
     public void OnStartTrial()
     {   
-        Debug.Log(probindex);
         inputVariablesManager.updateInputVariables();
         food.transform.position = centrePos.position;
         food.SetActive(true);
@@ -146,14 +148,16 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
             }
 
             else if (trial==40 && criterionReached.Value==0)
-            {
+            {   
+                csv.OutputTrialsData();
+                csv.OutputStageData();
                 if (RL==1)
                 {
-                    SceneManager.LoadScene(4);
+                    SceneManager.LoadScene(5);
                 }
                 else
                 {
-                    SceneManager.LoadScene(5);
+                    SceneManager.LoadScene(11);
                 }
             }
 
@@ -205,13 +209,13 @@ public class RLSP_Stimuli_Manager : MonoBehaviour
 
           this.In(rewardDuration).Call(() => 
         {
-            ITI.SetActive(true);
+            ITI[audio].SetActive(true);
             food.SetActive(false);
 
 
-            this.In(1).Call(() => 
+            this.In(2.5f).Call(() => 
             {
-                ITI.SetActive(false);
+                ITI[audio].SetActive(false);
                 trialEnd.Raise();
 
         });

@@ -5,6 +5,7 @@ using UnityEngine;
 public class InformationSheetLogic : MonoBehaviour
 {
     public GameObject consentform;
+    public GameObject infosheet;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,6 @@ public class InformationSheetLogic : MonoBehaviour
     public void TurnOnConsent()
     {
         consentform.SetActive(true);
-        gameObject.SetActive(false);
+        infosheet.SetActive(false);
     }
 }

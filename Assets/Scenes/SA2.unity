@@ -2355,7 +2355,6 @@ GameObject:
   - component: {fileID: 432307265}
   - component: {fileID: 432307264}
   - component: {fileID: 432307263}
-  - component: {fileID: 432307262}
   m_Layer: 0
   m_Name: 'Main Camera '
   m_TagString: MainCamera
@@ -2363,19 +2362,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &432307262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432307261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3f7772145404ff587c06f0ef9e5f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WantedAspectRatio: {fileID: 11400000, guid: 1312ce82e261946eb82d86b333b6d1fe, type: 2}
 --- !u!81 &432307263
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3030,23 +3016,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!1001 &599139771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3315,23 +3297,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!1 &641875765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,23 +4777,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!1 &963139078
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,7 +7390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1377607694}
@@ -7431,9 +7405,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1377607694}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &1377607696
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7615,7 +7608,7 @@ PrefabInstance:
     - target: {fileID: 3103463986440290725, guid: 6755680e6ec1240808e6fd5c0a736639,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4030956092385397950, guid: 6755680e6ec1240808e6fd5c0a736639,
         type: 3}
@@ -7796,7 +7789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1446915116}
@@ -7811,9 +7804,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1446915116}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &1446915118
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8406,23 +8418,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!1 &1639626281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9435,7 +9443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2054011771}
@@ -9450,9 +9458,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Unrewarded:
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2054011771}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2dd6630a826364a1a94e7b9bca1ea9a2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TranslatableAudioClip, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UnrewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 11400000, guid: 42d23039d04104fe28e06e50201dde3f, type: 2}
 --- !u!82 &2054011773
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9871,23 +9898,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79320aee48cd41748ee9990d45ecd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rewarded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Unrewarded:
+  RewardedOne:
     m_PersistentCalls:
       m_Calls: []
+  RewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedOne:
+    m_PersistentCalls:
+      m_Calls: []
+  UnrewardedTwo:
+    m_PersistentCalls:
+      m_Calls: []
+  audio: {fileID: 0}
 --- !u!1001 &2109664155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9903,12 +9926,17 @@ PrefabInstance:
     - target: {fileID: 2421000954961632990, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
       propertyPath: m_Radius
-      value: 3.3063364
+      value: 3.2151806
       objectReference: {fileID: 0}
     - target: {fileID: 2421000954961632990, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421000954961632990, guid: e442701b145664af68a900c3320e5ab0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5469364
       objectReference: {fileID: 0}
     - target: {fileID: 3197180118673305891, guid: e442701b145664af68a900c3320e5ab0,
         type: 3}
